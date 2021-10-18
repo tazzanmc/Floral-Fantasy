@@ -1,0 +1,22 @@
+{
+  "group": "rich_dirt",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "tag": "minecraft:small_flowers"
+    },
+    {
+      "item": "floral_fantasy:ancient_bone"
+    },
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:rich_dirt",
+    "count": 1
+  }
+}

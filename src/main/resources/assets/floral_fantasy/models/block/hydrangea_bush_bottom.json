@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "floral_fantasy:blocks/hydrangea_bush_bottom",
+    "particle": "floral_fantasy:blocks/hydrangea_bush_bottom"
+  }
+}

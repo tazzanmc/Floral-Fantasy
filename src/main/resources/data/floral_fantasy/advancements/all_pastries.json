@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "floral_fantasy:cornflower_cake"
+    },
+    "title": {
+      "translate": "advancements.all_pastries.title"
+    },
+    "description": {
+      "translate": "advancements.all_pastries.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "all_pastries": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "minecraft:husbandry/plant_seed"
+}

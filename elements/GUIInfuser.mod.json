@@ -1,0 +1,168 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_gui.png",
+          "use1Xscale": false,
+          "name": "infuser_gui.png",
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 186,
+          "y": 54
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 222,
+          "y": 54
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 159,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 249,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 204,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Infuser",
+          "color": {
+            "value": -11184811,
+            "falpha": 0.0
+          },
+          "name": "Infuser",
+          "x": 194,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_blaze_meter.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "InfuserBlazeMeterShow"
+          },
+          "name": "infuser_blaze_meter.png",
+          "x": 184,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_breath_meter.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "InfuserBreathMeterShow"
+          },
+          "name": "infuser_breath_meter.png",
+          "x": 224,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_progress_arrow.png",
+          "use1Xscale": false,
+          "name": "infuser_progress_arrow.png",
+          "x": 209,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_blaze_bubbles.png",
+          "use1Xscale": false,
+          "name": "infuser_blaze_bubbles.png",
+          "x": 187,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "infuser_breath_bubbles.png",
+          "use1Xscale": false,
+          "name": "infuser_breath_bubbles.png",
+          "x": 228,
+          "y": 77
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 27,
+      "oy": 32,
+      "snapOnGrid": false
+    }
+  }
+}

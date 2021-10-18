@@ -1,0 +1,22 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:anemone_flower"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:sweet_anemone_pie",
+    "count": 1
+  }
+}

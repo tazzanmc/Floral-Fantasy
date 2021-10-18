@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "floral_fantasy:block/hydrangea_bush"
+    },
+    "half=lower": {
+      "model": "floral_fantasy:block/hydrangea_bush_bottom"
+    }
+  }
+}

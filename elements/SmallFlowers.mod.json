@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DeathBloom"
+      },
+      {
+        "value": "CUSTOM:AnemoneFlower"
+      },
+      {
+        "value": "CUSTOM:WeepingBell"
+      },
+      {
+        "value": "CUSTOM:GrandAnemoneFlower"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "small_flowers",
+    "namespace": "minecraft"
+  }
+}

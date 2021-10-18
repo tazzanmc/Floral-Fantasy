@@ -1,0 +1,30 @@
+{
+  "group": "infuser",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "floral_fantasy:shade_rod"
+    },
+    "4": {
+      "item": "floral_fantasy:shade_rod"
+    },
+    "6": {
+      "item": "minecraft:purpur_block"
+    },
+    "7": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "8": {
+      "item": "minecraft:purpur_block"
+    }
+  },
+  "result": {
+    "item": "floral_fantasy:infuser",
+    "count": 1
+  }
+}

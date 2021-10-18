@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "floral_fantasy:blocks/weeping_bell",
+    "particle": "floral_fantasy:blocks/weeping_bell"
+  }
+}

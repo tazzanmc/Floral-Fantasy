@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "pastry",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DeathBloom"
+      },
+      {
+        "value": "CUSTOM:DeathBloom"
+      },
+      {
+        "value": "Items.WHEAT"
+      },
+      {
+        "value": "Items.EGG"
+      },
+      {
+        "value": "Items.SUGAR"
+      },
+      {
+        "value": "Items.WHEAT"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DeathBloomPie"
+    },
+    "name": "death_bloom_pie",
+    "namespace": "mod"
+  }
+}

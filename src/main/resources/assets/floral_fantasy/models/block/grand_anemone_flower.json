@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "floral_fantasy:blocks/grand_anemone_flower",
+    "particle": "floral_fantasy:blocks/grand_anemone_flower"
+  }
+}

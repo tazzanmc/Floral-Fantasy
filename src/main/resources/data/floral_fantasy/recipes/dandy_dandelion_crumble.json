@@ -1,0 +1,22 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dandelion"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:dandy_dandelion_crumble",
+    "count": 1
+  }
+}

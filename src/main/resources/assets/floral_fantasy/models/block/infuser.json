@@ -1,0 +1,8 @@
+{
+  "parent": "floral_fantasy:custom/infuser",
+  "textures": {
+    "all": "floral_fantasy:blocks/infuser",
+    "particle": "floral_fantasy:blocks/infuser",
+    "0": "floral_fantasy:blocks/infuser"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Crippling",
+    "splashName": "Splash Potion of Crippling",
+    "lingeringName": "Lingering Potion of Crippling",
+    "arrowName": "Arrow of Crippling",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Crippling"
+        },
+        "duration": 7200,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

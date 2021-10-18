@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "floral_fantasy:items/sweet_anemone_pie"
+  }
+}

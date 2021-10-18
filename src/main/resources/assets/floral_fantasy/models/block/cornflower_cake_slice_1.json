@@ -1,0 +1,11 @@
+{
+  "parent": "floral_fantasy:custom/cake_slice1",
+  "textures": {
+    "all": "floral_fantasy:blocks/cornflower_cake_top",
+    "particle": "floral_fantasy:blocks/cornflower_cake_top",
+    "side": "floral_fantasy:blocks/cornflower_cake_side",
+    "top": "floral_fantasy:blocks/cornflower_cake_top",
+    "bottom": "floral_fantasy:blocks/cornflower_cake_bottom",
+    "inside": "floral_fantasy:blocks/cornflower_cake_inner"
+  }
+}

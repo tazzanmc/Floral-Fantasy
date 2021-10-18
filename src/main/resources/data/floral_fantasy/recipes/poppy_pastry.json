@@ -1,0 +1,16 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:poppy"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:poppy_pastry",
+    "count": 1
+  }
+}

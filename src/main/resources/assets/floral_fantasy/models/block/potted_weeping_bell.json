@@ -1,0 +1,10 @@
+{
+  "parent": "floral_fantasy:custom/potted_weeping_bell",
+  "textures": {
+    "all": "floral_fantasy:blocks/weeping_bell",
+    "particle": "floral_fantasy:blocks/flower_pot",
+    "flowerpot": "floral_fantasy:blocks/flower_pot",
+    "plant": "floral_fantasy:blocks/weeping_bell",
+    "dirt": "floral_fantasy:blocks/dirt"
+  }
+}

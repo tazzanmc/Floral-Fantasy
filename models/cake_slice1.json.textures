@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "cornflower_cake_side",
+        "top": "cornflower_cake_top",
+        "bottom": "cornflower_cake_bottom",
+        "inside": "cornflower_cake_inner"
+      },
+      "name": "default"
+    }
+  }
+}

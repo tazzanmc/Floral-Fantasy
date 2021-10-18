@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "particle",
+  "definition": {
+    "texture": "anemone_petals.png",
+    "animate": true,
+    "frameDuration": 30,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": 1.0,
+    "speedFactor": 0.1,
+    "gravity": 0.1,
+    "maxAge": 120,
+    "maxAgeDiff": 10,
+    "angularVelocity": 0.01,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": false,
+    "renderType": "OPAQUE"
+  }
+}

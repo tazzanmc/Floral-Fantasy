@@ -1,0 +1,16 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:hydrangea_bush"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:hydrangea_muffin",
+    "count": 1
+  }
+}

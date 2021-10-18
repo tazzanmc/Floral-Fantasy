@@ -1,0 +1,28 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:death_bloom"
+    },
+    {
+      "item": "floral_fantasy:death_bloom"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:death_bloom_pie",
+    "count": 1
+  }
+}

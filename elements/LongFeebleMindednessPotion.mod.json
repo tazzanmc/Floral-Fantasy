@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Feeble Mindedness",
+    "splashName": "Splash Potion of Feeble Mindedness",
+    "lingeringName": "Lingering Potion of Feeble Mindedness",
+    "arrowName": "Arrow of Feeble Mindedness",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:FeebleMindedness"
+        },
+        "duration": 1200,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

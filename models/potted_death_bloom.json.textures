@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "flowerpot": "flower_pot",
+        "plant": "death_bloom",
+        "dirt": "dirt"
+      },
+      "name": "default"
+    }
+  }
+}
