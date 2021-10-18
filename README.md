@@ -2,6 +2,9 @@
 The remote workspace repository for my mod Floral Fantasy
 
 Floral Fantasy is a mod that I am working on made entirely withing MCreator for Minecraft Jave Edition 1.16.5 (and 1.17+ once those versions come out)
+
+Making wikis is allowed but they are liable for removal if they don't follow the established format, house incorrect information, or for any other deemable reason.
+
 Anyone is allowed to view and download these files for these purposes:
 - Making an addon for the mod
 - Making a separate mod using it as a basis
