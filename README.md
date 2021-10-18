@@ -11,4 +11,5 @@ Anyone is allowed to view and download these files for these purposes:
 - Familiariasing yourself with Java and MCreator
 - Personal/Private projects
 - Other unlisted reasons (if the reason is not listed please contact me for permission before editing)
+
 Anything not listed above would be considered as a violation of the license and I would humbly ask for you to take it down
