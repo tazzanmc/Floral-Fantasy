@@ -1930,6 +1930,114 @@
           }
         ]
       }
+    },
+    {
+      "name": "PrimalEnderman",
+      "type": "livingentity",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "primal_enderman"
+    },
+    {
+      "name": "PrimalEndermanEntityIsHurt",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "primal_enderman_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PrimalEndermanOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "primal_enderman_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PrimalEndermanReplaceEnderman",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "primal_enderman_replace_enderman",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1978,6 +2086,7 @@
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.tipped_arrow.effect.feeble_mindedness_potion": "Arrow of Feeble Mindedness",
+      "entity.floral_fantasy.primal_enderman": "Primal Enderman",
       "item.minecraft.potion.effect.strong_crippling_potion": "Potion of Crippling",
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
@@ -2020,6 +2129,7 @@
       "advancements.all_pastries.title": "Fresh Out the Oven(?)",
       "item.ores_and_oddities.cornflower_cake": "Cornflower Cake",
       "block.floral_fantasy.anemone_flower": "Anemone Flower",
+      "item.floral_fantasy.primal_enderman_spawn_egg": "Primal Enderman Spawn Egg",
       "item.floral_fantasy.infusion_bottle": "Infusion Bottle",
       "item.minecraft.potion.effect.strong_feeble_mindedness_potion": "Potion of Feeble Mindedness",
       "item.minecraft.lingering_potion.effect.long_crippling_potion": "Lingering Potion of Crippling",

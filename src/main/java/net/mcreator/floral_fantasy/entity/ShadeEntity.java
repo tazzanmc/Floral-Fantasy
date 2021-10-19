@@ -82,7 +82,7 @@ public class ShadeEntity extends FloralFantasyModElements.ModElement {
 		elements.entities.add(() -> entity);
 		elements.entities.add(() -> arrow);
 		elements.items.add(
-				() -> new SpawnEggItem(entity, -10793816, -5608520, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("shade_spawn_egg"));
+				() -> new SpawnEggItem(entity, -5608520, -10793816, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("shade_spawn_egg"));
 	}
 
 	@SubscribeEvent
