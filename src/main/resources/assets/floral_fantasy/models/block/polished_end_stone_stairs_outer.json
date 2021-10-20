@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "floral_fantasy:blocks/polished_end_stone",
+    "top": "floral_fantasy:blocks/polished_end_stone",
+    "side": "floral_fantasy:blocks/polished_end_stone_slab"
+  }
+}

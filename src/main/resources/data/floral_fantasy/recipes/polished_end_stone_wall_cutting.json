@@ -1,0 +1,9 @@
+{
+  "group": "polished_end_stone_wall",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "floral_fantasy:polised_end_stone"
+  },
+  "result": "floral_fantasy:polished_end_stone_wall"
+}

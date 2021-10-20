@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "floral_fantasy:block/polished_end_stone_slab"
+    },
+    "type=top": {
+      "model": "floral_fantasy:block/polished_end_stone_slab_top"
+    },
+    "type=double": {
+      "model": "floral_fantasy:block/polished_end_stone_slab_full"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "polished_end_stone_stairs",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PolishedEndStoneStairs"
+    },
+    "name": "polished_end_stone_stairs",
+    "namespace": "mod"
+  }
+}

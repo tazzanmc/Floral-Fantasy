@@ -1,0 +1,22 @@
+{
+  "group": "polished_end_stone_slab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "1": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "2": {
+      "item": "floral_fantasy:polised_end_stone"
+    }
+  },
+  "result": {
+    "item": "floral_fantasy:polished_end_stone_slab",
+    "count": 6
+  }
+}

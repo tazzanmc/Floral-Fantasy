@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PolisedEndStone"
+      },
+      {
+        "value": "CUSTOM:PolishedEndStoneSlab"
+      },
+      {
+        "value": "CUSTOM:PolishedEndStoneStairs"
+      },
+      {
+        "value": "CUSTOM:PolishedEndStoneWall"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "dragon_immune",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "group": "polished_end_stone_stairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "3": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "4": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "6": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "7": {
+      "item": "floral_fantasy:polised_end_stone"
+    },
+    "8": {
+      "item": "floral_fantasy:polised_end_stone"
+    }
+  },
+  "result": {
+    "item": "floral_fantasy:polished_end_stone_stairs",
+    "count": 4
+  }
+}

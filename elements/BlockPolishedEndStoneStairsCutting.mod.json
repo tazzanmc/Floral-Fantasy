@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "polished_end_stone_stairs",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:PolisedEndStone"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:PolishedEndStoneStairs"
+    },
+    "name": "polished_end_stone_stairs_cutting",
+    "namespace": "mod"
+  }
+}

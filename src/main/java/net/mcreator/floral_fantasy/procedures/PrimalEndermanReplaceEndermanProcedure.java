@@ -76,7 +76,7 @@ public class PrimalEndermanReplaceEndermanProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((entity instanceof EndermanEntity)) {
-			if ((Math.random() < 0.001)) {
+			if ((Math.random() < 0.01)) {
 				if (world instanceof ServerWorld) {
 					Entity entityToSpawn = new PrimalEndermanEntity.CustomEntity(PrimalEndermanEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles(x, y, z, (float) (entity.rotationYaw), (float) (entity.rotationPitch));

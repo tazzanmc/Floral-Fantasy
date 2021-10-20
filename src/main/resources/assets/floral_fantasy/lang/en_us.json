@@ -1,8 +1,8 @@
 {
   "item.floral_fantasy.ancient_bone": "Ancient Bone",
   "item.minecraft.splash_potion.effect.strong_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
-  "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
   "item.floral_fantasy.gnoll_bone": "Gnoll Bone",
+  "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
   "item.minecraft.splash_potion.effect.feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
   "effect.crippling": "Crippling",
   "block.floral_fantasy.potted_death_bloom": "Potted Death Bloom",
@@ -17,12 +17,14 @@
   "advancements.shade_rod_advancement.title": "Into Oblivion",
   "effect.feeble_mindedness": "Feeble Mindedness",
   "block.floral_fantasy.rich_dirt": "Rich Soil",
+  "block.floral_fantasy.polised_end_stone": "Polised End Stone",
   "advancements.shade_rod_advancement.descr": "Relieve a Shade of its rod",
   "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
   "item.minecraft.tipped_arrow.effect.crippling_potion": "Arrow of Crippling",
   "item.minecraft.tipped_arrow.effect.long_crippling_potion": "Arrow of Crippling",
   "item.floral_fantasy.poppy_pastry": "Poppy Pastry",
   "item.minecraft.splash_potion.effect.long_crippling_potion": "Splash Potion of Crippling",
+  "block.floral_fantasy.polished_end_stone_wall": "Polised End Stone Wall",
   "block.ores_and_oddities.potted_death_bloom": "Potted Death Bloom",
   "entity.floral_fantasy.overgrown_skeleton": "Overgrown Skeleton",
   "item.floral_fantasy.shade_spawn_egg": "Shade Spawn Egg",
@@ -62,6 +64,7 @@
   "block.floral_fantasy.cornflower_cake_slice_6": "Cornflower Cake Full",
   "block.ores_and_oddities.cornflower_cake_full": "Cornflower Cake Full",
   "entity.floral_fantasy.shade": "Shade",
+  "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
   "item.minecraft.splash_potion.effect.crippling_potion": "Splash Potion of Crippling",
   "item.floral_fantasy.hydrangea_muffin": "Hydrangea Muffin",
   "item.ores_and_oddities.vicious_carver": "Vicious Carver",
@@ -89,5 +92,6 @@
   "item.minecraft.potion.effect.strong_feeble_mindedness_potion": "Potion of Feeble Mindedness",
   "item.minecraft.lingering_potion.effect.long_crippling_potion": "Lingering Potion of Crippling",
   "item.minecraft.lingering_potion.effect.feeble_mindedness_potion": "Lingering Potion of Feeble Mindedness",
-  "item.minecraft.potion.effect.long_feeble_mindedness_potion": "Potion of Feeble Mindedness"
+  "item.minecraft.potion.effect.long_feeble_mindedness_potion": "Potion of Feeble Mindedness",
+  "block.floral_fantasy.polished_end_stone_stairs": "Polised End Stone Stairs"
 }

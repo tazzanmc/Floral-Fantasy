@@ -2038,6 +2038,141 @@
           }
         ]
       }
+    },
+    {
+      "name": "PolisedEndStone",
+      "type": "block",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "polised_end_stone"
+    },
+    {
+      "name": "PolishedEndStoneSlab",
+      "type": "block",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "polished_end_stone_slab"
+    },
+    {
+      "name": "PolishedEndStoneStairs",
+      "type": "block",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "polished_end_stone_stairs"
+    },
+    {
+      "name": "PolishedEndStoneWall",
+      "type": "block",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "polished_end_stone_wall"
+    },
+    {
+      "name": "BlockPolishedEndStone",
+      "type": "recipe",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone"
+    },
+    {
+      "name": "BlockPolishedEndStoneSlab",
+      "type": "recipe",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_slab"
+    },
+    {
+      "name": "BlockPolishedEndStoneSlabCutting",
+      "type": "recipe",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_slab_cutting"
+    },
+    {
+      "name": "BlockPolishedEndStoneStairs",
+      "type": "recipe",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_stairs"
+    },
+    {
+      "name": "BlockPolishedEndStoneStairsCutting",
+      "type": "recipe",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_stairs_cutting"
+    },
+    {
+      "name": "BlockPolishedEndStoneWall",
+      "type": "recipe",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_wall"
+    },
+    {
+      "name": "BlockPolishedEndStoneWallCutting",
+      "type": "recipe",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_polished_end_stone_wall_cutting"
+    },
+    {
+      "name": "WallBlocks",
+      "type": "tag",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wall_blocks"
+    },
+    {
+      "name": "DragonImmuneBlocks",
+      "type": "tag",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dragon_immune_blocks"
+    },
+    {
+      "name": "SlabBlocks",
+      "type": "tag",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slab_blocks"
+    },
+    {
+      "name": "StairBlocks",
+      "type": "tag",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stair_blocks"
     }
   ],
   "variable_elements": [],
@@ -2046,8 +2181,8 @@
     "en_us": {
       "item.floral_fantasy.ancient_bone": "Ancient Bone",
       "item.minecraft.splash_potion.effect.strong_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
-      "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.floral_fantasy.gnoll_bone": "Gnoll Bone",
+      "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.minecraft.splash_potion.effect.feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "effect.crippling": "Crippling",
       "block.floral_fantasy.potted_death_bloom": "Potted Death Bloom",
@@ -2062,12 +2197,14 @@
       "advancements.shade_rod_advancement.title": "Into Oblivion",
       "effect.feeble_mindedness": "Feeble Mindedness",
       "block.floral_fantasy.rich_dirt": "Rich Soil",
+      "block.floral_fantasy.polised_end_stone": "Polised End Stone",
       "advancements.shade_rod_advancement.descr": "Relieve a Shade of its rod",
       "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
       "item.minecraft.tipped_arrow.effect.crippling_potion": "Arrow of Crippling",
       "item.minecraft.tipped_arrow.effect.long_crippling_potion": "Arrow of Crippling",
       "item.floral_fantasy.poppy_pastry": "Poppy Pastry",
       "item.minecraft.splash_potion.effect.long_crippling_potion": "Splash Potion of Crippling",
+      "block.floral_fantasy.polished_end_stone_wall": "Polised End Stone Wall",
       "block.ores_and_oddities.potted_death_bloom": "Potted Death Bloom",
       "entity.floral_fantasy.overgrown_skeleton": "Overgrown Skeleton",
       "item.floral_fantasy.shade_spawn_egg": "Shade Spawn Egg",
@@ -2107,6 +2244,7 @@
       "block.floral_fantasy.cornflower_cake_slice_6": "Cornflower Cake Full",
       "block.ores_and_oddities.cornflower_cake_full": "Cornflower Cake Full",
       "entity.floral_fantasy.shade": "Shade",
+      "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
       "item.minecraft.splash_potion.effect.crippling_potion": "Splash Potion of Crippling",
       "item.floral_fantasy.hydrangea_muffin": "Hydrangea Muffin",
       "item.ores_and_oddities.vicious_carver": "Vicious Carver",
@@ -2134,7 +2272,8 @@
       "item.minecraft.potion.effect.strong_feeble_mindedness_potion": "Potion of Feeble Mindedness",
       "item.minecraft.lingering_potion.effect.long_crippling_potion": "Lingering Potion of Crippling",
       "item.minecraft.lingering_potion.effect.feeble_mindedness_potion": "Lingering Potion of Feeble Mindedness",
-      "item.minecraft.potion.effect.long_feeble_mindedness_potion": "Potion of Feeble Mindedness"
+      "item.minecraft.potion.effect.long_feeble_mindedness_potion": "Potion of Feeble Mindedness",
+      "block.floral_fantasy.polished_end_stone_stairs": "Polised End Stone Stairs"
     }
   },
   "foldersRoot": {

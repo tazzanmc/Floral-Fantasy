@@ -12,7 +12,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
 
 import net.mcreator.floral_fantasy.FloralFantasyMod;
 
@@ -127,9 +126,7 @@ public class PrimalEndermanOnEntityTickUpdateProcedure {
 						SoundCategory.HOSTILE, (float) 1, (float) 1, false);
 			}
 		}
-		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.WATER)
-				|| (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.WATER)
-						|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BUBBLE_COLUMN)))) {
+		if ((entity.isInWaterRainOrBubbleColumn())) {
 			entity.attackEntityFrom(DamageSource.DROWN, (float) 1);
 		}
 	}
