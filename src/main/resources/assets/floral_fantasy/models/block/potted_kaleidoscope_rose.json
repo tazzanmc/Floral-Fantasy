@@ -1,0 +1,10 @@
+{
+  "parent": "floral_fantasy:custom/potted_kaleidoscope_rose",
+  "textures": {
+    "all": "floral_fantasy:blocks/kaleidoscope_rose",
+    "particle": "floral_fantasy:blocks/flower_pot",
+    "flowerpot": "floral_fantasy:blocks/flower_pot",
+    "plant": "floral_fantasy:blocks/kaleidoscope_rose",
+    "dirt": "floral_fantasy:blocks/dirt"
+  }
+}

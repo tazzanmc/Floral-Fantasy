@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "grand_anemone_flower",
+    "texture": "kaleidoscope_rose",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "potted_grand_anemone_flower:default",
+    "customModelName": "potted_kaleidoscope_rose:default",
     "rotationMode": 0,
     "emissiveRendering": true,
     "displayFluidOverlay": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Potted Grand Anemone Flower",
+    "name": "Potted Kaleidoscope Rose",
     "specialInfo": [
       "You shouldn't have this in your inventory"
     ],
@@ -65,7 +65,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": "CUSTOM:GrandAnemoneFlower"
+      "value": "CUSTOM:KaleidoscopeRose"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -73,8 +73,8 @@
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "speedFactor": 1.0,
-    "jumpFactor": 1.0,
+    "speedFactor": 1.2000000000000002,
+    "jumpFactor": 1.2000000000000002,
     "reactionToPushing": "DESTROY",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -96,7 +96,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 4,
+    "luminance": 2,
     "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": false,
@@ -124,10 +124,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "PottedGrandAnemoneFlowerOnBlockRightClicked"
-    },
-    "onRandomUpdateEvent": {
-      "name": "GrandAnemoneFlowerSpawnParticles"
+      "name": "PottedKaleidoscopeRoseOnBlockRightClicked"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

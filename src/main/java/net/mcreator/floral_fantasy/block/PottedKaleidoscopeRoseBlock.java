@@ -33,7 +33,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.floral_fantasy.procedures.PottedDeathBloomOnBlockRightClickedProcedure;
+import net.mcreator.floral_fantasy.procedures.PottedKaleidoscopeRoseOnBlockRightClickedProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
 import java.util.Map;
@@ -41,11 +41,11 @@ import java.util.List;
 import java.util.HashMap;
 
 @FloralFantasyModElements.ModElement.Tag
-public class PottedDeathBloomBlock extends FloralFantasyModElements.ModElement {
-	@ObjectHolder("floral_fantasy:potted_death_bloom")
+public class PottedKaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
+	@ObjectHolder("floral_fantasy:potted_kaleidoscope_rose")
 	public static final Block block = null;
-	public PottedDeathBloomBlock(FloralFantasyModElements instance) {
-		super(instance, 32);
+	public PottedKaleidoscopeRoseBlock(FloralFantasyModElements instance) {
+		super(instance, 158);
 	}
 
 	@Override
@@ -61,9 +61,10 @@ public class PottedDeathBloomBlock extends FloralFantasyModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0).notSolid()
-					.setOpaque((bs, br, bp) -> false));
-			setRegistryName("potted_death_bloom");
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0f, 0f).setLightLevel(s -> 2)
+					.speedFactor(1.2000000000000002f).jumpFactor(1.2000000000000002f).notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+			setRegistryName("potted_kaleidoscope_rose");
 		}
 
 		@Override
@@ -91,7 +92,7 @@ public class PottedDeathBloomBlock extends FloralFantasyModElements.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(DeathBloomBlock.block);
+			return new ItemStack(KaleidoscopeRoseBlock.block);
 		}
 
 		@Override
@@ -116,7 +117,7 @@ public class PottedDeathBloomBlock extends FloralFantasyModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PottedDeathBloomOnBlockRightClickedProcedure.executeProcedure($_dependencies);
+				PottedKaleidoscopeRoseOnBlockRightClickedProcedure.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
 		}
