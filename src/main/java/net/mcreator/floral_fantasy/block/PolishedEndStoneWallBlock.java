@@ -2,11 +2,13 @@
 package net.mcreator.floral_fantasy.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.IBooleanFunction;
@@ -22,6 +24,8 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.WallHeight;
 import net.minecraft.block.WallBlock;
@@ -49,10 +53,16 @@ public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModEleme
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void clientLoad(FMLClientSetupEvent event) {
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
+	}
 	public static class CustomBlock extends WallBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 9f).setLightLevel(s -> 0).harvestLevel(0)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+					.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("polished_end_stone_wall");
 		}
 		private static final VoxelShape CENTER_POLE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
@@ -195,11 +205,6 @@ public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModEleme
 
 		private static boolean compareShapes(VoxelShape shape1, VoxelShape shape2) {
 			return !VoxelShapes.compare(shape2, shape1, IBooleanFunction.ONLY_FIRST);
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
 		}
 
 		@Override
