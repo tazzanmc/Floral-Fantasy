@@ -1,0 +1,8 @@
+{
+  "parent": "floral_fantasy:custom/volatile_breath",
+  "textures": {
+    "all": "floral_fantasy:blocks/volatile_breath",
+    "particle": "floral_fantasy:blocks/volatile_breath",
+    "missing": "floral_fantasy:blocks/volatile_breath"
+  }
+}

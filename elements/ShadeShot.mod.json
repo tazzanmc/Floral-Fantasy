@@ -23,15 +23,15 @@
     "animation": "block",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 1.0,
+    "bulletPower": 2.0,
     "bulletDamage": 5.0,
-    "bulletKnockback": 5,
-    "bulletParticles": true,
+    "bulletKnockback": 1,
+    "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "CUSTOM:ShadeEye"
     },
-    "bulletModel": "Modelshade",
-    "customBulletModelTexture": "shade.png"
+    "bulletModel": "Default",
+    "customBulletModelTexture": "shade_fireball.png"
   }
 }
