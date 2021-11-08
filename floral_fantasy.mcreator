@@ -2253,6 +2253,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "BlockPottedKaleidoscopeRose",
+      "type": "loottable",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_potted_kaleidoscope_rose"
     }
   ],
   "variable_elements": [],
