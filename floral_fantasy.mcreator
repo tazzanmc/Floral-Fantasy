@@ -2304,6 +2304,45 @@
           }
         ]
       }
+    },
+    {
+      "name": "Wader",
+      "type": "livingentity",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader"
+    },
+    {
+      "name": "WaderNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -2316,25 +2355,25 @@
       "item.minecraft.splash_potion.effect.feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "effect.crippling": "Crippling",
       "block.floral_fantasy.potted_death_bloom": "Potted Death Bloom",
-      "advancements.all_pastries.descr": "Bake every pastry from Floral Fantasy",
       "item.minecraft.tipped_arrow.effect.strong_crippling_potion": "Arrow of Crippling",
+      "advancements.all_pastries.descr": "Bake every pastry from Floral Fantasy",
       "item.floral_fantasy.death_bloom_pie": "Death Bloom Pie",
       "item.floral_fantasy.shade_rod": "Shade Rod",
       "advancements.shade_rod_advancement.descr": "Relieve a Shade of its rod",
       "block.floral_fantasy.volatile_breath": "Volatile Breath",
-      "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
-      "item.minecraft.tipped_arrow.effect.crippling_potion": "Arrow of Crippling",
       "item.minecraft.tipped_arrow.effect.long_crippling_potion": "Arrow of Crippling",
+      "item.minecraft.tipped_arrow.effect.crippling_potion": "Arrow of Crippling",
+      "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
       "block.ores_and_oddities.cornflower_cake_slice_4": "Cornflower Cake Full",
       "block.ores_and_oddities.cornflower_cake_slice_5": "Cornflower Cake Full",
       "block.floral_fantasy.weeping_bell": "Weeping Bell",
-      "block.ores_and_oddities.cornflower_cake_slice_6": "Cornflower Cake Full",
       "block.ores_and_oddities.death_bloom": "Death Bloom",
-      "block.floral_fantasy.kaleidoscope_rose": "Kaleidoscope Rose",
+      "block.ores_and_oddities.cornflower_cake_slice_6": "Cornflower Cake Full",
       "item.floral_fantasy.dandy_dandelion_crumble": "Dandy Dandelion Crumble",
+      "block.floral_fantasy.kaleidoscope_rose": "Kaleidoscope Rose",
       "item.minecraft.lingering_potion.effect.strong_crippling_potion": "Lingering Potion of Crippling",
-      "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
+      "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.floral_fantasy.forgotten_skeleton_spawn_egg": "Forgotten Skeleton Spawn Egg",
@@ -2378,6 +2417,7 @@
       "item.minecraft.tipped_arrow.effect.feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "entity.floral_fantasy.primal_enderman": "Primal Enderman",
       "item.minecraft.potion.effect.strong_crippling_potion": "Potion of Crippling",
+      "item.floral_fantasy.wader_spawn_egg": "Wader Spawn Egg",
       "item.ores_and_oddities.forgotten_skeleton_spawn_egg": "Forgotten Skeleton Spawn Egg",
       "entity.floral_fantasy.forgotten_skeleton": "Forgotten Skeleton",
       "block.floral_fantasy.cornflower_cake_slice_2": "Cornflower Cake Full",
@@ -2395,6 +2435,7 @@
       "entity.floral_fantasy.shade": "Shade",
       "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
       "item.ores_and_oddities.vicious_carver": "Vicious Carver",
+      "entity.floral_fantasy.wader": "Wader",
       "block.floral_fantasy.cornflower_cake_slice_1": "Cornflower Cake Full",
       "itemGroup.tabinfusion": "Infusion",
       "block.floral_fantasy.hydrangea_bush": "Hydrangea Bush",

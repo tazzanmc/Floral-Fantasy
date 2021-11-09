@@ -1,22 +1,6 @@
 {
-  "parent": "floral_fantasy:block/volatile_breath",
-  "display": {
-    "thirdperson": {
-      "rotation": [
-        10,
-        -45,
-        170
-      ],
-      "translation": [
-        0,
-        1.5,
-        -2.75
-      ],
-      "scale": [
-        0.375,
-        0.375,
-        0.375
-      ]
-    }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "floral_fantasy:blocks/volatile_breath"
   }
 }

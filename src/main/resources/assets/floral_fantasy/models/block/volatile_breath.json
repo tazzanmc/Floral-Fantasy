@@ -1,8 +1,7 @@
 {
-  "parent": "floral_fantasy:custom/volatile_breath",
+  "parent": "block/crop",
   "textures": {
-    "all": "floral_fantasy:blocks/volatile_breath",
-    "particle": "floral_fantasy:blocks/volatile_breath",
-    "missing": "floral_fantasy:blocks/volatile_breath"
+    "crop": "floral_fantasy:blocks/volatile_breath",
+    "particle": "floral_fantasy:blocks/volatile_breath"
   }
 }
