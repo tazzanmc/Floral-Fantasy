@@ -511,7 +511,7 @@ public class InfuserTickProcedure {
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("breath", 200);
+								_tileEntity.getTileData().putDouble("breath", 100);
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -520,7 +520,7 @@ public class InfuserTickProcedure {
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("maxBreath", 200);
+								_tileEntity.getTileData().putDouble("maxBreath", 100);
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}

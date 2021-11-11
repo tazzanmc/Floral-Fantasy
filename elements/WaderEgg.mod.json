@@ -3,35 +3,41 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "shade_eye",
+    "texture": "wader_egg",
     "customModelName": "Normal",
-    "name": "Shade Shot",
+    "name": "Wader Egg",
     "specialInfo": [],
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "MISC"
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": ""
+      "value": "CUSTOM:WaderEgg"
     },
-    "shootConstantly": false,
+    "shootConstantly": true,
     "usageCount": 0,
     "actionSound": {
-      "value": "entity.blaze.shoot"
+      "value": "entity.egg.throw"
     },
-    "hasGlow": true,
+    "hasGlow": false,
     "animation": "block",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
-    "bulletDamage": 5.0,
+    "bulletDamage": 0.0,
     "bulletKnockback": 1,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:VolatileCharge"
+      "value": "CUSTOM:WaderEgg"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "WaderEggHatch"
+    },
+    "onBulletHitsEntity": {
+      "name": "WaderEggHatch"
+    }
   }
 }

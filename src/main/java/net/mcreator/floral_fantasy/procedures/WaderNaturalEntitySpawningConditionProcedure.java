@@ -2,7 +2,6 @@ package net.mcreator.floral_fantasy.procedures;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.Blocks;
 
 import net.mcreator.floral_fantasy.FloralFantasyMod;
 
@@ -38,23 +37,7 @@ public class WaderNaturalEntitySpawningConditionProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		sx = (double) (-3);
-		found = (boolean) (false);
-		for (int index0 = 0; index0 < (int) (6); index0++) {
-			sy = (double) (-3);
-			for (int index1 = 0; index1 < (int) (6); index1++) {
-				sz = (double) (-3);
-				for (int index2 = 0; index2 < (int) (6); index2++) {
-					if (((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock() == Blocks.LAVA)) {
-						found = (boolean) (true);
-					}
-					sz = (double) (sz + 1);
-				}
-				sy = (double) (sy + 1);
-			}
-			sx = (double) (sx + 1);
-		}
-		if ((found == (true))) {
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.LAVA)) {
 			return (true);
 		}
 		return (false);

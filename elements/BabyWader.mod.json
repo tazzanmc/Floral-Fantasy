@@ -4,14 +4,14 @@
   "definition": {
     "mobName": "Wader",
     "mobLabel": "",
-    "mobModelName": "Modelwader",
-    "mobModelTexture": "wader.png",
+    "mobModelName": "Modelbaby_wader",
+    "mobModelTexture": "baby_wader.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 0.875,
-    "modelHeight": 1.563,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.625,
+    "modelHeight": 0.75,
+    "modelShadowSize": 0.25,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -7852753,
       "falpha": 0.0
@@ -49,11 +49,11 @@
     "attackStrength": 0,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
+    "movementSpeed": 0.35,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "health": 16,
-    "xpAmount": 2,
+    "health": 8,
+    "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -77,10 +77,10 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.STRING"
+      "value": ""
     },
     "livingSound": {
-      "value": "entity.strider.ambient"
+      "value": ""
     },
     "hurtSound": {
       "value": "entity.strider.hurt"
@@ -98,18 +98,12 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "onRightClickedOn": {
-      "name": "WaderRightClickedOnEntity"
-    },
     "onMobTickUpdate": {
-      "name": "WaderOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "WaderOnInitialEntitySpawn"
+      "name": "BabyWaderOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"60\" y=\"58\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">0.8</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.CRIMSON_FUNGUS</field></block></value><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"60\" y=\"58\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">0.8</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.CRIMSON_FUNGUS</field></block></value><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -118,12 +112,12 @@
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningCondition": {
       "name": "WaderNaturalEntitySpawningCondition"
     },
-    "spawningProbability": 40,
+    "spawningProbability": 35,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 3,
     "maxNumberOfMobsPerGroup": 6,
