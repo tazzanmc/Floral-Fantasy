@@ -18,7 +18,9 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
+import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -29,21 +31,24 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.floral_fantasy.entity.renderer.ShadeShotRenderer;
+import net.mcreator.floral_fantasy.procedures.WaderEggHatchProcedure;
+import net.mcreator.floral_fantasy.entity.renderer.WaderEggRenderer;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @FloralFantasyModElements.ModElement.Tag
-public class ShadeShotItem extends FloralFantasyModElements.ModElement {
-	@ObjectHolder("floral_fantasy:shade_shot")
+public class WaderEggItem extends FloralFantasyModElements.ModElement {
+	@ObjectHolder("floral_fantasy:wader_egg")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletshade_shot").setRegistryName("entitybulletshade_shot");
-	public ShadeShotItem(FloralFantasyModElements instance) {
-		super(instance, 131);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadeShotRenderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletwader_egg").setRegistryName("entitybulletwader_egg");
+	public WaderEggItem(FloralFantasyModElements instance) {
+		super(instance, 169);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new WaderEggRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -53,8 +58,8 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(null).maxStackSize(1));
-			setRegistryName("shade_shot");
+			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1));
+			setRegistryName("wader_egg");
 		}
 
 		@Override
@@ -74,22 +79,45 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 		}
 
 		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
-		}
-
-		@Override
-		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
+		public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
+			World world = entityLiving.world;
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 5, 1);
-					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
-					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
+					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == WaderEggItem.block);
+					if (stack == ItemStack.EMPTY) {
+						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
+							ItemStack teststack = entity.inventory.mainInventory.get(i);
+							if (teststack != null && teststack.getItem() == WaderEggItem.block) {
+								stack = teststack;
+								break;
+							}
+						}
+					}
+					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 0, 1);
+						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
+						if (entity.abilities.isCreativeMode) {
+							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
+						} else {
+							if (new ItemStack(WaderEggItem.block).isDamageable()) {
+								if (stack.attemptDamageItem(1, random, entity)) {
+									stack.shrink(1);
+									stack.setDamage(0);
+									if (stack.isEmpty())
+										entity.inventory.deleteStack(stack);
+								}
+							} else {
+								stack.shrink(1);
+								if (stack.isEmpty())
+									entity.inventory.deleteStack(stack);
+							}
+						}
+					}
+					entity.stopActiveHand();
 				}
 			}
 		}
@@ -121,18 +149,32 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(VolatileChargeItem.block);
+			return new ItemStack(WaderEggItem.block);
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return null;
+			return new ItemStack(WaderEggItem.block);
 		}
 
 		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WaderEggHatchProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -145,6 +187,14 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
 			if (this.inGround) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					WaderEggHatchProcedure.executeProcedure($_dependencies);
+				}
 				this.remove();
 			}
 		}
@@ -161,7 +211,7 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.egg.throw")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
@@ -173,7 +223,7 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 		double d3 = target.getPosZ() - entity.getPosZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(5);
+		entityarrow.setDamage(0);
 		entityarrow.setKnockbackStrength(1);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
@@ -181,7 +231,7 @@ public class ShadeShotItem extends FloralFantasyModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.egg.throw")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

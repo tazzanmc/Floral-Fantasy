@@ -2343,6 +2343,211 @@
           }
         ]
       }
+    },
+    {
+      "name": "WaderOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VolatileCharge",
+      "type": "item",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatile_charge"
+    },
+    {
+      "name": "WaderEgg",
+      "type": "rangeditem",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_egg"
+    },
+    {
+      "name": "DamageEntityWhileInWater",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "damage_entity_while_in_water",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WaderEggHatch",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_egg_hatch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WaderRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyWader",
+      "type": "livingentity",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "baby_wader"
+    },
+    {
+      "name": "WaderOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wader_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyWaderOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "baby_wader_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -2374,6 +2579,7 @@
       "item.minecraft.lingering_potion.effect.strong_crippling_potion": "Lingering Potion of Crippling",
       "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
+      "item.floral_fantasy.baby_wader_spawn_egg": "Wader Spawn Egg",
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.floral_fantasy.forgotten_skeleton_spawn_egg": "Forgotten Skeleton Spawn Egg",
@@ -2439,7 +2645,9 @@
       "block.floral_fantasy.cornflower_cake_slice_1": "Cornflower Cake Full",
       "itemGroup.tabinfusion": "Infusion",
       "block.floral_fantasy.hydrangea_bush": "Hydrangea Bush",
+      "entity.floral_fantasy.baby_wader": "Wader",
       "block.floral_fantasy.potted_weeping_bell": "Potted Weeping Bell",
+      "item.floral_fantasy.wader_egg": "Wader Egg",
       "item.minecraft.potion.effect.feeble_mindedness_potion": "Potion of Feeble Mindedness",
       "block.floral_fantasy.infuser": "Infuser",
       "block.ores_and_oddities.anemone_flower": "Anemone Flower",

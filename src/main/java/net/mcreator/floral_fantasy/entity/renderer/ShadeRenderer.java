@@ -12,12 +12,10 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
-import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.IEntityRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.floral_fantasy.entity.ShadeEntity;
 
@@ -41,8 +39,6 @@ public class ShadeRenderer {
 					}
 				};
 			});
-			RenderingRegistry.registerEntityRenderingHandler(ShadeEntity.arrow,
-					renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 		}
 	}
 

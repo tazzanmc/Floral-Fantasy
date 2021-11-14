@@ -57,9 +57,16 @@ public class DeathBloomRightClickEntityProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == DeathBloomBlock.block.asItem())) {
+		if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == DeathBloomBlock.block.asItem())
+				|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == DeathBloomBlock.block.asItem()))) {
 			if ((entity instanceof BeeEntity)) {
+				if (sourceentity instanceof PlayerEntity) {
+					ItemStack _stktoremove = new ItemStack(DeathBloomBlock.block);
+					((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+							((PlayerEntity) sourceentity).container.func_234641_j_());
+				}
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(CripplingPotionEffect.potion, (int) 60, (int) 0));
 			}

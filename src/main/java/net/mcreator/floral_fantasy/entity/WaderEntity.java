@@ -11,10 +11,11 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
+import net.minecraft.world.IServerWorld;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
@@ -29,10 +30,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.FollowMobGoal;
@@ -44,20 +45,29 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.entity.AgeableEntity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.floral_fantasy.procedures.WaderRightClickedOnEntityProcedure;
+import net.mcreator.floral_fantasy.procedures.WaderOnInitialEntitySpawnProcedure;
+import net.mcreator.floral_fantasy.procedures.WaderOnEntityTickUpdateProcedure;
 import net.mcreator.floral_fantasy.procedures.WaderNaturalEntitySpawningConditionProcedure;
 import net.mcreator.floral_fantasy.entity.renderer.WaderRenderer;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
+
+import javax.annotation.Nullable;
+
+import java.util.Map;
+import java.util.HashMap;
 
 import com.google.common.collect.ImmutableMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class WaderEntity extends FloralFantasyModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.875f, 1.563f)).build("wader").setRegistryName("wader");
 	public WaderEntity(FloralFantasyModElements instance) {
@@ -81,15 +91,17 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 			biomeCriteria = true;
 		if (new ResourceLocation("warped_forest").equals(event.getName()))
 			biomeCriteria = true;
+		if (new ResourceLocation("basalt_deltas").equals(event.getName()))
+			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 3, 6));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 40, 3, 6));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
@@ -108,7 +120,7 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 		}
 	}
 
-	public static class CustomEntity extends AnimalEntity {
+	public static class CustomEntity extends CreatureEntity {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
 		}
@@ -128,11 +140,12 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new PanicGoal(this, 1.2));
-			this.goalSelector.addGoal(2, new TemptGoal(this, 0.75, Ingredient.fromItems(Blocks.CRIMSON_FUNGUS.asItem()), true));
+			this.goalSelector.addGoal(2, new TemptGoal(this, 0.8, Ingredient.fromItems(Blocks.CRIMSON_FUNGUS.asItem()), false));
 			this.goalSelector.addGoal(3, new FollowMobGoal(this, (float) 1, 10, 5));
 			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(6, new SwimGoal(this));
+			this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(7, new SwimGoal(this));
 		}
 
 		@Override
@@ -167,29 +180,62 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 		}
 
 		@Override
+		public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance difficulty, SpawnReason reason,
+				@Nullable ILivingEntityData livingdata, @Nullable CompoundNBT tag) {
+			ILivingEntityData retval = super.onInitialSpawn(world, difficulty, reason, livingdata, tag);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WaderOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
+		}
+
+		@Override
 		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
 			ItemStack itemstack = sourceentity.getHeldItem(hand);
 			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
 			super.func_230254_b_(sourceentity, hand);
-			sourceentity.startRiding(this);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WaderRightClickedOnEntityProcedure.executeProcedure($_dependencies);
+			}
 			return retval;
 		}
 
 		@Override
-		public AgeableEntity func_241840_a(ServerWorld serverWorld, AgeableEntity ageable) {
-			CustomEntity retval = (CustomEntity) entity.create(serverWorld);
-			retval.onInitialSpawn(serverWorld, serverWorld.getDifficultyForLocation(new BlockPos(retval.getPosition())), SpawnReason.BREEDING,
-					(ILivingEntityData) null, (CompoundNBT) null);
-			return retval;
-		}
-
-		@Override
-		public boolean isBreedingItem(ItemStack stack) {
-			if (stack == null)
-				return false;
-			if (Blocks.CRIMSON_FUNGUS.asItem() == stack.getItem())
-				return true;
-			return false;
+		public void baseTick() {
+			super.baseTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WaderOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }
