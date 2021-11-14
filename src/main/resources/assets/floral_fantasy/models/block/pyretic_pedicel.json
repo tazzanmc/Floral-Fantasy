@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "floral_fantasy:blocks/pyretic_pedicel_top",
+    "up": "floral_fantasy:blocks/pyretic_pedicel_top",
+    "north": "floral_fantasy:blocks/pyretic_pedicel",
+    "east": "floral_fantasy:blocks/pyretic_pedicel",
+    "south": "floral_fantasy:blocks/pyretic_pedicel",
+    "west": "floral_fantasy:blocks/pyretic_pedicel",
+    "particle": "floral_fantasy:blocks/pyretic_pedicel_top"
+  }
+}

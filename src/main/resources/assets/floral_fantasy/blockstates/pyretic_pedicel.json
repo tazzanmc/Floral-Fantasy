@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "floral_fantasy:block/pyretic_pedicel",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "floral_fantasy:block/pyretic_pedicel"
+    },
+    "axis=z": {
+      "model": "floral_fantasy:block/pyretic_pedicel",
+      "x": 90
+    }
+  }
+}
