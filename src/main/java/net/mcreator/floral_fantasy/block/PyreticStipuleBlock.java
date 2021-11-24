@@ -49,9 +49,9 @@ public class PyreticStipuleBlock extends FloralFantasyModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.NETHER_VINE_LOWER_PITCH).hardnessAndResistance(0.3f, 0.3f)
-					.setLightLevel(s -> 0).harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool().notSolid()
-					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.NETHER_VINE).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0)
+					.harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool().notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("pyretic_stipule");
 		}
 

@@ -1,0 +1,42 @@
+{
+  "group": "pyretic_stipule",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "1": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "2": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "3": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "4": {
+      "item": "floral_fantasy:argent_ember"
+    },
+    "5": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "6": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "7": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    "8": {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    }
+  },
+  "result": {
+    "item": "floral_fantasy:pyretic_stipule",
+    "count": 2
+  }
+}

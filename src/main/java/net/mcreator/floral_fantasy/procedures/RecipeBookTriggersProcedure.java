@@ -14,6 +14,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.floral_fantasy.item.ShadeRodItem;
+import net.mcreator.floral_fantasy.item.PyreticStipuleItemItem;
+import net.mcreator.floral_fantasy.item.ArgentEmberItem;
 import net.mcreator.floral_fantasy.item.AncientBoneItem;
 import net.mcreator.floral_fantasy.block.WeepingBellBlock;
 import net.mcreator.floral_fantasy.block.HydrangeaBushBlock;
@@ -119,6 +121,22 @@ public class RecipeBookTriggersProcedure {
 		if ((((itemstack).getItem() == ShadeRodItem.block) || ((itemstack).getItem() == Items.NETHERITE_INGOT))) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:infuser")});
+			}
+		}
+		if (((itemstack).getItem() == ArgentEmberItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_stipule")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_pedicel")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:feverish_silt")});
+			}
+		}
+		if (((itemstack).getItem() == PyreticStipuleItemItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:stick_pyretic_stipule")});
 			}
 		}
 	}

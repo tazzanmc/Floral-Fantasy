@@ -54,7 +54,7 @@ public class FeverishSiltBlock extends FloralFantasyModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(SiltBlock.block));
+			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 }

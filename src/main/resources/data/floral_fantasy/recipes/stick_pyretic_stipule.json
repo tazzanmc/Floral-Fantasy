@@ -1,0 +1,22 @@
+{
+  "group": "stick",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    },
+    {
+      "item": "floral_fantasy:pyretic_stipule_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 1
+  }
+}

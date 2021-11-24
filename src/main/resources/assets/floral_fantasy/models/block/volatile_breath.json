@@ -1,7 +1,7 @@
 {
-  "parent": "block/crop",
+  "parent": "block/cross",
   "textures": {
-    "crop": "floral_fantasy:blocks/volatile_breath",
-    "particle": "floral_fantasy:blocks/volatile_breath"
+    "cross": "floral_fantasy:blocks/volatile_breath",
+    "particle": "floral_fantasy:blocks/nothing"
   }
 }
