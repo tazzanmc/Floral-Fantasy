@@ -1,5 +1,5 @@
 {
-  "group": "floral_fantasy",
+  "group": "feverish_silt",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "012",
@@ -8,31 +8,31 @@
   ],
   "key": {
     "0": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "1": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "2": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "3": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "4": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:argent_ember"
     },
     "5": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "6": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "7": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     },
     "8": {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:silt"
     }
   },
   "result": {

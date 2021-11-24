@@ -3,16 +3,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:pyretic_stipule_item"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:pyretic_stipule_item"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:pyretic_stipule_item"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:pyretic_stipule_item"
     }
   ],
   "result": {
