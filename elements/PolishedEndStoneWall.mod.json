@@ -67,7 +67,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "FENCE",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,

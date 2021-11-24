@@ -41,7 +41,7 @@
     "creativeTab": {
       "value": "DECORATIONS"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
@@ -66,7 +66,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "LEAVES",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:AnemonePetals"

@@ -13,11 +13,13 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.PushReaction;
@@ -78,6 +80,11 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 		}
 
 		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.OPEN;
+		}
+
+		@Override
 		public Block.OffsetType getOffsetType() {
 			return Block.OffsetType.XZ;
 		}
@@ -106,10 +113,6 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				DestroyIfAboveAirProcedure.executeProcedure($_dependencies);
 			}
 		}

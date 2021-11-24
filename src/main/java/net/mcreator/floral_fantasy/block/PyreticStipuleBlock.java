@@ -3,16 +3,19 @@ package net.mcreator.floral_fantasy.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -47,14 +50,19 @@ public class PyreticStipuleBlock extends FloralFantasyModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.NETHER_VINE_LOWER_PITCH).hardnessAndResistance(0.3f, 0.3f)
-					.setLightLevel(s -> 0).notSolid().setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
-					.setOpaque((bs, br, bp) -> false));
+					.setLightLevel(s -> 0).harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool().notSolid()
+					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("pyretic_stipule");
 		}
 
 		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return 1;
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.LEAVES;
 		}
 
 		@Override
