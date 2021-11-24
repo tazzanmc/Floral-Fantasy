@@ -2566,6 +2566,219 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "pyretic_stipule"
+    },
+    {
+      "name": "FeverishSilt",
+      "type": "block",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "feverish_silt"
+    },
+    {
+      "name": "PyreticOasis1",
+      "type": "structure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyretic_oasis_1"
+    },
+    {
+      "name": "PyreticOasis2",
+      "type": "structure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyretic_oasis_2"
+    },
+    {
+      "name": "ItemStickPyreticStipule",
+      "type": "recipe",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_stick_pyretic_stipule"
+    },
+    {
+      "name": "PyreticStipuleItem",
+      "type": "item",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyretic_stipule_item"
+    },
+    {
+      "name": "BlockPyreticStipuleRecipe",
+      "type": "recipe",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_pyretic_stipule_recipe"
+    },
+    {
+      "name": "PurgingPotion",
+      "type": "potion",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purging_potion"
+    },
+    {
+      "name": "PurgingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purging_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockFeverishSiltRecipe",
+      "type": "recipe",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_feverish_silt_recipe"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "log_blocks"
+    },
+    {
+      "name": "BlockPyreticStipule",
+      "type": "loottable",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_pyretic_stipule"
+    },
+    {
+      "name": "PyreticPlate",
+      "type": "item",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyretic_plate"
+    },
+    {
+      "name": "BlockPyreticPedicelRecipe",
+      "type": "recipe",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_pyretic_pedicel_recipe"
+    },
+    {
+      "name": "StrongPurgingPotion",
+      "type": "potion",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_purging_potion"
+    },
+    {
+      "name": "ArgentEmber",
+      "type": "item",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "argent_ember"
+    },
+    {
+      "name": "BlockPyreticPedicel",
+      "type": "loottable",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_pyretic_pedicel"
+    },
+    {
+      "name": "Purging",
+      "type": "potioneffect",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purging"
+    },
+    {
+      "name": "Silt",
+      "type": "block",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silt"
+    },
+    {
+      "name": "FireBlocks",
+      "type": "tag",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_blocks"
+    },
+    {
+      "name": "LongPurgingPotion",
+      "type": "potion",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "long_purging_potion"
+    },
+    {
+      "name": "BlockFeverishSilt",
+      "type": "loottable",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_feverish_silt"
     }
   ],
   "variable_elements": [],

@@ -2,6 +2,7 @@
 package net.mcreator.floral_fantasy.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
@@ -43,8 +44,9 @@ public class PyreticPedicelBlock extends FloralFantasyModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 3)
-					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 3).harvestLevel(1)
+					.harvestTool(ToolType.PICKAXE).setRequiresTool().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true));
 			this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.Y));
 			setRegistryName("pyretic_pedicel");
 		}

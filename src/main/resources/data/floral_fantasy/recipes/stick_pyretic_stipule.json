@@ -1,0 +1,22 @@
+{
+  "group": "stick",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    },
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    },
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    },
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 1
+  }
+}

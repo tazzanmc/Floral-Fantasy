@@ -7,11 +7,13 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -46,6 +48,11 @@ public class RichDirtBlock extends FloralFantasyModElements.ModElement {
 		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return 15;
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.STICKY_HONEY;
 		}
 
 		@Override

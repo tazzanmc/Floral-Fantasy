@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:ArgentEmber"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      },
+      {
+        "value": "CUSTOM:Silt"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:FeverishSilt"
+    },
+    "name": "feverish_silt",
+    "namespace": "mod"
+  }
+}

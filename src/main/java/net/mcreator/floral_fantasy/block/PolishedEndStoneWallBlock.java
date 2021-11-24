@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.IBooleanFunction;
@@ -16,6 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.state.Property;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -24,6 +26,7 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -205,6 +208,11 @@ public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModEleme
 
 		private static boolean compareShapes(VoxelShape shape1, VoxelShape shape2) {
 			return !VoxelShapes.compare(shape2, shape1, IBooleanFunction.ONLY_FIRST);
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.FENCE;
 		}
 
 		@Override

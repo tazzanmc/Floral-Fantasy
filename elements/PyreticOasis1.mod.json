@@ -1,0 +1,36 @@
+{
+  "_fv": 24,
+  "_type": "structure",
+  "definition": {
+    "structure": "pyretic_oasis_1",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 15000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": -6,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "Nether"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.NETHERRACK"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "crimson_forest"
+      },
+      {
+        "value": "nether"
+      },
+      {
+        "value": "warped_forest"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

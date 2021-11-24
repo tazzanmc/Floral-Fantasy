@@ -66,27 +66,21 @@ public class WaderOnEntityTickUpdateProcedure {
 					((ServerWorld) world).spawnParticle(ParticleTypes.ANGRY_VILLAGER, x, (y + 1), z, (int) 5, 0.35, 0.35, 0.35, 1);
 				}
 				if (world instanceof World && !world.isRemote()) {
-					((World) world)
-							.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
-									SoundCategory.NEUTRAL, (float) 1, (float) 1);
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.strider.happy")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
 				} else {
 					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.strider.happy")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 				if (world instanceof World && !world.isRemote()) {
-					((World) world)
-							.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
-									SoundCategory.NEUTRAL, (float) 1, (float) 1);
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.chicken.egg")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
 				} else {
 					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.chicken.egg")),
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}

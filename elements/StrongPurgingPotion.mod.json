@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Purging",
+    "splashName": "Splash Potion of Purging",
+    "lingeringName": "Lingering Potion of Purging",
+    "arrowName": "Arrow of Purging",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Purging"
+        },
+        "duration": 1200,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

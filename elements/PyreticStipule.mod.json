@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Pyretic Stipule",
+    "name": "Pyretic Stipules",
     "specialInfo": [],
     "hardness": 0.3,
     "resistance": 0.3,
@@ -41,7 +41,7 @@
     "creativeTab": {
       "value": "DECORATIONS"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
@@ -66,7 +66,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "LEAVES",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -77,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "NETHER_VINE_LOWER_PITCH"
+      "value": "NETHER_VINE"
     },
     "breakSound": {
       "value": ""
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:AnemonePetals"

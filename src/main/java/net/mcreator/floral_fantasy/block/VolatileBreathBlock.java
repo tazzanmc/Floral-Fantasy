@@ -12,12 +12,14 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
@@ -77,6 +79,11 @@ public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return 0;
+		}
+
+		@Override
+		public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, MobEntity entity) {
+			return PathNodeType.DAMAGE_FIRE;
 		}
 
 		@Override
