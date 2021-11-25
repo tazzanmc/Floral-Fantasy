@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Debilitation",
+    "splashName": "Splash Potion of Debilitation",
+    "lingeringName": "Lingering Potion of Debilitation",
+    "arrowName": "Arrow of Debilitation",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Debilitation"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

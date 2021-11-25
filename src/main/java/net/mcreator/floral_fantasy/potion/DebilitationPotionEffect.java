@@ -16,6 +16,7 @@ import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.floral_fantasy.procedures.EffectDebilitationStartedProcedure;
 import net.mcreator.floral_fantasy.procedures.EffectDebilitationEndedProcedure;
+import net.mcreator.floral_fantasy.procedures.DebilitationOnEffectActiveTickProcedure;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -31,7 +32,7 @@ public class DebilitationPotionEffect {
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {
-			super(EffectType.HARMFUL, -13421773);
+			super(EffectType.HARMFUL, -13291215);
 			setRegistryName("debilitation");
 			potionIcon = new ResourceLocation("floral_fantasy:textures/debilitation.png");
 		}
@@ -76,6 +77,19 @@ public class DebilitationPotionEffect {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				EffectDebilitationStartedProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void performEffect(LivingEntity entity, int amplifier) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				DebilitationOnEffectActiveTickProcedure.executeProcedure($_dependencies);
 			}
 		}
 

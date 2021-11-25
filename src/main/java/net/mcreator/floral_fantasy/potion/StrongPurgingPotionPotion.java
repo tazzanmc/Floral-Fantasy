@@ -19,7 +19,7 @@ public class StrongPurgingPotionPotion {
 	}
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
-			super(new EffectInstance(PurgingPotionEffect.potion, 1200, 1, false, true));
+			super(new EffectInstance(PurgingPotionEffect.potion, 300, 1, false, true));
 			setRegistryName("strong_purging_potion");
 		}
 	}

@@ -19,7 +19,7 @@ public class FeebleMindednessPotionPotion {
 	}
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
-			super(new EffectInstance(FeebleMindednessPotionEffect.potion, 600, 0, false, true));
+			super(new EffectInstance(FeebleMindednessPotionEffect.potion, 200, 0, false, true));
 			setRegistryName("feeble_mindedness_potion");
 		}
 	}

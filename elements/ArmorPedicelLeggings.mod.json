@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "pedicel_leggings",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.IRON_LEGGINGS"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:PyreticPlate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:PedicelArmor.legs"
+    },
+    "name": "pedicel_leggings",
+    "namespace": "mod"
+  }
+}

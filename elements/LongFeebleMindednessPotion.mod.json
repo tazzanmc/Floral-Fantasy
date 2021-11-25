@@ -11,7 +11,7 @@
         "effect": {
           "value": "CUSTOM:FeebleMindedness"
         },
-        "duration": 1200,
+        "duration": 300,
         "amplifier": 0,
         "ambient": false,
         "showParticles": true

@@ -19,20 +19,19 @@ public class FeebleMindednessOnEffectActiveTickProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 1)) {
-			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).addExperienceLevel(-((int) (new Object() {
-					int check(Entity _entity) {
-						if (_entity instanceof LivingEntity) {
-							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-							for (EffectInstance effect : effects) {
-								if (effect.getPotion() == FeebleMindednessPotionEffect.potion)
-									return effect.getAmplifier();
-							}
+		if (entity instanceof PlayerEntity) {
+			((PlayerEntity) entity).giveExperiencePoints((int) -((((new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == FeebleMindednessPotionEffect.potion)
+								return effect.getAmplifier();
 						}
-						return 0;
 					}
-				}.check(entity))));
+					return 0;
+				}
+			}.check(entity)) + 1) * ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)) / 5));
 		}
 	}
 }

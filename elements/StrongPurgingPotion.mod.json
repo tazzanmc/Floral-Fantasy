@@ -11,7 +11,7 @@
         "effect": {
           "value": "CUSTOM:Purging"
         },
-        "duration": 1200,
+        "duration": 300,
         "amplifier": 1,
         "ambient": false,
         "showParticles": true

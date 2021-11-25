@@ -11,7 +11,7 @@
         "effect": {
           "value": "CUSTOM:Crippling"
         },
-        "duration": 1800,
+        "duration": 2400,
         "amplifier": 1,
         "ambient": false,
         "showParticles": true

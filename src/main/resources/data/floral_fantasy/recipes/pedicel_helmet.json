@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_helmet"
+  },
+  "addition": {
+    "item": "floral_fantasy:pyretic_plate"
+  },
+  "result": {
+    "item": "floral_fantasy:pedicel_armor_helmet"
+  }
+}

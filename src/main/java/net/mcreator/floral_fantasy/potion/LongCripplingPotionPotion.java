@@ -19,7 +19,7 @@ public class LongCripplingPotionPotion {
 	}
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
-			super(new EffectInstance(CripplingPotionEffect.potion, 7200, 0, false, true));
+			super(new EffectInstance(CripplingPotionEffect.potion, 4800, 0, false, true));
 			setRegistryName("long_crippling_potion");
 		}
 	}

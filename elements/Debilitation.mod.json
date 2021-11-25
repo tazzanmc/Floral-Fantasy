@@ -5,7 +5,7 @@
     "effectName": "Debilitation",
     "icon": "debilitation.png",
     "color": {
-      "value": -13421773,
+      "value": -13291215,
       "falpha": 0.0
     },
     "isInstant": false,
@@ -15,6 +15,9 @@
     "renderStatusInHUD": true,
     "onStarted": {
       "name": "EffectDebilitationStarted"
+    },
+    "onActiveTick": {
+      "name": "DebilitationOnEffectActiveTick"
     },
     "onExpired": {
       "name": "EffectDebilitationEnded"

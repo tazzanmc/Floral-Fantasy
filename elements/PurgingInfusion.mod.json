@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "purging_infusion",
+    "customModelName": "Normal",
+    "name": "Purging Infusion",
+    "rarity": "RARE",
+    "specialInfo": [
+      "§cPurging (0:30)"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Infusion"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 0,
+    "saturation": 0.0,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": "CUSTOM:InfusionBottle"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "PurgingInfusionFoodEaten"
+    }
+  }
+}
