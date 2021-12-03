@@ -106,7 +106,7 @@
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": "Items.FIRE_CHARGE"
+      "value": "CUSTOM:VolatileCharge"
     },
     "rangedItemType": "ShadeShot",
     "spawnThisMob": true,
