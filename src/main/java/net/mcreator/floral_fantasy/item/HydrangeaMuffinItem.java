@@ -38,11 +38,6 @@ public class HydrangeaMuffinItem extends FloralFantasyModElements.ModElement {
 		}
 
 		@Override
-		public int getUseDuration(ItemStack stack) {
-			return 16;
-		}
-
-		@Override
 		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.EAT;
 		}

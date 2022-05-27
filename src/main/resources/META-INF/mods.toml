@@ -4,10 +4,11 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="floral_fantasy"
-version="1.0.0"
+version="0.1.1"
 displayName="Floral Fantasy"
 credits="Made with MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
+logoFile="logo.png"
 authors="tazzan"
 description='''
 A vanilla-styled fantasy mod with floral accents

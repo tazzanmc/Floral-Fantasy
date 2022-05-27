@@ -2974,6 +2974,402 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "volatile_ember"
+    },
+    {
+      "name": "Volatility",
+      "type": "potioneffect",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatility"
+    },
+    {
+      "name": "VolatilityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatility_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MobPrimalEnderman",
+      "type": "loottable",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mob_primal_enderman"
+    },
+    {
+      "name": "RichChocolateCake",
+      "type": "item",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake"
+    },
+    {
+      "name": "RichChocolateCakeFull",
+      "type": "block",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_full"
+    },
+    {
+      "name": "RichChocolateCakeSlice1",
+      "type": "block",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_1"
+    },
+    {
+      "name": "RichChocolateCakeSlice2",
+      "type": "block",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_2"
+    },
+    {
+      "name": "RichChocolateCakeSlice3",
+      "type": "block",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_3"
+    },
+    {
+      "name": "RichChocolateCakeSlice4",
+      "type": "block",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_4"
+    },
+    {
+      "name": "RichChocolateCakeSlice5",
+      "type": "block",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_5"
+    },
+    {
+      "name": "RichChocolateCakeSlice6",
+      "type": "block",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_6"
+    },
+    {
+      "name": "RichChocolateCakePlace",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_place",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeFullEat",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_full_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice1Eat",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_1_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice2Eat",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_2_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice3Eat",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_3_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice4Eat",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_4_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice5Eat",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_5_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice6Eat",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_6_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemRichChocolateCake",
+      "type": "recipe",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_rich_chocolate_cake"
     }
   ],
   "variable_elements": [],
@@ -3021,11 +3417,17 @@
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.minecraft.tipped_arrow.effect.strong_purging_potion": "Arrow of Purging",
+      "block.floral_fantasy.rich_chocolate_cake_slice_6": "Cornflower Cake Full",
+      "block.floral_fantasy.rich_chocolate_cake_slice_5": "Cornflower Cake Full",
+      "block.floral_fantasy.rich_chocolate_cake_slice_4": "Cornflower Cake Full",
       "item.floral_fantasy.debilitation_infusion": "Debilitation Infusion",
+      "block.floral_fantasy.rich_chocolate_cake_slice_3": "Cornflower Cake Full",
       "item.floral_fantasy.forgotten_skeleton_spawn_egg": "Forgotten Skeleton Spawn Egg",
       "item.minecraft.splash_potion.effect.purging_potion": "Splash Potion of Purging",
       "item.minecraft.lingering_potion.effect.strong_ignition_potion": "Lingering Potion of Ignition",
+      "block.floral_fantasy.rich_chocolate_cake_slice_2": "Cornflower Cake Full",
       "item.minecraft.lingering_potion.effect.long_debilitation_potion": "Lingering Potion of Debilitation",
+      "block.floral_fantasy.rich_chocolate_cake_slice_1": "Cornflower Cake Full",
       "item.minecraft.tipped_arrow.effect.long_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "item.minecraft.tipped_arrow.effect.long_purging_potion": "Arrow of Purging",
       "item.minecraft.splash_potion.effect.crippling_potion": "Splash Potion of Crippling",
@@ -3078,6 +3480,7 @@
       "block.floral_fantasy.polised_end_stone": "Polised End Stone",
       "item.floral_fantasy.pyretic_stipule_item": "Pyretic Stipule",
       "item.minecraft.splash_potion.effect.strong_debilitation_potion": "Splash Potion of Debilitation",
+      "effect.volatility": "Volatility",
       "item.floral_fantasy.poppy_pastry": "Poppy Pastry",
       "block.floral_fantasy.polished_end_stone_wall": "Polised End Stone Wall",
       "item.minecraft.splash_potion.effect.long_crippling_potion": "Splash Potion of Crippling",
@@ -3089,11 +3492,14 @@
       "block.ores_and_oddities.potted_anemone_flower": "Potted Anemone Flower",
       "item.minecraft.splash_potion.effect.strong_crippling_potion": "Splash Potion of Crippling",
       "effect.debilitation": "Debilitation",
+      "item.floral_fantasy.pyretic_composite": "Pyretic Composite",
       "item.minecraft.lingering_potion.effect.crippling_potion": "Lingering Potion of Crippling",
       "item.minecraft.potion.effect.long_purging_potion": "Potion of Purging",
       "item.floral_fantasy.pedicel_armor_chestplate": "Pedicel Chestplate",
       "item.minecraft.splash_potion.effect.long_purging_potion": "Splash Potion of Purging",
+      "item.floral_fantasy.rich_chocolate_cake": "Rich Chocolate Cake",
       "block.floral_fantasy.death_bloom": "Death Bloom",
+      "block.floral_fantasy.rich_chocolate_cake_full": "Cornflower Cake Full",
       "item.minecraft.tipped_arrow.effect.feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "entity.floral_fantasy.primal_enderman": "Primal Enderman",
       "item.minecraft.potion.effect.strong_crippling_potion": "Potion of Crippling",
@@ -3116,6 +3522,7 @@
       "block.ores_and_oddities.cornflower_cake_full": "Cornflower Cake Full",
       "entity.floral_fantasy.shade": "Shade",
       "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
+      "item.floral_fantasy.volatile_ember": "Volatile Ember",
       "item.ores_and_oddities.vicious_carver": "Vicious Carver",
       "entity.floral_fantasy.wader": "Wader",
       "item.floral_fantasy.purging_infusion": "Purging Infusion",
@@ -3129,6 +3536,7 @@
       "block.floral_fantasy.infuser": "Infuser",
       "item.minecraft.potion.effect.feeble_mindedness_potion": "Potion of Feeble Mindedness",
       "block.floral_fantasy.feverish_silt": "Feverish Silt",
+      "item.floral_fantasy.concentrated_ember": "Concentrated Ember",
       "block.ores_and_oddities.anemone_flower": "Anemone Flower",
       "block.floral_fantasy.potted_anemone_flower": "Potted Anemone Flower",
       "item.ores_and_oddities.cornflower_cake": "Cornflower Cake",
@@ -3147,13 +3555,14 @@
   "workspaceSettings": {
     "modid": "floral_fantasy",
     "modName": "Floral Fantasy",
-    "version": "1.0.0",
+    "version": "0.1.1",
     "description": "A vanilla-styled fantasy mod with floral accents",
     "author": "tazzan",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "purging",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

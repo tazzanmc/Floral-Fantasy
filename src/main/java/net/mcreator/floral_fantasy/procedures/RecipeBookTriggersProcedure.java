@@ -15,6 +15,7 @@ import net.minecraft.block.Blocks;
 
 import net.mcreator.floral_fantasy.item.ShadeRodItem;
 import net.mcreator.floral_fantasy.item.PyreticStipuleItemItem;
+import net.mcreator.floral_fantasy.item.PyreticPlateItem;
 import net.mcreator.floral_fantasy.item.ArgentEmberItem;
 import net.mcreator.floral_fantasy.item.AncientBoneItem;
 import net.mcreator.floral_fantasy.block.WeepingBellBlock;
@@ -137,6 +138,28 @@ public class RecipeBookTriggersProcedure {
 		if (((itemstack).getItem() == PyreticStipuleItemItem.block)) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:stick_pyretic_stipule")});
+			}
+		}
+		if (((itemstack).getItem() == PyreticPlateItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_composite")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_helmet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_chestplate")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_leggings")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_boots")});
+			}
+		}
+		if (((itemstack).getItem() == Items.COCOA_BEANS)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:rich_chocolate_cake")});
 			}
 		}
 	}
