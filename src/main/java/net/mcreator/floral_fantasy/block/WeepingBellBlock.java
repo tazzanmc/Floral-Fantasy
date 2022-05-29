@@ -13,6 +13,7 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
@@ -23,6 +24,7 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.PushReaction;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -77,6 +79,16 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
 			return VoxelShapes.or(makeCuboidShape(5, 0, 5, 11, 10, 11)).withOffset(offset.x, offset.y, offset.z);
+		}
+
+		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 60;
+		}
+
+		@Override
+		public MaterialColor getMaterialColor() {
+			return MaterialColor.FOLIAGE;
 		}
 
 		@Override

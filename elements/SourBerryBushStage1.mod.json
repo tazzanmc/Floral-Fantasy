@@ -2,18 +2,18 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "weeping_bell",
+    "texture": "sour_berry_bush_stage0",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 12,
-    "customModelName": "Cross model",
+    "renderType": 2,
+    "customModelName": "sour_berry_bush_stage1:default",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "weeping_bell",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -23,29 +23,29 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 5.0,
+        "mx": 3.0,
         "my": 0.0,
-        "mz": 5.0,
-        "Mx": 11.0,
-        "My": 10.0,
-        "Mz": 11.0,
+        "mz": 3.0,
+        "Mx": 13.0,
+        "My": 8.0,
+        "Mz": 13.0,
         "subtract": false
       }
     ],
-    "name": "Weeping Bell",
+    "name": "Sour Berry Bush",
     "specialInfo": [],
     "hardness": 0.0,
     "resistance": 0.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "DECORATIONS"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "Blocks.AIR"
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -54,8 +54,8 @@
     "material": {
       "value": "PLANTS"
     },
-    "tickRate": 10,
-    "tickRandomly": false,
+    "tickRate": 20,
+    "tickRandomly": true,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
@@ -63,9 +63,9 @@
     },
     "colorOnMap": "FOLIAGE",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:UnripeSourBerries"
     },
-    "offsetType": "XZ",
+    "offsetType": "NONE",
     "aiPathNodeType": "OPEN",
     "flammability": 60,
     "fireSpreadSpeed": 0,
@@ -104,13 +104,13 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.0,
     "particleAmount": 1,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 0,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -124,14 +124,16 @@
     "onNeighbourBlockChanges": {
       "name": "DestroyIfAboveAir"
     },
+    "onTickUpdate": {
+      "name": "SourBerryBushStage1UpdateTick"
+    },
+    "onEntityCollides": {
+      "name": "SourBerryBushEntityCollidesInTheBlock"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
-    "frequencyPerChunks": 10,
+    "blocksToReplace": [],
+    "frequencyPerChunks": 16,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64

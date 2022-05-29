@@ -13,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.floral_fantasy.item.SourBerriesItem;
 import net.mcreator.floral_fantasy.item.ShadeRodItem;
 import net.mcreator.floral_fantasy.item.PyreticStipuleItemItem;
 import net.mcreator.floral_fantasy.item.PyreticPlateItem;
@@ -160,6 +161,11 @@ public class RecipeBookTriggersProcedure {
 		if (((itemstack).getItem() == Items.COCOA_BEANS)) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:rich_chocolate_cake")});
+			}
+		}
+		if (((itemstack).getItem() == SourBerriesItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:oxeye_danish")});
 			}
 		}
 	}
