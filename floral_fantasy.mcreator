@@ -3597,6 +3597,262 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "sour_berry_bush_gen"
+    },
+    {
+      "name": "SugarBeetSeeds",
+      "type": "item",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_seeds"
+    },
+    {
+      "name": "SugarBeetSeedsRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_seeds_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WhenBlockBroken",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "when_block_broken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SugarBeetStage0",
+      "type": "block",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_0"
+    },
+    {
+      "name": "SugarBeetUpdateTick",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SugarBeetStage1",
+      "type": "block",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_1"
+    },
+    {
+      "name": "SugarBeetStage2",
+      "type": "block",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_2"
+    },
+    {
+      "name": "SugarBeetStage3",
+      "type": "block",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_3"
+    },
+    {
+      "name": "SugarBeet",
+      "type": "food",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet"
+    },
+    {
+      "name": "GrowingSugarBeetBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "growing_sugar_beet_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockSugarBeetStage3",
+      "type": "loottable",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_sugar_beet_stage_3"
+    },
+    {
+      "name": "BottleOfMolasses",
+      "type": "food",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottle_of_molasses"
+    },
+    {
+      "name": "BottledSugarBeet",
+      "type": "item",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottled_sugar_beet"
+    },
+    {
+      "name": "ItemBottleOfMolasses",
+      "type": "recipe",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_bottle_of_molasses"
+    },
+    {
+      "name": "ItemBottledSugarBeet",
+      "type": "recipe",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_bottled_sugar_beet"
+    },
+    {
+      "name": "BottledSugarBeetRightClickedInAir",
+      "type": "procedure",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottled_sugar_beet_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -3640,7 +3896,12 @@
       "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "item.minecraft.potion.effect.debilitation_potion": "Potion of Debilitation",
+      "block.floral_fantasy.sugar_beet_stage_0": "Sugar Beet Crop",
+      "block.floral_fantasy.sugar_beet_stage_1": "Sugar Beet Crop",
       "item.floral_fantasy.baby_wader_spawn_egg": "Wader Spawn Egg",
+      "block.floral_fantasy.sugar_beet_stage_2": "Sugar Beet Crop",
+      "block.floral_fantasy.sugar_beet_stage_3": "Sugar Beet Crop",
+      "item.floral_fantasy.sugar_beet": "Sugar Beet",
       "effect.ignition": "Ignition",
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
@@ -3679,6 +3940,7 @@
       "item.ores_and_oddities.death_bloom_pie": "Death Bloom Pie",
       "block.floral_fantasy.pyretic_pedicel": "Pyretic Pedicel",
       "item.floral_fantasy.pedicel_armor_boots": "Pedicel Boots",
+      "item.floral_fantasy.bottled_sugar_beet": "Bottled Sugar Beet",
       "item.minecraft.potion.effect.long_crippling_potion": "Potion of Crippling",
       "item.minecraft.potion.effect.strong_purging_potion": "Potion of Purging",
       "advancements.all_pastries.title": "Fresh Out the Oven(?)",
@@ -3753,6 +4015,7 @@
       "entity.floral_fantasy.shade": "Shade",
       "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
       "item.floral_fantasy.volatile_ember": "Volatile Ember",
+      "item.floral_fantasy.sugar_beet_seeds": "Sugar Beet Seeds",
       "item.ores_and_oddities.vicious_carver": "Vicious Carver",
       "entity.floral_fantasy.wader": "Wader",
       "item.floral_fantasy.purging_infusion": "Purging Infusion",
@@ -3767,6 +4030,7 @@
       "block.floral_fantasy.sour_berry_bush_stage_1": "Sour Berry Bush",
       "block.floral_fantasy.sour_berry_bush_stage_2": "Sour Berry Bush",
       "item.floral_fantasy.wader_egg": "Wader Egg",
+      "item.floral_fantasy.bottle_of_molasses": "Bottle Of Molasses",
       "block.floral_fantasy.infuser": "Infuser",
       "item.minecraft.potion.effect.feeble_mindedness_potion": "Potion of Feeble Mindedness",
       "block.floral_fantasy.feverish_silt": "Feverish Silt",

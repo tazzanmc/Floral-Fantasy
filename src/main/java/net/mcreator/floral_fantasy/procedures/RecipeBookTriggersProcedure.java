@@ -13,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.floral_fantasy.item.SugarBeetItem;
 import net.mcreator.floral_fantasy.item.SourBerriesItem;
 import net.mcreator.floral_fantasy.item.ShadeRodItem;
 import net.mcreator.floral_fantasy.item.PyreticStipuleItemItem;
@@ -166,6 +167,14 @@ public class RecipeBookTriggersProcedure {
 		if (((itemstack).getItem() == SourBerriesItem.block)) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:oxeye_danish")});
+			}
+		}
+		if (((itemstack).getItem() == SugarBeetItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottled_sugar_beet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottle_of_molasses")});
 			}
 		}
 	}

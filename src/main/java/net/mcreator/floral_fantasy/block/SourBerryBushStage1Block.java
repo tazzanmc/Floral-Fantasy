@@ -59,7 +59,6 @@ import net.minecraft.block.Block;
 
 import net.mcreator.floral_fantasy.procedures.SourBerryBushStage1UpdateTickProcedure;
 import net.mcreator.floral_fantasy.procedures.SourBerryBushEntityCollidesInTheBlockProcedure;
-import net.mcreator.floral_fantasy.procedures.DestroyIfAboveAirProcedure;
 import net.mcreator.floral_fantasy.item.UnripeSourBerriesItem;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
@@ -154,25 +153,6 @@ public class SourBerryBushStage1Block extends FloralFantasyModElements.ModElemen
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(Blocks.AIR, (int) (0)));
-		}
-
-		@Override
-		public void neighborChanged(BlockState blockstate, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-			super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
-			} else {
-			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DestroyIfAboveAirProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

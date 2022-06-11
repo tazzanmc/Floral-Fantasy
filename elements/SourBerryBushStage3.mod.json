@@ -124,9 +124,6 @@
     "onRightClicked": {
       "name": "SourBerryBushStage3OnBlockRightClicked"
     },
-    "onNeighbourBlockChanges": {
-      "name": "DestroyIfAboveAir"
-    },
     "onTickUpdate": {
       "name": "SourBerryBushStage1UpdateTick"
     },

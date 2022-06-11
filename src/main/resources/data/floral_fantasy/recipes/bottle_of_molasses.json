@@ -1,0 +1,12 @@
+{
+  "group": "floral_fantasy",
+  "type": "minecraft:smelting",
+  "experience": 0,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "floral_fantasy:bottled_sugar_beet"
+  },
+  "result": {
+    "item": "floral_fantasy:bottle_of_molasses"
+  }
+}

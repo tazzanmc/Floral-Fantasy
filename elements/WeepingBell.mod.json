@@ -55,7 +55,7 @@
       "value": "PLANTS"
     },
     "tickRate": 10,
-    "tickRandomly": false,
+    "tickRandomly": true,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
@@ -121,7 +121,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
+    "onTickUpdate": {
       "name": "DestroyIfAboveAir"
     },
     "spawnWorldTypes": [],

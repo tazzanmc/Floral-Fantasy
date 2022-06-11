@@ -112,5 +112,8 @@ public class SourBerryBushStage1UpdateTickProcedure {
 				}
 			}
 		}
+		if ((!(world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)).isSolid()))) {
+			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+		}
 	}
 }

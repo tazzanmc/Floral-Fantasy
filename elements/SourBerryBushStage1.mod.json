@@ -121,9 +121,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
-      "name": "DestroyIfAboveAir"
-    },
     "onTickUpdate": {
       "name": "SourBerryBushStage1UpdateTick"
     },

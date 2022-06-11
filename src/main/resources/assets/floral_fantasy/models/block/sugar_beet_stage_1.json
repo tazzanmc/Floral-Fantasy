@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "floral_fantasy:blocks/sugar_beets_stage1",
+    "particle": "floral_fantasy:blocks/sugar_beets_stage1"
+  }
+}
