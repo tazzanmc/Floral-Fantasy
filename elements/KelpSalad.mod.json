@@ -3,24 +3,24 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "bottle_of_molasses",
+    "texture": "kelp_salad",
     "customModelName": "Normal",
-    "name": "Bottle Of Molasses",
+    "name": "Kelp Salad",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 16,
-    "nutritionalValue": 3,
-    "saturation": 0.6,
-    "eatingSpeed": 40,
+    "stackSize": 1,
+    "nutritionalValue": 5,
+    "saturation": 6.0,
+    "eatingSpeed": 28,
     "resultItem": {
-      "value": "Items.GLASS_BOTTLE"
+      "value": "Items.BOWL"
     },
     "forDogs": false,
-    "isAlwaysEdible": true,
-    "animation": "drink",
+    "isAlwaysEdible": false,
+    "animation": "eat",
     "hasGlow": false
   }
 }

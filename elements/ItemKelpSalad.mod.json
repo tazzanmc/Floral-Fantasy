@@ -6,16 +6,10 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "bottled_sugar_beet",
+    "group": "kelp_salad",
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:SugarBeet"
-      },
-      {
-        "value": "Items.GLASS_BOTTLE"
-      },
-      {
         "value": ""
       },
       {
@@ -25,22 +19,28 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.PUMPKIN_SEEDS"
+      },
+      {
+        "value": "Blocks.KELP"
+      },
+      {
+        "value": "Blocks.RED_MUSHROOM"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.BOWL"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BottledSugarBeet"
+      "value": "CUSTOM:KelpSalad"
     },
-    "name": "bottled_sugar_beet",
+    "name": "kelp_salad",
     "namespace": "mod"
   }
 }

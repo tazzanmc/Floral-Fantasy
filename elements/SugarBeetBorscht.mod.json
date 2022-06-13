@@ -3,24 +3,24 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "bottle_of_molasses",
+    "texture": "sugar_beet_borscht",
     "customModelName": "Normal",
-    "name": "Bottle Of Molasses",
+    "name": "Sugar Beet Borscht",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 16,
-    "nutritionalValue": 3,
-    "saturation": 0.6,
-    "eatingSpeed": 40,
+    "stackSize": 1,
+    "nutritionalValue": 7,
+    "saturation": 8.4,
+    "eatingSpeed": 36,
     "resultItem": {
-      "value": "Items.GLASS_BOTTLE"
+      "value": "Items.BOWL"
     },
     "forDogs": false,
-    "isAlwaysEdible": true,
-    "animation": "drink",
+    "isAlwaysEdible": false,
+    "animation": "eat",
     "hasGlow": false
   }
 }

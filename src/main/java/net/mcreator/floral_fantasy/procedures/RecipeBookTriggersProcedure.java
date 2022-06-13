@@ -171,10 +171,29 @@ public class RecipeBookTriggersProcedure {
 		}
 		if (((itemstack).getItem() == SugarBeetItem.block)) {
 			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_from_sugar_beet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottled_sugar_beet")});
 			}
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottle_of_molasses")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_beet_soup")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_beet_borscht")});
+			}
+		}
+		if (((itemstack).getItem() == Items.BEETROOT)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:beetroot_borscht")});
+			}
+		}
+		if (((itemstack).getItem() == Blocks.KELP.asItem())) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:kelp_salad")});
 			}
 		}
 	}

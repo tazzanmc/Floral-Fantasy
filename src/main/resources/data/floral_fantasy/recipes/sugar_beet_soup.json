@@ -1,0 +1,31 @@
+{
+  "group": "beetroot_soup",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:sugar_beet_soup",
+    "count": 1
+  }
+}

@@ -6,41 +6,41 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "bottled_sugar_beet",
+    "group": "borscht",
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:SugarBeet"
+        "value": "Items.POTATO"
       },
       {
-        "value": "Items.GLASS_BOTTLE"
+        "value": "Items.PORKCHOP"
       },
       {
-        "value": ""
+        "value": "Items.CARROT"
       },
       {
-        "value": ""
+        "value": "Items.BEETROOT"
       },
       {
-        "value": ""
+        "value": "Items.BEETROOT"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "Items.BEETROOT"
       },
       {
         "value": ""
+      },
+      {
+        "value": "Items.BOWL"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BottledSugarBeet"
+      "value": "CUSTOM:BeetrootBorscht"
     },
-    "name": "bottled_sugar_beet",
+    "name": "beetroot_borscht",
     "namespace": "mod"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "group": "sugar",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    },
+    {
+      "item": "floral_fantasy:sugar_beet"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar",
+    "count": 2
+  }
+}

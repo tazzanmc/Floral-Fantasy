@@ -5,24 +5,24 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
-    "group": "bottled_sugar_beet",
+    "recipeRetstackSize": 2,
+    "group": "sugar",
     "recipeShapeless": true,
     "recipeSlots": [
+      {
+        "value": ""
+      },
       {
         "value": "CUSTOM:SugarBeet"
       },
       {
-        "value": "Items.GLASS_BOTTLE"
-      },
-      {
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:SugarBeet"
       },
       {
-        "value": ""
+        "value": "CUSTOM:SugarBeet"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BottledSugarBeet"
+      "value": "Items.SUGAR"
     },
-    "name": "bottled_sugar_beet",
+    "name": "sugar_from_sugar_beet",
     "namespace": "mod"
   }
 }
