@@ -44,9 +44,8 @@ public class IgnitionOnEffectActiveTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((!(entity.isSneaking()))
-				|| ((((entity.getMotion().getX()) >= 0.5) || ((entity.getMotion().getZ()) >= 0.5)) || ((entity.getMotion().getY()) >= 0.5)))) {
-			entity.setFire((int) (1 + ((new Object() {
+		if ((!(entity.isSneaking()))) {
+			entity.setFire((int) ((1 + (new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -57,7 +56,7 @@ public class IgnitionOnEffectActiveTickProcedure {
 					}
 					return 0;
 				}
-			}.check(entity)) * 2)));
+			}.check(entity))) * 2));
 			world.addParticle(ParticleTypes.FLAME, x, y, z, 0, 0.15, 0);
 		}
 	}

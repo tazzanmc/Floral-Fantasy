@@ -1,7 +1,12 @@
 package net.mcreator.floral_fantasy.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
@@ -49,11 +54,24 @@ public class CornflowerCakePlaceProcedure {
 		if (entity instanceof LivingEntity) {
 			((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
 		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(CornflowerCakeItem.block);
-			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-					((PlayerEntity) entity).container.func_234641_j_());
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).isSolid())) {
+			if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
+				if (entity instanceof PlayerEntity) {
+					ItemStack _stktoremove = new ItemStack(CornflowerCakeItem.block);
+					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+							((PlayerEntity) entity).container.func_234641_j_());
+				}
+			}
+			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), CornflowerCakeFullBlock.block.getDefaultState(), 3);
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.place")),
+						SoundCategory.BLOCKS, (float) 1, (float) 1);
+			} else {
+				((World) world).playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.place")),
+						SoundCategory.BLOCKS, (float) 1, (float) 1, false);
+			}
 		}
-		world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), CornflowerCakeFullBlock.block.getDefaultState(), 3);
 	}
 }

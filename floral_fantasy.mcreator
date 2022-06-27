@@ -2742,141 +2742,6 @@
       }
     },
     {
-      "name": "CripplingPotion",
-      "type": "potion",
-      "sortid": 200,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crippling_potion"
-    },
-    {
-      "name": "LongCripplingPotion",
-      "type": "potion",
-      "sortid": 201,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "long_crippling_potion"
-    },
-    {
-      "name": "StrongCripplingPotion",
-      "type": "potion",
-      "sortid": 202,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strong_crippling_potion"
-    },
-    {
-      "name": "DebilitationPotion",
-      "type": "potion",
-      "sortid": 203,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "debilitation_potion"
-    },
-    {
-      "name": "LongDebilitationPotion",
-      "type": "potion",
-      "sortid": 204,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "long_debilitation_potion"
-    },
-    {
-      "name": "StrongDebilitationPotion",
-      "type": "potion",
-      "sortid": 205,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strong_debilitation_potion"
-    },
-    {
-      "name": "FeebleMindednessPotion",
-      "type": "potion",
-      "sortid": 206,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "feeble_mindedness_potion"
-    },
-    {
-      "name": "LongFeebleMindednessPotion",
-      "type": "potion",
-      "sortid": 207,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "long_feeble_mindedness_potion"
-    },
-    {
-      "name": "StrongFeebleMindednessPotion",
-      "type": "potion",
-      "sortid": 208,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strong_feeble_mindedness_potion"
-    },
-    {
-      "name": "PurgingPotion",
-      "type": "potion",
-      "sortid": 209,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "purging_potion"
-    },
-    {
-      "name": "LongPurgingPotion",
-      "type": "potion",
-      "sortid": 210,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "long_purging_potion"
-    },
-    {
-      "name": "StrongPurgingPotion",
-      "type": "potion",
-      "sortid": 211,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strong_purging_potion"
-    },
-    {
-      "name": "IgnitionPotion",
-      "type": "potion",
-      "sortid": 212,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ignition_potion"
-    },
-    {
-      "name": "LongIgnitionPotion",
-      "type": "potion",
-      "sortid": 213,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "long_ignition_potion"
-    },
-    {
-      "name": "StrongIgnitionPotion",
-      "type": "potion",
-      "sortid": 214,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strong_ignition_potion"
-    },
-    {
       "name": "CripplingInfusionFoodEaten",
       "type": "procedure",
       "sortid": 215,
@@ -3073,6 +2938,985 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "armor_pedicel_boots"
+    },
+    {
+      "name": "RichChocolateCakePlace",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_place",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice5Eat",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_5_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemBeetrootBorscht",
+      "type": "recipe",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_beetroot_borscht"
+    },
+    {
+      "name": "ItemBottleOfMolasses",
+      "type": "recipe",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_bottle_of_molasses"
+    },
+    {
+      "name": "SugarBeetUpdateTick",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SourBerryBushStage1",
+      "type": "block",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_1"
+    },
+    {
+      "name": "SourBerryBushStage2",
+      "type": "block",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_2"
+    },
+    {
+      "name": "SourBerryBushStage3",
+      "type": "block",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_3"
+    },
+    {
+      "name": "SourBerryBushStage4",
+      "type": "block",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_4"
+    },
+    {
+      "name": "ItemSugarFromSugarBeet",
+      "type": "recipe",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_sugar_from_sugar_beet"
+    },
+    {
+      "name": "RichChocolateCakeSlice2Eat",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_2_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice4Eat",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_4_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OxeyeDanish",
+      "type": "food",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oxeye_danish"
+    },
+    {
+      "name": "BeetrootBorscht",
+      "type": "food",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "beetroot_borscht"
+    },
+    {
+      "name": "ItemRichChocolateCake",
+      "type": "recipe",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_rich_chocolate_cake"
+    },
+    {
+      "name": "WhenBlockBroken",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "when_block_broken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SugarBeetSeedsRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_seeds_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCake",
+      "type": "item",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake"
+    },
+    {
+      "name": "SugarBeetSeeds",
+      "type": "item",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_seeds"
+    },
+    {
+      "name": "VolatileEmber",
+      "type": "item",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatile_ember"
+    },
+    {
+      "name": "RichChocolateCakeSlice1Eat",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_1_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SugarBeetSoup",
+      "type": "food",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_soup"
+    },
+    {
+      "name": "BottleOfMolasses",
+      "type": "food",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottle_of_molasses"
+    },
+    {
+      "name": "ConcentratedEmber",
+      "type": "item",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "concentrated_ember"
+    },
+    {
+      "name": "ItemBottledSugarBeet",
+      "type": "recipe",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_bottled_sugar_beet"
+    },
+    {
+      "name": "KelpSalad",
+      "type": "food",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kelp_salad"
+    },
+    {
+      "name": "OxeyeDanishFoodEaten",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oxeye_danish_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PyreticComposite",
+      "type": "item",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyretic_composite"
+    },
+    {
+      "name": "RichChocolateCakeSlice3Eat",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_3_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Volatility",
+      "type": "potioneffect",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatility"
+    },
+    {
+      "name": "SourBerryBushGen",
+      "type": "structure",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_gen"
+    },
+    {
+      "name": "ItemSugarBeetBorscht",
+      "type": "recipe",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_sugar_beet_borscht"
+    },
+    {
+      "name": "BottledSugarBeet",
+      "type": "item",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottled_sugar_beet"
+    },
+    {
+      "name": "SugarBeet",
+      "type": "food",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet"
+    },
+    {
+      "name": "SugarBeetStage0",
+      "type": "block",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_0"
+    },
+    {
+      "name": "SugarBeetBorscht",
+      "type": "food",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_borscht"
+    },
+    {
+      "name": "SugarBeetStage1",
+      "type": "block",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_1"
+    },
+    {
+      "name": "RichChocolateCakeFullEat",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_full_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SugarBeetStage2",
+      "type": "block",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_2"
+    },
+    {
+      "name": "SugarBeetStage3",
+      "type": "block",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sugar_beet_stage_3"
+    },
+    {
+      "name": "ItemPyreticComposite",
+      "type": "recipe",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_pyretic_composite"
+    },
+    {
+      "name": "BlockSugarBeetStage3",
+      "type": "loottable",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_sugar_beet_stage_3"
+    },
+    {
+      "name": "ItemOxeyeDanish",
+      "type": "recipe",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_oxeye_danish"
+    },
+    {
+      "name": "SourBerries",
+      "type": "food",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berries"
+    },
+    {
+      "name": "RichChocolateCakeSlice6Eat",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_6_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BottledSugarBeetRightClickedInAir",
+      "type": "procedure",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bottled_sugar_beet_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SourBerryBushEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_entity_collides_in_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemSugarBeetSoup",
+      "type": "recipe",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_sugar_beet_soup"
+    },
+    {
+      "name": "VolatilityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "volatility_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemKelpSalad",
+      "type": "recipe",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_kelp_salad"
+    },
+    {
+      "name": "RichChocolateCakeFull",
+      "type": "block",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_full"
+    },
+    {
+      "name": "GrowingSugarBeetBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "growing_sugar_beet_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UnripeSourBerries",
+      "type": "food",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unripe_sour_berries"
+    },
+    {
+      "name": "MobPrimalEnderman",
+      "type": "loottable",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mob_primal_enderman"
+    },
+    {
+      "name": "RichChocolateCakeSlice1",
+      "type": "block",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_1"
+    },
+    {
+      "name": "SourBerryBushStage3OnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_3_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RichChocolateCakeSlice2",
+      "type": "block",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_2"
+    },
+    {
+      "name": "RichChocolateCakeSlice3",
+      "type": "block",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_3"
+    },
+    {
+      "name": "RichChocolateCakeSlice4",
+      "type": "block",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_4"
+    },
+    {
+      "name": "RichChocolateCakeSlice5",
+      "type": "block",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_5"
+    },
+    {
+      "name": "RichChocolateCakeSlice6",
+      "type": "block",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rich_chocolate_cake_slice_6"
+    },
+    {
+      "name": "SourBerryBushStage1UpdateTick",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sour_berry_bush_stage_1_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Planting",
+      "type": "procedure",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "planting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -3083,22 +3927,24 @@
       "item.floral_fantasy.gnoll_bone": "Gnoll Bone",
       "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.minecraft.splash_potion.effect.feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
+      "item.floral_fantasy.oxeye_danish": "Oxeye Danish",
       "effect.crippling": "Crippling",
       "block.floral_fantasy.potted_death_bloom": "Potted Death Bloom",
       "item.minecraft.lingering_potion.effect.ignition_potion": "Lingering Potion of Ignition",
-      "item.minecraft.tipped_arrow.effect.strong_crippling_potion": "Arrow of Crippling",
       "advancements.all_pastries.descr": "Bake every pastry from Floral Fantasy",
-      "item.floral_fantasy.shade_rod": "Shade Rod",
+      "item.minecraft.tipped_arrow.effect.strong_crippling_potion": "Arrow of Crippling",
       "item.floral_fantasy.death_bloom_pie": "Death Bloom Pie",
+      "item.floral_fantasy.shade_rod": "Shade Rod",
+      "item.floral_fantasy.kelp_salad": "Kelp Salad",
       "advancements.shade_rod_advancement.descr": "Relieve a Shade of its rod",
       "block.floral_fantasy.volatile_breath": "Volatile Breath",
       "block.floral_fantasy.pyretic_stipule": "Pyretic Stipule",
       "item.minecraft.splash_potion.effect.ignition_potion": "Splash Potion of Ignition",
       "item.minecraft.potion.effect.purging_potion": "Potion of Purging",
+      "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
       "item.minecraft.splash_potion.effect.debilitation_potion": "Splash Potion of Debilitation",
       "item.minecraft.tipped_arrow.effect.long_crippling_potion": "Arrow of Crippling",
       "item.minecraft.tipped_arrow.effect.crippling_potion": "Arrow of Crippling",
-      "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
       "effect.purging": "Purging",
       "block.floral_fantasy.silt": "Silt",
       "item.minecraft.potion.effect.strong_debilitation_potion": "Potion of Debilitation",
@@ -3112,29 +3958,42 @@
       "item.minecraft.tipped_arrow.effect.ignition_potion": "Arrow of Ignition",
       "item.minecraft.lingering_potion.effect.strong_crippling_potion": "Lingering Potion of Crippling",
       "item.minecraft.potion.effect.strong_ignition_potion": "Potion of Ignition",
-      "block.floral_fantasy.grand_anemone_flower": "Grand Anemone Flower",
+      "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "item.minecraft.potion.effect.debilitation_potion": "Potion of Debilitation",
+      "block.floral_fantasy.sugar_beet_stage_0": "Sugar Beet Crop",
+      "block.floral_fantasy.sugar_beet_stage_1": "Sugar Beet Crop",
       "item.floral_fantasy.baby_wader_spawn_egg": "Wader Spawn Egg",
+      "block.floral_fantasy.sugar_beet_stage_2": "Sugar Beet Crop",
+      "block.floral_fantasy.sugar_beet_stage_3": "Sugar Beet Crop",
+      "item.floral_fantasy.sugar_beet": "Sugar Beet",
       "effect.ignition": "Ignition",
       "item.minecraft.splash_potion.effect.long_feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
       "item.floral_fantasy.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.minecraft.tipped_arrow.effect.strong_purging_potion": "Arrow of Purging",
+      "block.floral_fantasy.rich_chocolate_cake_slice_6": "Cornflower Cake Full",
+      "block.floral_fantasy.rich_chocolate_cake_slice_5": "Cornflower Cake Full",
+      "block.floral_fantasy.rich_chocolate_cake_slice_4": "Cornflower Cake Full",
       "item.floral_fantasy.debilitation_infusion": "Debilitation Infusion",
+      "block.floral_fantasy.rich_chocolate_cake_slice_3": "Cornflower Cake Full",
       "item.floral_fantasy.forgotten_skeleton_spawn_egg": "Forgotten Skeleton Spawn Egg",
       "item.minecraft.splash_potion.effect.purging_potion": "Splash Potion of Purging",
       "item.minecraft.lingering_potion.effect.strong_ignition_potion": "Lingering Potion of Ignition",
+      "block.floral_fantasy.rich_chocolate_cake_slice_2": "Cornflower Cake Full",
       "item.minecraft.lingering_potion.effect.long_debilitation_potion": "Lingering Potion of Debilitation",
+      "block.floral_fantasy.rich_chocolate_cake_slice_1": "Cornflower Cake Full",
+      "item.floral_fantasy.unripe_sour_berries": "Unripe Sour Berries",
       "item.minecraft.tipped_arrow.effect.long_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "item.minecraft.tipped_arrow.effect.long_purging_potion": "Arrow of Purging",
       "item.minecraft.splash_potion.effect.crippling_potion": "Splash Potion of Crippling",
       "item.floral_fantasy.hydrangea_muffin": "Hydrangea Muffin",
+      "item.floral_fantasy.sour_berries": "Sour Berries",
       "entity.ores_and_oddities.forgotten_skeleton": "Forgotten Skeleton",
       "item.minecraft.lingering_potion.effect.strong_debilitation_potion": "Lingering Potion of Debilitation",
       "item.floral_fantasy.shade_shot": "Shade Shot",
       "block.floral_fantasy.potted_kaleidoscope_rose": "Potted Kaleidoscope Rose",
-      "item.minecraft.tipped_arrow.effect.long_ignition_potion": "Arrow of Ignition",
       "item.floral_fantasy.crippling_infusion": "Crippling Infusion",
+      "item.minecraft.tipped_arrow.effect.long_ignition_potion": "Arrow of Ignition",
       "item.ores_and_oddities.poppy_pastry": "Poppy Pastry",
       "item.floral_fantasy.pedicel_armor_helmet": "Pedicel Helmet",
       "block.floral_fantasy.cornflower_cake_full": "Cornflower Cake Full",
@@ -3146,6 +4005,8 @@
       "item.ores_and_oddities.death_bloom_pie": "Death Bloom Pie",
       "block.floral_fantasy.pyretic_pedicel": "Pyretic Pedicel",
       "item.floral_fantasy.pedicel_armor_boots": "Pedicel Boots",
+      "item.floral_fantasy.bottled_sugar_beet": "Bottled Sugar Beet",
+      "item.floral_fantasy.beetroot_borscht": "Beetroot Borscht",
       "item.minecraft.potion.effect.long_crippling_potion": "Potion of Crippling",
       "item.minecraft.potion.effect.strong_purging_potion": "Potion of Purging",
       "advancements.all_pastries.title": "Fresh Out the Oven(?)",
@@ -3177,6 +4038,7 @@
       "block.floral_fantasy.polised_end_stone": "Polised End Stone",
       "item.floral_fantasy.pyretic_stipule_item": "Pyretic Stipule",
       "item.minecraft.splash_potion.effect.strong_debilitation_potion": "Splash Potion of Debilitation",
+      "effect.volatility": "Volatility",
       "item.floral_fantasy.poppy_pastry": "Poppy Pastry",
       "block.floral_fantasy.polished_end_stone_wall": "Polised End Stone Wall",
       "item.minecraft.splash_potion.effect.long_crippling_potion": "Splash Potion of Crippling",
@@ -3188,11 +4050,14 @@
       "block.ores_and_oddities.potted_anemone_flower": "Potted Anemone Flower",
       "item.minecraft.splash_potion.effect.strong_crippling_potion": "Splash Potion of Crippling",
       "effect.debilitation": "Debilitation",
+      "item.floral_fantasy.pyretic_composite": "Pyretic Composite",
       "item.minecraft.lingering_potion.effect.crippling_potion": "Lingering Potion of Crippling",
       "item.minecraft.potion.effect.long_purging_potion": "Potion of Purging",
       "item.floral_fantasy.pedicel_armor_chestplate": "Pedicel Chestplate",
       "item.minecraft.splash_potion.effect.long_purging_potion": "Splash Potion of Purging",
+      "item.floral_fantasy.rich_chocolate_cake": "Rich Chocolate Cake",
       "block.floral_fantasy.death_bloom": "Death Bloom",
+      "block.floral_fantasy.rich_chocolate_cake_full": "Cornflower Cake Full",
       "item.minecraft.tipped_arrow.effect.feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "entity.floral_fantasy.primal_enderman": "Primal Enderman",
       "item.minecraft.potion.effect.strong_crippling_potion": "Potion of Crippling",
@@ -3215,6 +4080,9 @@
       "block.ores_and_oddities.cornflower_cake_full": "Cornflower Cake Full",
       "entity.floral_fantasy.shade": "Shade",
       "block.floral_fantasy.polished_end_stone_slab": "Polised End Stone Slab",
+      "item.floral_fantasy.sugar_beet_soup": "Sugar Beet Soup",
+      "item.floral_fantasy.volatile_ember": "Volatile Ember",
+      "item.floral_fantasy.sugar_beet_seeds": "Sugar Beet Seeds",
       "item.ores_and_oddities.vicious_carver": "Vicious Carver",
       "entity.floral_fantasy.wader": "Wader",
       "item.floral_fantasy.purging_infusion": "Purging Infusion",
@@ -3223,11 +4091,18 @@
       "block.floral_fantasy.hydrangea_bush": "Hydrangea Bush",
       "entity.floral_fantasy.baby_wader": "Wader",
       "item.minecraft.lingering_potion.effect.long_purging_potion": "Lingering Potion of Purging",
+      "block.floral_fantasy.sour_berry_bush_stage_3": "Sour Berry Bush",
+      "block.floral_fantasy.sour_berry_bush_stage_4": "Sour Berry Bush",
       "block.floral_fantasy.potted_weeping_bell": "Potted Weeping Bell",
+      "block.floral_fantasy.sour_berry_bush_stage_1": "Sour Berry Bush",
+      "block.floral_fantasy.sour_berry_bush_stage_2": "Sour Berry Bush",
       "item.floral_fantasy.wader_egg": "Wader Egg",
+      "item.floral_fantasy.bottle_of_molasses": "Bottle Of Molasses",
       "block.floral_fantasy.infuser": "Infuser",
       "item.minecraft.potion.effect.feeble_mindedness_potion": "Potion of Feeble Mindedness",
+      "item.floral_fantasy.sugar_beet_borscht": "Sugar Beet Borscht",
       "block.floral_fantasy.feverish_silt": "Feverish Silt",
+      "item.floral_fantasy.concentrated_ember": "Concentrated Ember",
       "block.ores_and_oddities.anemone_flower": "Anemone Flower",
       "block.floral_fantasy.potted_anemone_flower": "Potted Anemone Flower",
       "item.ores_and_oddities.cornflower_cake": "Cornflower Cake",

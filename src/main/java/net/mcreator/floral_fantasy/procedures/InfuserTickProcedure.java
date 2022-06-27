@@ -18,7 +18,7 @@ import net.mcreator.floral_fantasy.item.GnollBoneItem;
 import net.mcreator.floral_fantasy.item.FeebleMindednessInfusionItem;
 import net.mcreator.floral_fantasy.item.DebilitationInfusionItem;
 import net.mcreator.floral_fantasy.item.CripplingInfusionItem;
-import net.mcreator.floral_fantasy.item.ArgentEmberItem;
+import net.mcreator.floral_fantasy.item.ConcentratedEmberItem;
 import net.mcreator.floral_fantasy.FloralFantasyMod;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -243,7 +243,7 @@ public class InfuserTickProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == ArgentEmberItem.block) && ((new Object() {
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == ConcentratedEmberItem.block) && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);

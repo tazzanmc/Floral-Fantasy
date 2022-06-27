@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 2,
+    "group": "sugar",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Items.SUGAR"
+    },
+    "name": "sugar_from_sugar_beet",
+    "namespace": "mod"
+  }
+}

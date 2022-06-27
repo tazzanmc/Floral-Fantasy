@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "floral_fantasy:blocks/sugar_beets_stage3"
+  }
+}

@@ -14,7 +14,7 @@
     "stackSize": 64,
     "nutritionalValue": 1,
     "saturation": 0.5,
-    "eatingSpeed": 16,
+    "eatingSpeed": 32,
     "resultItem": {
       "value": ""
     },

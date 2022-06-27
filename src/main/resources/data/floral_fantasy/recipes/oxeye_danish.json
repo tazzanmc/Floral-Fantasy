@@ -1,0 +1,22 @@
+{
+  "group": "pastry",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:oxeye_daisy"
+    },
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:oxeye_danish",
+    "count": 1
+  }
+}

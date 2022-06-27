@@ -1,0 +1,12 @@
+{
+  "group": "bottle_of_molasses",
+  "type": "minecraft:smelting",
+  "experience": 0,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "floral_fantasy:deleted_mod_element"
+  },
+  "result": {
+    "item": "floral_fantasy:deleted_mod_element"
+  }
+}

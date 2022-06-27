@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "cross": "sour_berry_bush_stage2"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -55,19 +55,19 @@
       "value": "PLANTS"
     },
     "tickRate": 10,
-    "tickRandomly": false,
+    "tickRandomly": true,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "FOLIAGE",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "XZ",
     "aiPathNodeType": "OPEN",
-    "flammability": 0,
+    "flammability": 60,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
@@ -121,7 +121,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
+    "onTickUpdate": {
       "name": "DestroyIfAboveAir"
     },
     "spawnWorldTypes": [],

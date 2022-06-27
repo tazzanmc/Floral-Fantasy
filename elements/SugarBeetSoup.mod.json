@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "sugar_beet_soup",
+    "customModelName": "Normal",
+    "name": "Sugar Beet Soup",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 6,
+    "saturation": 7.2,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": "Items.BOWL"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

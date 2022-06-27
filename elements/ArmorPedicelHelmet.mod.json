@@ -12,7 +12,7 @@
       "value": "Items.IRON_HELMET"
     },
     "smithingInputAdditionStack": {
-      "value": "CUSTOM:PyreticPlate"
+      "value": "CUSTOM:PyreticComposite"
     },
     "smithingReturnStack": {
       "value": "CUSTOM:PedicelArmor.helmet"

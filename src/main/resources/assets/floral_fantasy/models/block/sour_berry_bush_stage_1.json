@@ -1,0 +1,8 @@
+{
+  "parent": "floral_fantasy:custom/sour_berry_bush_stage1",
+  "textures": {
+    "all": "floral_fantasy:blocks/sour_berry_bush_stage0",
+    "particle": "floral_fantasy:blocks/sour_berry_bush_stage0",
+    "cross": "floral_fantasy:blocks/sour_berry_bush_stage0"
+  }
+}

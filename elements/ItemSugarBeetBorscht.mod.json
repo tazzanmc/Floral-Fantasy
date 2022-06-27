@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "borscht",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.POTATO"
+      },
+      {
+        "value": "Items.PORKCHOP"
+      },
+      {
+        "value": "Items.CARROT"
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": "CUSTOM:SugarBeet"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.BOWL"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SugarBeetBorscht"
+    },
+    "name": "sugar_beet_borscht",
+    "namespace": "mod"
+  }
+}

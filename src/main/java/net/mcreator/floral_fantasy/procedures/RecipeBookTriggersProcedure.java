@@ -13,8 +13,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.floral_fantasy.item.SugarBeetItem;
+import net.mcreator.floral_fantasy.item.SourBerriesItem;
 import net.mcreator.floral_fantasy.item.ShadeRodItem;
 import net.mcreator.floral_fantasy.item.PyreticStipuleItemItem;
+import net.mcreator.floral_fantasy.item.PyreticPlateItem;
 import net.mcreator.floral_fantasy.item.ArgentEmberItem;
 import net.mcreator.floral_fantasy.item.AncientBoneItem;
 import net.mcreator.floral_fantasy.block.WeepingBellBlock;
@@ -137,6 +140,60 @@ public class RecipeBookTriggersProcedure {
 		if (((itemstack).getItem() == PyreticStipuleItemItem.block)) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:stick_pyretic_stipule")});
+			}
+		}
+		if (((itemstack).getItem() == PyreticPlateItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_composite")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_helmet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_chestplate")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_leggings")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_boots")});
+			}
+		}
+		if (((itemstack).getItem() == Items.COCOA_BEANS)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:rich_chocolate_cake")});
+			}
+		}
+		if (((itemstack).getItem() == SourBerriesItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:oxeye_danish")});
+			}
+		}
+		if (((itemstack).getItem() == SugarBeetItem.block)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_from_sugar_beet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottled_sugar_beet")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:bottle_of_molasses")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_beet_soup")});
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_beet_borscht")});
+			}
+		}
+		if (((itemstack).getItem() == Items.BEETROOT)) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:beetroot_borscht")});
+			}
+		}
+		if (((itemstack).getItem() == Blocks.KELP.asItem())) {
+			if (entity instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:kelp_salad")});
 			}
 		}
 	}

@@ -1,0 +1,42 @@
+{
+  "group": "pyretic_composite",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "1": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "2": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "3": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "4": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "5": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "6": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "7": {
+      "item": "floral_fantasy:pyretic_plate"
+    },
+    "8": {
+      "item": "floral_fantasy:pyretic_plate"
+    }
+  },
+  "result": {
+    "item": "floral_fantasy:pyretic_composite",
+    "count": 1
+  }
+}

@@ -18,6 +18,6 @@ public class DandyDandelionCrumbleFoodEatenProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SATURATION, (int) 6, (int) 0));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SATURATION, (int) 4, (int) 0));
 	}
 }

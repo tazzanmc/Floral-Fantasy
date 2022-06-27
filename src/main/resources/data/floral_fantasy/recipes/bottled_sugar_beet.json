@@ -1,0 +1,16 @@
+{
+  "group": "bottled_sugar_beet",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_fantasy:deleted_mod_element"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "floral_fantasy:deleted_mod_element",
+    "count": 1
+  }
+}
