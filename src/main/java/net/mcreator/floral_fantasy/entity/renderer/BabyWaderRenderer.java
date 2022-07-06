@@ -1,3 +1,4 @@
+
 package net.mcreator.floral_fantasy.entity.renderer;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -26,6 +27,7 @@ public class BabyWaderRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(BabyWaderEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelbaby_wader(), 0.25f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("floral_fantasy:textures/baby_wader.png");
@@ -50,6 +52,7 @@ public class BabyWaderRenderer {
 		private final ModelRenderer legs;
 		private final ModelRenderer leftleg;
 		private final ModelRenderer rightleg;
+
 		public Modelbaby_wader() {
 			textureWidth = 32;
 			textureHeight = 32;
@@ -109,10 +112,12 @@ public class BabyWaderRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
 			this.head.rotateAngleX = f4 / (180F / (float) Math.PI);
 			this.rightleg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
 			this.leftleg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 		}
 	}
+
 }

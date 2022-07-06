@@ -28,6 +28,7 @@ public class PedicelArmorItem extends FloralFantasyModElements.ModElement {
 	public static final Item legs = null;
 	@ObjectHolder("floral_fantasy:pedicel_armor_boots")
 	public static final Item boots = null;
+
 	public PedicelArmorItem(FloralFantasyModElements instance) {
 		super(instance, 225);
 	}
@@ -101,4 +102,5 @@ public class PedicelArmorItem extends FloralFantasyModElements.ModElement {
 			}
 		}.setRegistryName("pedicel_armor_boots"));
 	}
+
 }

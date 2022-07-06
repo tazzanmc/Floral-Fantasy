@@ -48,16 +48,19 @@ import net.minecraft.block.Block;
 import net.mcreator.floral_fantasy.procedures.AnemoneFlowerUpdateTickProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class AnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:anemone_flower")
 	public static final Block block = null;
+
 	public AnemoneFlowerBlock(FloralFantasyModElements instance) {
 		super(instance, 8);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -75,8 +78,10 @@ public class AnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -106,6 +111,7 @@ public class AnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:anemone_flower"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
@@ -155,11 +161,17 @@ public class AnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.REGENERATION, 15, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)
 					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 0));
 			setRegistryName("anemone_flower");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 15;
 		}
 
 		@Override
@@ -190,14 +202,11 @@ public class AnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AnemoneFlowerUpdateTickProcedure.executeProcedure($_dependencies);
-			}
+
+			AnemoneFlowerUpdateTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

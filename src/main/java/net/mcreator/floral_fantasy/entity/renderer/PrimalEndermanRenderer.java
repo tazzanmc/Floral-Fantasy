@@ -1,3 +1,4 @@
+
 package net.mcreator.floral_fantasy.entity.renderer;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -34,6 +35,7 @@ public class PrimalEndermanRenderer {
 					{
 						this.addLayer(new GlowingLayer<>(this));
 					}
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("floral_fantasy:textures/primal_enderman.png");
@@ -75,6 +77,7 @@ public class PrimalEndermanRenderer {
 		private final ModelRenderer left_leg2;
 		private final ModelRenderer right_leg;
 		private final ModelRenderer right_leg2;
+
 		public Modelprimal_enderman() {
 			textureWidth = 64;
 			textureHeight = 64;
@@ -157,6 +160,7 @@ public class PrimalEndermanRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.right_arm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 			this.left_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
@@ -165,4 +169,5 @@ public class PrimalEndermanRenderer {
 			this.right_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
 		}
 	}
+
 }

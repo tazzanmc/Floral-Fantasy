@@ -1,23 +1,83 @@
 
 package net.mcreator.floral_fantasy.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.Direction;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.LockableLootTileEntity;
+import net.minecraft.pathfinding.PathNodeType;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.BlockItem;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ChestContainer;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.block.material.PushReaction;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.mcreator.floral_fantasy.procedures.SugarBeetUpdateTickProcedure;
+import net.mcreator.floral_fantasy.item.SugarBeetSeedsItem;
+import net.mcreator.floral_fantasy.FloralFantasyModElements;
+
+import javax.annotation.Nullable;
+
+import java.util.stream.Stream;
+import java.util.stream.IntStream;
+import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
-
 	@ObjectHolder("floral_fantasy:sugar_beet_stage_3")
 	public static final Block block = null;
-
 	@ObjectHolder("floral_fantasy:sugar_beet_stage_3")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public SugarBeetStage3Block(FloralFantasyModElements instance) {
 		super(instance, 274);
-
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
-
 	}
 
 	@Override
@@ -41,11 +101,9 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 	}
 
 	public static class CustomBlock extends Block {
-
 		public CustomBlock() {
-			super(Block.Properties.create(Material.PLANTS).sound(SoundType.CROP).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0)
-					.doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
-
+			super(Block.Properties.create(Material.PLANTS, MaterialColor.FOLIAGE).sound(SoundType.CROP).hardnessAndResistance(0f, 0f)
+					.setLightLevel(s -> 0).doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
 			setRegistryName("sugar_beet_stage_3");
 		}
 
@@ -101,17 +159,10 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-
-				SugarBeetUpdateTickProcedure.executeProcedure($_dependencies);
-			}
-
+			SugarBeetUpdateTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -136,11 +187,9 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 			TileEntity tileentity = world.getTileEntity(pos);
 			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
 		}
-
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
 
 		protected CustomTileEntity() {
@@ -150,23 +199,18 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 		@Override
 		public void read(BlockState blockState, CompoundNBT compound) {
 			super.read(blockState, compound);
-
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
-
 			ItemStackHelper.loadAllItems(compound, this.stacks);
-
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
-
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
-
 			return compound;
 		}
 
@@ -254,7 +298,6 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
-
 			return super.getCapability(capability, facing);
 		}
 
@@ -264,7 +307,5 @@ public class SugarBeetStage3Block extends FloralFantasyModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
-
 	}
-
 }

@@ -60,16 +60,17 @@ import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class WaderEntity extends FloralFantasyModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.875f, 1.563f)).build("wader").setRegistryName("wader");
+
 	public WaderEntity(FloralFantasyModElements instance) {
 		super(instance, 164);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WaderRenderer.ModelRegisterHandler());
@@ -105,9 +106,13 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
-					return WaderNaturalEntitySpawningConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+					return WaderNaturalEntitySpawningConditionProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				});
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -187,14 +192,11 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				WaderOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
-			}
+
+			WaderOnInitialEntitySpawnProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -207,16 +209,12 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("sourceentity", sourceentity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				WaderRightClickedOnEntityProcedure.executeProcedure($_dependencies);
-			}
+
+			WaderRightClickedOnEntityProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -227,15 +225,11 @@ public class WaderEntity extends FloralFantasyModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				WaderOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
-			}
+
+			WaderOnEntityTickUpdateProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

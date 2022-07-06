@@ -44,10 +44,11 @@ public class PrimalEndermanReplaceEndermanProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure PrimalEndermanReplaceEnderman!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure PrimalEndermanReplaceEnderman!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -65,18 +66,18 @@ public class PrimalEndermanReplaceEndermanProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure PrimalEndermanReplaceEnderman!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure PrimalEndermanReplaceEnderman!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure PrimalEndermanReplaceEnderman!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((entity instanceof EndermanEntity)) {
-			if ((Math.random() < 0.01)) {
+		Entity entity = (Entity) dependencies.get("entity");
+		if (entity instanceof EndermanEntity) {
+			if (Math.random() < 0.01) {
 				if (world instanceof ServerWorld) {
 					Entity entityToSpawn = new PrimalEndermanEntity.CustomEntity(PrimalEndermanEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles(x, y, z, (float) (entity.rotationYaw), (float) (entity.rotationPitch));
@@ -90,7 +91,7 @@ public class PrimalEndermanReplaceEndermanProcedure {
 				}
 				if (world instanceof World && !world.isRemote()) {
 					((World) world)
-							.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							.playSound(null, new BlockPos(x, y, z),
 									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 									SoundCategory.HOSTILE, (float) 1, (float) 1);

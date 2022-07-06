@@ -54,6 +54,7 @@ import java.util.Collections;
 public class KaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:kaleidoscope_rose")
 	public static final Block block = null;
+
 	public KaleidoscopeRoseBlock(FloralFantasyModElements instance) {
 		super(instance, 157);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -71,8 +72,10 @@ public class KaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -102,6 +105,7 @@ public class KaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:kaleidoscope_rose"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
@@ -111,6 +115,7 @@ public class KaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.ABSORPTION, 5,
@@ -118,6 +123,11 @@ public class KaleidoscopeRoseBlock extends FloralFantasyModElements.ModElement {
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f)
 							.jumpFactor(1.2000000000000002f).setLightLevel(s -> 2));
 			setRegistryName("kaleidoscope_rose");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 5;
 		}
 
 		@Override

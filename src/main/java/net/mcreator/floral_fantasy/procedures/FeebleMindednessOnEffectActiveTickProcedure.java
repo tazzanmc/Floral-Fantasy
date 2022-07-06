@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Collection;
 
 public class FeebleMindednessOnEffectActiveTickProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -20,7 +21,7 @@ public class FeebleMindednessOnEffectActiveTickProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity) {
-			((PlayerEntity) entity).giveExperiencePoints((int) -((((new Object() {
+			((PlayerEntity) entity).giveExperiencePoints((int) -(((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -31,7 +32,7 @@ public class FeebleMindednessOnEffectActiveTickProcedure {
 					}
 					return 0;
 				}
-			}.check(entity)) + 1) * ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)) / 5));
+			}.check(entity) + 1) * ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)) / 5));
 		}
 	}
 }

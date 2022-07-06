@@ -7,7 +7,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -15,23 +14,25 @@ import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.floral_fantasy.procedures.IgnitionOnEffectActiveTickProcedure;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class IgnitionPotionEffect {
 	@ObjectHolder("floral_fantasy:ignition")
 	public static final Effect potion = null;
+
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
+
 	public static class EffectCustom extends Effect {
-		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -366070);
 			setRegistryName("ignition");
-			potionIcon = new ResourceLocation("floral_fantasy:textures/ignition.png");
 		}
 
 		@Override
@@ -70,11 +71,11 @@ public class IgnitionPotionEffect {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				IgnitionOnEffectActiveTickProcedure.executeProcedure($_dependencies);
-			}
+
+			IgnitionOnEffectActiveTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

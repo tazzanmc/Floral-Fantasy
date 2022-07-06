@@ -25,6 +25,7 @@ import java.util.Collections;
 public class PolisedEndStoneBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:polised_end_stone")
 	public static final Block block = null;
+
 	public PolisedEndStoneBlock(FloralFantasyModElements instance) {
 		super(instance, 141);
 	}
@@ -35,6 +36,7 @@ public class PolisedEndStoneBlock extends FloralFantasyModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 9f).setLightLevel(s -> 0).harvestLevel(0)

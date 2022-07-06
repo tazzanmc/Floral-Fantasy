@@ -62,7 +62,8 @@ import java.util.EnumSet;
 public class ShadeEntity extends FloralFantasyModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1f, 1f))
-					.build("shade").setRegistryName("shade");
+			.build("shade").setRegistryName("shade");
+
 	public ShadeEntity(FloralFantasyModElements instance) {
 		super(instance, 5);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadeRenderer.ModelRegisterHandler());
@@ -94,6 +95,7 @@ public class ShadeEntity extends FloralFantasyModElements.ModElement {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				MonsterEntity::canMonsterSpawn);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -132,6 +134,7 @@ public class ShadeEntity extends FloralFantasyModElements.ModElement {
 				{
 					this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
 				}
+
 				public boolean shouldExecute() {
 					if (CustomEntity.this.getAttackTarget() != null && !CustomEntity.this.getMoveHelper().isUpdating()) {
 						return true;
@@ -184,7 +187,7 @@ public class ShadeEntity extends FloralFantasyModElements.ModElement {
 			this.goalSelector.addGoal(7, new AvoidEntityGoal(this, PlayerEntity.class, (float) 6, 1, 1.2));
 			this.goalSelector.addGoal(8, new AvoidEntityGoal(this, ServerPlayerEntity.class, (float) 6, 1, 1.2));
 			this.goalSelector.addGoal(9, new AvoidEntityGoal(this, BlazeEntity.class, (float) 6, 1, 1.2));
-			this.targetSelector.addGoal(10, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.targetSelector.addGoal(10, new HurtByTargetGoal(this).setCallsForHelp());
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override
 				public boolean shouldContinueExecuting() {

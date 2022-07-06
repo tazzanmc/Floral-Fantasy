@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -147,6 +147,7 @@
         "value": "extreme_hills_with_trees"
       }
     ],
-    "patchSize": 22
+    "patchSize": 22,
+    "generateAtAnyHeight": false
   }
 }

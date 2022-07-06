@@ -29,6 +29,7 @@ import net.minecraft.entity.ai.goal.FollowMobGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
@@ -42,6 +43,7 @@ public class OvergrownSkeletonEntity extends FloralFantasyModElements.ModElement
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.8f, 1.9f)).build("overgrown_skeleton").setRegistryName("overgrown_skeleton");
+
 	public OvergrownSkeletonEntity(FloralFantasyModElements instance) {
 		super(instance, 2);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new OvergrownSkeletonRenderer.ModelRegisterHandler());
@@ -58,6 +60,7 @@ public class OvergrownSkeletonEntity extends FloralFantasyModElements.ModElement
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -90,10 +93,15 @@ public class OvergrownSkeletonEntity extends FloralFantasyModElements.ModElement
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
 			this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 0.8));
 			this.goalSelector.addGoal(3, new FollowMobGoal(this, (float) 1, 10, 5));
-			this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setCallsForHelp());
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
 			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));

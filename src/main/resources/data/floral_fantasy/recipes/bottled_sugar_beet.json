@@ -3,14 +3,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:sugar_beet"
     },
     {
       "item": "minecraft:glass_bottle"
     }
   ],
   "result": {
-    "item": "floral_fantasy:deleted_mod_element",
+    "item": "floral_fantasy:bottled_sugar_beet",
     "count": 1
   }
 }

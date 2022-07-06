@@ -29,6 +29,7 @@ import java.util.Collections;
 public class PolishedEndStoneStairsBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:polished_end_stone_stairs")
 	public static final Block block = null;
+
 	public PolishedEndStoneStairsBlock(FloralFantasyModElements instance) {
 		super(instance, 143);
 	}
@@ -45,6 +46,7 @@ public class PolishedEndStoneStairsBlock extends FloralFantasyModElements.ModEle
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 9f).setLightLevel(s -> 0)

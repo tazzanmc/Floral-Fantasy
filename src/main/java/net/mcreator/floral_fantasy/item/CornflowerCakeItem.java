@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
@@ -18,13 +19,16 @@ import net.minecraft.block.BlockState;
 import net.mcreator.floral_fantasy.procedures.CornflowerCakePlaceProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class CornflowerCakeItem extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:cornflower_cake")
 	public static final Item block = null;
+
 	public CornflowerCakeItem(FloralFantasyModElements instance) {
 		super(instance, 21);
 	}
@@ -33,10 +37,16 @@ public class CornflowerCakeItem extends FloralFantasyModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("cornflower_cake");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override
@@ -66,15 +76,11 @@ public class CornflowerCakeItem extends FloralFantasyModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				CornflowerCakePlaceProcedure.executeProcedure($_dependencies);
-			}
+
+			CornflowerCakePlaceProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 	}

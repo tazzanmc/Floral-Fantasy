@@ -45,15 +45,11 @@ public class HydrangeaDuplicateProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure HydrangeaDuplicate!");
-			return;
-		}
-		if (dependencies.get("itemstack") == null) {
-			if (!dependencies.containsKey("itemstack"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency itemstack for procedure HydrangeaDuplicate!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure HydrangeaDuplicate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -71,22 +67,27 @@ public class HydrangeaDuplicateProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure HydrangeaDuplicate!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure HydrangeaDuplicate!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure HydrangeaDuplicate!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency itemstack for procedure HydrangeaDuplicate!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == HydrangeaBushBlock.block)) {
+		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == HydrangeaBushBlock.block) {
 			if (entity instanceof LivingEntity) {
 				((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
 			}
-			((itemstack)).shrink((int) 1);
+			(itemstack).shrink((int) 1);
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(HydrangeaBushBlock.block));
 				entityToSpawn.setPickupDelay((int) 10);

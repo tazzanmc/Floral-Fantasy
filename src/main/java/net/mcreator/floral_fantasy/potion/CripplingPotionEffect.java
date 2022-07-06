@@ -7,7 +7,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -17,23 +16,22 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.floral_fantasy.procedures.EffectCripplingStartedProcedure;
 import net.mcreator.floral_fantasy.procedures.EffectCripplingEndedProcedure;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Collections;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CripplingPotionEffect {
 	@ObjectHolder("floral_fantasy:crippling")
 	public static final Effect potion = null;
+
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
+
 	public static class EffectCustom extends Effect {
-		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -3555161);
 			setRegistryName("crippling");
-			potionIcon = new ResourceLocation("floral_fantasy:textures/crippling.png");
 		}
 
 		@Override
@@ -72,11 +70,8 @@ public class CripplingPotionEffect {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				EffectCripplingStartedProcedure.executeProcedure($_dependencies);
-			}
+
+			EffectCripplingStartedProcedure.executeProcedure(Collections.emptyMap());
 		}
 
 		@Override
@@ -86,11 +81,8 @@ public class CripplingPotionEffect {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				EffectCripplingEndedProcedure.executeProcedure($_dependencies);
-			}
+
+			EffectCripplingEndedProcedure.executeProcedure(Collections.emptyMap());
 		}
 
 		@Override

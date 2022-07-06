@@ -16,6 +16,7 @@ import net.mcreator.floral_fantasy.FloralFantasyMod;
 import java.util.Map;
 
 public class DeathBloomMobplayerCollidesWithPlantProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -23,7 +24,7 @@ public class DeathBloomMobplayerCollidesWithPlantProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((!(new Object() {
+		if (!(new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
@@ -34,7 +35,7 @@ public class DeathBloomMobplayerCollidesWithPlantProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)))) {
+		}.checkGamemode(entity))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(CripplingPotionEffect.potion, (int) 60, (int) 0));
 		}

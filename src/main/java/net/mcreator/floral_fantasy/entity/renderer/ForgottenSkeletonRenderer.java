@@ -1,3 +1,4 @@
+
 package net.mcreator.floral_fantasy.entity.renderer;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -26,6 +27,7 @@ public class ForgottenSkeletonRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(ForgottenSkeletonEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelforgotten_skeleton(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("floral_fantasy:textures/forgotten_skeleton.png");
@@ -53,6 +55,7 @@ public class ForgottenSkeletonRenderer {
 		private final ModelRenderer head;
 		private final ModelRenderer flower_r1;
 		private final ModelRenderer head_r1;
+
 		public Modelforgotten_skeleton() {
 			textureWidth = 64;
 			textureHeight = 64;
@@ -127,6 +130,7 @@ public class ForgottenSkeletonRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.left_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 			this.rightarm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
 			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
@@ -135,4 +139,5 @@ public class ForgottenSkeletonRenderer {
 			this.leftarm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
 		}
 	}
+
 }

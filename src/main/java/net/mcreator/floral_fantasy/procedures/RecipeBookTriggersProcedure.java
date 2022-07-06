@@ -52,6 +52,7 @@ public class RecipeBookTriggersProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -65,7 +66,7 @@ public class RecipeBookTriggersProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if (((itemstack).getItem() == DeathBloomBlock.block.asItem())) {
+		if (itemstack.getItem() == DeathBloomBlock.block.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity)
 						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:purple_dye_from_death_bloom")});
@@ -74,7 +75,7 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:death_bloom_pie")});
 			}
 		}
-		if (((itemstack).getItem() == AnemoneFlowerBlock.block.asItem())) {
+		if (itemstack.getItem() == AnemoneFlowerBlock.block.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pink_dye_anemone_flower")});
 			}
@@ -82,17 +83,17 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sweet_anemone_pie")});
 			}
 		}
-		if (((itemstack).getItem() == Blocks.CORNFLOWER.asItem())) {
+		if (itemstack.getItem() == Blocks.CORNFLOWER.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:cornflower_cake")});
 			}
 		}
-		if (((itemstack).getItem() == Blocks.POPPY.asItem())) {
+		if (itemstack.getItem() == Blocks.POPPY.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:poppy_pastry")});
 			}
 		}
-		if (((itemstack).getItem() == HydrangeaBushBlock.block.asItem())) {
+		if (itemstack.getItem() == HydrangeaBushBlock.block.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:hydrangea_muffin")});
 			}
@@ -100,33 +101,33 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:blue_dye_hydrangea")});
 			}
 		}
-		if (((itemstack).getItem() == Blocks.DANDELION.asItem())) {
+		if (itemstack.getItem() == Blocks.DANDELION.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:dandy_dandelion_crumble")});
 			}
 		}
-		if (((itemstack).getItem() == WeepingBellBlock.block.asItem())) {
+		if (itemstack.getItem() == WeepingBellBlock.block.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:lime_dye_weeping_bell")});
 			}
 		}
-		if (((itemstack).getItem() == GrandAnemoneFlowerBlock.block.asItem())) {
+		if (itemstack.getItem() == GrandAnemoneFlowerBlock.block.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity)
 						.unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pink_dye_grand_anemone_flower")});
 			}
 		}
-		if (((itemstack).getItem() == AncientBoneItem.block)) {
+		if (itemstack.getItem() == AncientBoneItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:rich_dirt")});
 			}
 		}
-		if ((((itemstack).getItem() == ShadeRodItem.block) || ((itemstack).getItem() == Items.NETHERITE_INGOT))) {
+		if (itemstack.getItem() == ShadeRodItem.block || itemstack.getItem() == Items.NETHERITE_INGOT) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:infuser")});
 			}
 		}
-		if (((itemstack).getItem() == ArgentEmberItem.block)) {
+		if (itemstack.getItem() == ArgentEmberItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_stipule")});
 			}
@@ -137,12 +138,12 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:feverish_silt")});
 			}
 		}
-		if (((itemstack).getItem() == PyreticStipuleItemItem.block)) {
+		if (itemstack.getItem() == PyreticStipuleItemItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:stick_pyretic_stipule")});
 			}
 		}
-		if (((itemstack).getItem() == PyreticPlateItem.block)) {
+		if (itemstack.getItem() == PyreticPlateItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pyretic_composite")});
 			}
@@ -159,17 +160,17 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:pedicel_boots")});
 			}
 		}
-		if (((itemstack).getItem() == Items.COCOA_BEANS)) {
+		if (itemstack.getItem() == Items.COCOA_BEANS) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:rich_chocolate_cake")});
 			}
 		}
-		if (((itemstack).getItem() == SourBerriesItem.block)) {
+		if (itemstack.getItem() == SourBerriesItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:oxeye_danish")});
 			}
 		}
-		if (((itemstack).getItem() == SugarBeetItem.block)) {
+		if (itemstack.getItem() == SugarBeetItem.block) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_from_sugar_beet")});
 			}
@@ -186,12 +187,12 @@ public class RecipeBookTriggersProcedure {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:sugar_beet_borscht")});
 			}
 		}
-		if (((itemstack).getItem() == Items.BEETROOT)) {
+		if (itemstack.getItem() == Items.BEETROOT) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:beetroot_borscht")});
 			}
 		}
-		if (((itemstack).getItem() == Blocks.KELP.asItem())) {
+		if (itemstack.getItem() == Blocks.KELP.asItem()) {
 			if (entity instanceof ServerPlayerEntity) {
 				((ServerPlayerEntity) entity).unlockRecipes(new ResourceLocation[]{new ResourceLocation("floral_fantasy:kelp_salad")});
 			}

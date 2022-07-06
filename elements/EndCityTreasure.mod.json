@@ -1,0 +1,10 @@
+{
+  "_fv": 28,
+  "_type": "loottable",
+  "definition": {
+    "type": "Chest",
+    "pools": [],
+    "name": "chests/end_city_treasure",
+    "namespace": "minecraft"
+  }
+}

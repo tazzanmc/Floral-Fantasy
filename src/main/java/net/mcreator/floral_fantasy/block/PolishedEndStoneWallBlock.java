@@ -46,6 +46,7 @@ import java.util.Collections;
 public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:polished_end_stone_wall")
 	public static final Block block = null;
+
 	public PolishedEndStoneWallBlock(FloralFantasyModElements instance) {
 		super(instance, 144);
 	}
@@ -62,17 +63,20 @@ public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModEleme
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends WallBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 9f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("polished_end_stone_wall");
 		}
+
 		private static final VoxelShape CENTER_POLE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_NORTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_SOUTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 16.0D);
 		private static final VoxelShape WALL_CONNECTION_WEST_SIDE_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_EAST_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
+
 		private boolean shouldConnect(BlockState state, boolean checkattach, Direction face) {
 			boolean flag = state.getBlock() instanceof WallBlock
 					|| state.getBlock() instanceof FenceGateBlock && FenceGateBlock.isParallel(state, face);
@@ -102,13 +106,9 @@ public class PolishedEndStoneWallBlock extends FloralFantasyModElements.ModEleme
 			return this.func_235626_a_(iworldreader, blockstate5, blockpos5, blockstate4, flag, flag1, flag2, flag3);
 		}
 
-		@Override /**
-					 * Update the provided state given the provided neighbor facing and neighbor
-					 * state, returning a new state. For example, fences make their connections to
-					 * the passed in state if possible, and wet concrete powder immediately returns
-					 * its solidified counterpart. Note that this method should ideally consider
-					 * only the specific face passed in.
-					 */
+		@Override /** 
+					* Update the provided state given the provided neighbor facing and neighbor state, returning a new state. For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart. Note that this method should ideally consider only the specific face passed in.
+					*/
 		public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos,
 				BlockPos facingPos) {
 			if (stateIn.get(WATERLOGGED)) {

@@ -46,6 +46,7 @@ public class FloralFantasyMod {
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("floral_fantasy", "floral_fantasy"),
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	public FloralFantasyModElements elements;
+
 	public FloralFantasyMod() {
 		elements = new FloralFantasyModElements();
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -86,8 +87,10 @@ public class FloralFantasyMod {
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
 		elements.registerSounds(event);
 	}
+
 	private static class FloralFantasyModFMLBusEvents {
 		private final FloralFantasyMod parent;
+
 		FloralFantasyModFMLBusEvents(FloralFantasyMod parent) {
 			this.parent = parent;
 		}

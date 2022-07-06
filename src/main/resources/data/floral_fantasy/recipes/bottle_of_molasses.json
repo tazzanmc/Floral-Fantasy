@@ -4,9 +4,9 @@
   "experience": 0,
   "cookingtime": 200,
   "ingredient": {
-    "item": "floral_fantasy:deleted_mod_element"
+    "item": "floral_fantasy:bottled_sugar_beet"
   },
   "result": {
-    "item": "floral_fantasy:deleted_mod_element"
+    "item": "floral_fantasy:bottle_of_molasses"
   }
 }

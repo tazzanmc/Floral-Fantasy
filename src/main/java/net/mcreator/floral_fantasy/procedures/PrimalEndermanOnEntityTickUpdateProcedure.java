@@ -19,10 +19,11 @@ import java.util.Map;
 import java.util.Collections;
 
 public class PrimalEndermanOnEntityTickUpdateProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure PrimalEndermanOnEntityTickUpdate!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure PrimalEndermanOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -40,26 +41,26 @@ public class PrimalEndermanOnEntityTickUpdateProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure PrimalEndermanOnEntityTickUpdate!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure PrimalEndermanOnEntityTickUpdate!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure PrimalEndermanOnEntityTickUpdate!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, x, y, z, (int) 1, 0.5, 1, 0.5, 1);
 		}
-		if ((Math.random() < 0.0005)) {
+		if (Math.random() < 0.0005) {
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, x, y, z, (int) 25, 0.5, 1, 0.5, 1);
 			}
 			if (world instanceof World && !world.isRemote()) {
 				((World) world)
-						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						.playSound(null, new BlockPos(x, y, z),
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 										.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 								SoundCategory.HOSTILE, (float) 1, (float) 1);
@@ -69,42 +70,42 @@ public class PrimalEndermanOnEntityTickUpdateProcedure {
 								.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 						SoundCategory.HOSTILE, (float) 1, (float) 1, false);
 			}
-			if ((5 >= (Math.random() * 10))) {
-				if ((5 >= (Math.random() * 10))) {
+			if (5 >= Math.random() * 10) {
+				if (5 >= Math.random() * 10) {
 					{
 						Entity _ent = entity;
-						_ent.setPositionAndUpdate((x + (Math.random() * 10)), y, (z + (Math.random() * 10)));
+						_ent.setPositionAndUpdate((x + Math.random() * 10), y, (z + Math.random() * 10));
 						if (_ent instanceof ServerPlayerEntity) {
-							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + (Math.random() * 10)), y, (z + (Math.random() * 10)),
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + Math.random() * 10), y, (z + Math.random() * 10),
 									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				} else {
 					{
 						Entity _ent = entity;
-						_ent.setPositionAndUpdate((x + (Math.random() * 10)), y, (z - (Math.random() * 10)));
+						_ent.setPositionAndUpdate((x + Math.random() * 10), y, (z - Math.random() * 10));
 						if (_ent instanceof ServerPlayerEntity) {
-							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + (Math.random() * 10)), y, (z - (Math.random() * 10)),
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + Math.random() * 10), y, (z - Math.random() * 10),
 									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				}
 			} else {
-				if ((5 >= (Math.random() * 10))) {
+				if (5 >= Math.random() * 10) {
 					{
 						Entity _ent = entity;
-						_ent.setPositionAndUpdate((x - (Math.random() * 10)), y, (z + (Math.random() * 10)));
+						_ent.setPositionAndUpdate((x - Math.random() * 10), y, (z + Math.random() * 10));
 						if (_ent instanceof ServerPlayerEntity) {
-							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x - (Math.random() * 10)), y, (z + (Math.random() * 10)),
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x - Math.random() * 10), y, (z + Math.random() * 10),
 									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				} else {
 					{
 						Entity _ent = entity;
-						_ent.setPositionAndUpdate((x - (Math.random() * 10)), y, (z - (Math.random() * 10)));
+						_ent.setPositionAndUpdate((x - Math.random() * 10), y, (z - Math.random() * 10));
 						if (_ent instanceof ServerPlayerEntity) {
-							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x - (Math.random() * 10)), y, (z - (Math.random() * 10)),
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((x - Math.random() * 10), y, (z - Math.random() * 10),
 									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
@@ -115,7 +116,7 @@ public class PrimalEndermanOnEntityTickUpdateProcedure {
 			}
 			if (world instanceof World && !world.isRemote()) {
 				((World) world)
-						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						.playSound(null, new BlockPos(x, y, z),
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 										.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 								SoundCategory.HOSTILE, (float) 1, (float) 1);
@@ -126,7 +127,7 @@ public class PrimalEndermanOnEntityTickUpdateProcedure {
 						SoundCategory.HOSTILE, (float) 1, (float) 1, false);
 			}
 		}
-		if ((entity.isInWaterRainOrBubbleColumn())) {
+		if (entity.isInWaterRainOrBubbleColumn()) {
 			entity.attackEntityFrom(DamageSource.DROWN, (float) 1);
 		}
 	}

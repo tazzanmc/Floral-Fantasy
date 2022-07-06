@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "Crippling",
@@ -7,7 +6,6 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "crippling"
     },
     {
@@ -16,15 +14,9 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "effect_crippling_started",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -33,15 +25,9 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "effect_crippling_ended",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -50,7 +36,6 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "gnoll_bone"
     },
     {
@@ -59,7 +44,6 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "vicious_carver_living_entity_is_hit",
       "metadata": {
         "dependencies": [
@@ -76,7 +60,6 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "death_bloom_mobplayer_collides_with_plant",
       "metadata": {
         "dependencies": [
@@ -93,7 +76,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "death_bloom"
     },
     {
@@ -102,7 +84,6 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "debilitation"
     },
     {
@@ -111,15 +92,9 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "effect_debilitation_started",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -128,15 +103,9 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "effect_debilitation_ended",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -145,7 +114,6 @@
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "vicious_carver"
     },
     {
@@ -154,7 +122,6 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_death_bloom"
     },
     {
@@ -163,7 +130,6 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_death_bloom_on_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -192,7 +158,6 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "death_bloom_potting",
       "metadata": {
         "dependencies": [
@@ -225,7 +190,6 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "death_bloom_pie_food_eaten",
       "metadata": {
         "dependencies": [
@@ -237,21 +201,11 @@
       }
     },
     {
-      "name": "DeathBloomPie",
-      "type": "food",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "death_bloom_pie"
-    },
-    {
       "name": "ItemDeathBloomPie",
       "type": "recipe",
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_death_bloom_pie"
     },
     {
@@ -260,7 +214,6 @@
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_potted_death_bloom"
     },
     {
@@ -269,7 +222,6 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infuser"
     },
     {
@@ -278,7 +230,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "anemone_flower"
     },
     {
@@ -287,7 +238,6 @@
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_pink_dye_from_anemone_flower"
     },
     {
@@ -296,7 +246,6 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "small_flowers"
     },
     {
@@ -305,7 +254,6 @@
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_anemone_flower"
     },
     {
@@ -314,7 +262,6 @@
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_anemone_flower_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -343,7 +290,6 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "anemone_flower_potting",
       "metadata": {
         "dependencies": [
@@ -371,21 +317,11 @@
       }
     },
     {
-      "name": "SweetAnemonePie",
-      "type": "food",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sweet_anemone_pie"
-    },
-    {
       "name": "SweetAnemonePieFoodEaten",
       "type": "procedure",
       "sortid": 43,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sweet_anemone_pie_food_eaten",
       "metadata": {
         "dependencies": [
@@ -402,7 +338,6 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_sweet_anemone_pie"
     },
     {
@@ -411,7 +346,6 @@
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_potted_anemone_flower"
     },
     {
@@ -420,7 +354,6 @@
       "sortid": 46,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "loot_abandoned_outpost"
     },
     {
@@ -429,7 +362,6 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "abandoned_outpost"
     },
     {
@@ -438,7 +370,6 @@
       "sortid": 48,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "feeble_mindedness"
     },
     {
@@ -447,7 +378,6 @@
       "sortid": 49,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "feeble_mindedness_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -464,7 +394,6 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mob_forgotten_skeleton"
     },
     {
@@ -473,7 +402,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "forgotten_skeleton"
     },
     {
@@ -482,17 +410,7 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "anemone_petals"
-    },
-    {
-      "name": "PoppyPastry",
-      "type": "food",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "poppy_pastry"
     },
     {
       "name": "PoppyPastryFoodEaten",
@@ -500,7 +418,6 @@
       "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "poppy_pastry_food_eaten",
       "metadata": {
         "dependencies": [
@@ -517,7 +434,6 @@
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_poppy_pastry"
     },
     {
@@ -526,7 +442,6 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake"
     },
     {
@@ -535,7 +450,6 @@
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_full"
     },
     {
@@ -544,7 +458,6 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_1"
     },
     {
@@ -553,7 +466,6 @@
       "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_2"
     },
     {
@@ -562,7 +474,6 @@
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_3"
     },
     {
@@ -571,7 +482,6 @@
       "sortid": 63,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_4"
     },
     {
@@ -580,7 +490,6 @@
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_5"
     },
     {
@@ -589,7 +498,6 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_6"
     },
     {
@@ -598,7 +506,6 @@
       "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_cornflower_cake"
     },
     {
@@ -607,7 +514,6 @@
       "sortid": 67,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_place",
       "metadata": {
         "dependencies": [
@@ -640,7 +546,6 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_full_eat",
       "metadata": {
         "dependencies": [
@@ -673,7 +578,6 @@
       "sortid": 69,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_1_eat",
       "metadata": {
         "dependencies": [
@@ -706,7 +610,6 @@
       "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_2_eat",
       "metadata": {
         "dependencies": [
@@ -739,7 +642,6 @@
       "sortid": 71,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_3_eat",
       "metadata": {
         "dependencies": [
@@ -772,7 +674,6 @@
       "sortid": 72,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_4_eat",
       "metadata": {
         "dependencies": [
@@ -805,7 +706,6 @@
       "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_5_eat",
       "metadata": {
         "dependencies": [
@@ -838,7 +738,6 @@
       "sortid": 74,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cornflower_cake_slice_6_eat",
       "metadata": {
         "dependencies": [
@@ -871,7 +770,6 @@
       "sortid": 75,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "gui_infuser"
     },
     {
@@ -880,7 +778,6 @@
       "sortid": 77,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "skeletons"
     },
     {
@@ -889,7 +786,6 @@
       "sortid": 78,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "flowers"
     },
     {
@@ -898,7 +794,6 @@
       "sortid": 79,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "recipe_book_triggers",
       "metadata": {
         "dependencies": [
@@ -919,7 +814,6 @@
       "sortid": 80,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "small_flowers_item"
     },
     {
@@ -928,7 +822,6 @@
       "sortid": 81,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "flowers_item"
     },
     {
@@ -937,7 +830,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ancient_bone"
     },
     {
@@ -946,7 +838,6 @@
       "sortid": 82,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "death_bloom_right_click_entity",
       "metadata": {
         "dependencies": [
@@ -967,7 +858,6 @@
       "sortid": 83,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infusion"
     },
     {
@@ -976,7 +866,6 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "hydrangea_bush"
     },
     {
@@ -985,7 +874,6 @@
       "sortid": 84,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_purple_dye_from_death_bloom"
     },
     {
@@ -994,7 +882,6 @@
       "sortid": 85,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_blue_dye_hydrangea"
     },
     {
@@ -1003,7 +890,6 @@
       "sortid": 86,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "hydrangea_duplicate",
       "metadata": {
         "dependencies": [
@@ -1040,7 +926,6 @@
       "sortid": 87,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "all_pastries"
     },
     {
@@ -1049,7 +934,6 @@
       "sortid": 88,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "trigger_bake_all_advancement",
       "metadata": {
         "dependencies": [
@@ -1065,21 +949,11 @@
       }
     },
     {
-      "name": "HydrangeaMuffin",
-      "type": "food",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hydrangea_muffin"
-    },
-    {
       "name": "HydrangeaMuffinFoodEaten",
       "type": "procedure",
       "sortid": 89,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "hydrangea_muffin_food_eaten",
       "metadata": {
         "dependencies": [
@@ -1096,7 +970,6 @@
       "sortid": 90,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_hydrangea_muffin"
     },
     {
@@ -1105,17 +978,7 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infusion_bottle"
-    },
-    {
-      "name": "DandyDandelionCrumble",
-      "type": "food",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dandy_dandelion_crumble"
     },
     {
       "name": "DandyDandelionCrumbleFoodEaten",
@@ -1123,7 +986,6 @@
       "sortid": 91,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dandy_dandelion_crumble_food_eaten",
       "metadata": {
         "dependencies": [
@@ -1140,7 +1002,6 @@
       "sortid": 92,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_dandy_dandelion_crumble"
     },
     {
@@ -1149,7 +1010,6 @@
       "sortid": 93,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "fairy_ring"
     },
     {
@@ -1158,7 +1018,6 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell"
     },
     {
@@ -1167,7 +1026,6 @@
       "sortid": 94,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_generation_condition",
       "metadata": {
         "return_type": "logic",
@@ -1197,7 +1055,6 @@
       "sortid": 95,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_1"
     },
     {
@@ -1206,7 +1063,6 @@
       "sortid": 96,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_2"
     },
     {
@@ -1215,7 +1071,6 @@
       "sortid": 97,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_3"
     },
     {
@@ -1224,7 +1079,6 @@
       "sortid": 98,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_4"
     },
     {
@@ -1233,7 +1087,6 @@
       "sortid": 99,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_lime_dye_weeping_bell"
     },
     {
@@ -1242,7 +1095,6 @@
       "sortid": 100,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_block_valid_placement_condition",
       "metadata": {
         "dependencies": []
@@ -1254,7 +1106,6 @@
       "sortid": 101,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_weeping_bell"
     },
     {
@@ -1263,7 +1114,6 @@
       "sortid": 102,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_weeping_bell_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -1292,7 +1142,6 @@
       "sortid": 103,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_potting",
       "metadata": {
         "dependencies": [
@@ -1325,7 +1174,6 @@
       "sortid": 104,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_5"
     },
     {
@@ -1334,7 +1182,6 @@
       "sortid": 105,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_6"
     },
     {
@@ -1343,7 +1190,6 @@
       "sortid": 106,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "weeping_bell_7"
     },
     {
@@ -1352,10 +1198,26 @@
       "sortid": 107,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "destroy_if_above_air",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -1364,7 +1226,6 @@
       "sortid": 108,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_potted_weeping_bell"
     },
     {
@@ -1373,7 +1234,6 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "grand_anemone_flower"
     },
     {
@@ -1382,7 +1242,6 @@
       "sortid": 109,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_grand_anemone_flower"
     },
     {
@@ -1391,7 +1250,6 @@
       "sortid": 110,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_pink_dye_grand_anemone"
     },
     {
@@ -1400,7 +1258,6 @@
       "sortid": 111,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_grand_anemone_flower_on_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -1429,7 +1286,6 @@
       "sortid": 112,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "grand_anemone_flower_potting",
       "metadata": {
         "dependencies": [
@@ -1462,7 +1318,6 @@
       "sortid": 113,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "grand_anemone_flower_spawn_particles",
       "metadata": {
         "dependencies": [
@@ -1491,7 +1346,6 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_dirt"
     },
     {
@@ -1500,7 +1354,6 @@
       "sortid": 114,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_rich_dirt"
     },
     {
@@ -1509,7 +1362,6 @@
       "sortid": 115,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "anemone_flower_update_tick",
       "metadata": {
         "dependencies": [
@@ -1538,7 +1390,6 @@
       "sortid": 116,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_potted_grand_anemone_flower"
     },
     {
@@ -1547,7 +1398,6 @@
       "sortid": 117,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dirt_blocks"
     },
     {
@@ -1556,7 +1406,6 @@
       "sortid": 118,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "tall_flower_blocks"
     },
     {
@@ -1565,7 +1414,6 @@
       "sortid": 119,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "tall_flowers_item"
     },
     {
@@ -1574,7 +1422,6 @@
       "sortid": 120,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "abandoned_outpost_additional_generation_condition",
       "metadata": {
         "return_type": "logic",
@@ -1604,7 +1451,6 @@
       "sortid": 121,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "fairy_ring_additional_generation_condition",
       "metadata": {
         "return_type": "logic",
@@ -1634,7 +1480,6 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "overgrown_skeleton"
     },
     {
@@ -1643,7 +1488,6 @@
       "sortid": 122,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "forgotten_skeleton_on_initial_entity_spawn",
       "metadata": {
         "dependencies": [
@@ -1676,7 +1520,6 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shade"
     },
     {
@@ -1685,7 +1528,6 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shade_rod"
     },
     {
@@ -1694,7 +1536,6 @@
       "sortid": 123,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mob_overgrown_skeleton"
     },
     {
@@ -1703,7 +1544,6 @@
       "sortid": 124,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mob_shade"
     },
     {
@@ -1712,7 +1552,6 @@
       "sortid": 125,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shade_rod_advancement"
     },
     {
@@ -1721,7 +1560,6 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shade_eye"
     },
     {
@@ -1730,7 +1568,6 @@
       "sortid": 131,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shade_shot"
     },
     {
@@ -1739,7 +1576,6 @@
       "sortid": 132,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_infuser"
     },
     {
@@ -1748,7 +1584,6 @@
       "sortid": 135,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infuser_display_tick",
       "metadata": {
         "dependencies": [
@@ -1777,7 +1612,6 @@
       "sortid": 135,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infuser_tick",
       "metadata": {
         "dependencies": [
@@ -1806,7 +1640,6 @@
       "sortid": 136,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infuser_blaze_meter_show",
       "metadata": {
         "return_type": "logic",
@@ -1836,7 +1669,6 @@
       "sortid": 137,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infuser_breath_meter_show",
       "metadata": {
         "return_type": "logic",
@@ -1866,7 +1698,6 @@
       "sortid": 138,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "primal_enderman"
     },
     {
@@ -1875,7 +1706,6 @@
       "sortid": 139,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "primal_enderman_entity_is_hurt",
       "metadata": {
         "dependencies": [
@@ -1908,7 +1738,6 @@
       "sortid": 139,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "primal_enderman_on_entity_tick_update",
       "metadata": {
         "dependencies": [
@@ -1941,7 +1770,6 @@
       "sortid": 140,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "primal_enderman_replace_enderman",
       "metadata": {
         "dependencies": [
@@ -1974,7 +1802,6 @@
       "sortid": 141,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "polised_end_stone"
     },
     {
@@ -1983,7 +1810,6 @@
       "sortid": 142,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "polished_end_stone_slab"
     },
     {
@@ -1992,7 +1818,6 @@
       "sortid": 143,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "polished_end_stone_stairs"
     },
     {
@@ -2001,7 +1826,6 @@
       "sortid": 144,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "polished_end_stone_wall"
     },
     {
@@ -2010,7 +1834,6 @@
       "sortid": 145,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone"
     },
     {
@@ -2019,7 +1842,6 @@
       "sortid": 146,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_slab"
     },
     {
@@ -2028,7 +1850,6 @@
       "sortid": 147,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_slab_cutting"
     },
     {
@@ -2037,7 +1858,6 @@
       "sortid": 148,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_stairs"
     },
     {
@@ -2046,7 +1866,6 @@
       "sortid": 149,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_stairs_cutting"
     },
     {
@@ -2055,7 +1874,6 @@
       "sortid": 150,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_wall"
     },
     {
@@ -2064,7 +1882,6 @@
       "sortid": 151,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_polished_end_stone_wall_cutting"
     },
     {
@@ -2073,7 +1890,6 @@
       "sortid": 153,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wall_blocks"
     },
     {
@@ -2082,7 +1898,6 @@
       "sortid": 154,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dragon_immune_blocks"
     },
     {
@@ -2091,7 +1906,6 @@
       "sortid": 155,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "slab_blocks"
     },
     {
@@ -2100,7 +1914,6 @@
       "sortid": 156,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stair_blocks"
     },
     {
@@ -2109,7 +1922,6 @@
       "sortid": 157,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "kaleidoscope_rose"
     },
     {
@@ -2118,7 +1930,6 @@
       "sortid": 158,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_kaleidoscope_rose"
     },
     {
@@ -2127,7 +1938,6 @@
       "sortid": 159,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "potted_kaleidoscope_rose_on_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -2156,7 +1966,6 @@
       "sortid": 160,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "kaleidoscope_rose_potting",
       "metadata": {
         "dependencies": [
@@ -2189,7 +1998,6 @@
       "sortid": 161,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_potted_kaleidoscope_rose"
     },
     {
@@ -2198,7 +2006,6 @@
       "sortid": 162,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatile_breath_entity_collides_in_the_block",
       "metadata": {
         "dependencies": [
@@ -2215,7 +2022,6 @@
       "sortid": 162,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatile_breath"
     },
     {
@@ -2224,7 +2030,6 @@
       "sortid": 163,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatile_breath_replace_fire",
       "metadata": {
         "dependencies": [
@@ -2257,7 +2062,6 @@
       "sortid": 164,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader"
     },
     {
@@ -2266,7 +2070,6 @@
       "sortid": 165,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_natural_entity_spawning_condition",
       "metadata": {
         "return_type": "logic",
@@ -2296,7 +2099,6 @@
       "sortid": 168,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_on_entity_tick_update",
       "metadata": {
         "dependencies": [
@@ -2329,7 +2131,6 @@
       "sortid": 172,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatile_charge"
     },
     {
@@ -2338,7 +2139,6 @@
       "sortid": 169,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_egg"
     },
     {
@@ -2347,7 +2147,6 @@
       "sortid": 166,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "damage_entity_while_in_water",
       "metadata": {
         "dependencies": [
@@ -2364,7 +2163,6 @@
       "sortid": 170,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_egg_hatch",
       "metadata": {
         "dependencies": [
@@ -2393,7 +2191,6 @@
       "sortid": 167,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_right_clicked_on_entity",
       "metadata": {
         "dependencies": [
@@ -2430,7 +2227,6 @@
       "sortid": 171,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "baby_wader"
     },
     {
@@ -2439,7 +2235,6 @@
       "sortid": 174,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "wader_on_initial_entity_spawn",
       "metadata": {
         "dependencies": [
@@ -2468,7 +2263,6 @@
       "sortid": 173,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "baby_wader_on_entity_tick_update",
       "metadata": {
         "dependencies": [
@@ -2501,7 +2295,6 @@
       "sortid": 175,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_pedicel"
     },
     {
@@ -2510,7 +2303,6 @@
       "sortid": 176,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_stipule"
     },
     {
@@ -2519,7 +2311,6 @@
       "sortid": 178,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "feverish_silt"
     },
     {
@@ -2528,7 +2319,6 @@
       "sortid": 179,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_oasis_1"
     },
     {
@@ -2537,7 +2327,6 @@
       "sortid": 180,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_oasis_2"
     },
     {
@@ -2546,7 +2335,6 @@
       "sortid": 193,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_stick_pyretic_stipule"
     },
     {
@@ -2555,7 +2343,6 @@
       "sortid": 183,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_stipule_item"
     },
     {
@@ -2564,7 +2351,6 @@
       "sortid": 188,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_pyretic_stipule_recipe"
     },
     {
@@ -2573,7 +2359,6 @@
       "sortid": 194,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "purging_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -2606,7 +2391,6 @@
       "sortid": 191,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_feverish_silt_recipe"
     },
     {
@@ -2615,7 +2399,6 @@
       "sortid": 181,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "log_blocks"
     },
     {
@@ -2624,7 +2407,6 @@
       "sortid": 185,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_pyretic_stipule"
     },
     {
@@ -2633,7 +2415,6 @@
       "sortid": 187,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_plate"
     },
     {
@@ -2642,7 +2423,6 @@
       "sortid": 189,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_pyretic_pedicel_recipe"
     },
     {
@@ -2651,7 +2431,6 @@
       "sortid": 184,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "argent_ember"
     },
     {
@@ -2660,7 +2439,6 @@
       "sortid": 190,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_pyretic_pedicel"
     },
     {
@@ -2669,7 +2447,6 @@
       "sortid": 194,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "purging"
     },
     {
@@ -2678,7 +2455,6 @@
       "sortid": 177,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "silt"
     },
     {
@@ -2687,7 +2463,6 @@
       "sortid": 182,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "fire_blocks"
     },
     {
@@ -2696,7 +2471,6 @@
       "sortid": 192,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_feverish_silt"
     },
     {
@@ -2705,7 +2479,6 @@
       "sortid": 198,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ignition"
     },
     {
@@ -2714,7 +2487,6 @@
       "sortid": 198,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ignition_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -2747,7 +2519,6 @@
       "sortid": 215,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "crippling_infusion_food_eaten",
       "metadata": {
         "dependencies": [
@@ -2759,30 +2530,11 @@
       }
     },
     {
-      "name": "CripplingInfusion",
-      "type": "food",
-      "sortid": 215,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crippling_infusion"
-    },
-    {
-      "name": "DebilitationInfusion",
-      "type": "food",
-      "sortid": 216,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "debilitation_infusion"
-    },
-    {
       "name": "DebilitationInfusionFoodEaten",
       "type": "procedure",
       "sortid": 217,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "debilitation_infusion_food_eaten",
       "metadata": {
         "dependencies": [
@@ -2794,21 +2546,11 @@
       }
     },
     {
-      "name": "FeebleMindednessInfusion",
-      "type": "food",
-      "sortid": 218,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "feeble_mindedness_infusion"
-    },
-    {
       "name": "FeebleMindednessInfusionFoodEaten",
       "type": "procedure",
       "sortid": 219,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "feeble_mindedness_infusion_food_eaten",
       "metadata": {
         "dependencies": [
@@ -2820,21 +2562,11 @@
       }
     },
     {
-      "name": "PurgingInfusion",
-      "type": "food",
-      "sortid": 220,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "purging_infusion"
-    },
-    {
       "name": "PurgingInfusionFoodEaten",
       "type": "procedure",
       "sortid": 221,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "purging_infusion_food_eaten",
       "metadata": {
         "dependencies": [
@@ -2846,21 +2578,11 @@
       }
     },
     {
-      "name": "IgnitionInfusion",
-      "type": "food",
-      "sortid": 222,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ignition_infusion"
-    },
-    {
       "name": "IgnitionInfusionFoodEaten",
       "type": "procedure",
       "sortid": 223,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ignition_infusion_food_eaten",
       "metadata": {
         "dependencies": [
@@ -2877,7 +2599,6 @@
       "sortid": 224,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "debilitation_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -2894,7 +2615,6 @@
       "sortid": 225,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pedicel_armor",
       "metadata": {
         "eh": true,
@@ -2909,7 +2629,6 @@
       "sortid": 226,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "armor_pedicel_helmet"
     },
     {
@@ -2918,7 +2637,6 @@
       "sortid": 227,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "armor_pedicel_chestplate"
     },
     {
@@ -2927,7 +2645,6 @@
       "sortid": 228,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "armor_pedicel_leggings"
     },
     {
@@ -2936,7 +2653,6 @@
       "sortid": 229,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "armor_pedicel_boots"
     },
     {
@@ -2945,7 +2661,6 @@
       "sortid": 244,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_place",
       "metadata": {
         "dependencies": [
@@ -2978,7 +2693,6 @@
       "sortid": 250,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_5_eat",
       "metadata": {
         "dependencies": [
@@ -3011,7 +2725,6 @@
       "sortid": 290,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_beetroot_borscht"
     },
     {
@@ -3020,7 +2733,6 @@
       "sortid": 281,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_bottle_of_molasses"
     },
     {
@@ -3029,7 +2741,6 @@
       "sortid": 271,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_update_tick",
       "metadata": {
         "dependencies": [
@@ -3058,7 +2769,6 @@
       "sortid": 258,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_1"
     },
     {
@@ -3067,7 +2777,6 @@
       "sortid": 259,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_2"
     },
     {
@@ -3076,7 +2785,6 @@
       "sortid": 260,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_3"
     },
     {
@@ -3085,7 +2793,6 @@
       "sortid": 261,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_4"
     },
     {
@@ -3094,7 +2801,6 @@
       "sortid": 292,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_sugar_from_sugar_beet"
     },
     {
@@ -3103,7 +2809,6 @@
       "sortid": 247,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_2_eat",
       "metadata": {
         "dependencies": [
@@ -3136,7 +2841,6 @@
       "sortid": 249,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_4_eat",
       "metadata": {
         "dependencies": [
@@ -3164,30 +2868,11 @@
       }
     },
     {
-      "name": "OxeyeDanish",
-      "type": "food",
-      "sortid": 253,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "oxeye_danish"
-    },
-    {
-      "name": "BeetrootBorscht",
-      "type": "food",
-      "sortid": 288,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "beetroot_borscht"
-    },
-    {
       "name": "ItemRichChocolateCake",
       "type": "recipe",
       "sortid": 252,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_rich_chocolate_cake"
     },
     {
@@ -3196,7 +2881,6 @@
       "sortid": 269,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "when_block_broken",
       "metadata": {
         "dependencies": [
@@ -3229,7 +2913,6 @@
       "sortid": 268,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_seeds_right_clicked_on_block",
       "metadata": {
         "dependencies": [
@@ -3262,7 +2945,6 @@
       "sortid": 236,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake"
     },
     {
@@ -3271,7 +2953,6 @@
       "sortid": 268,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_seeds"
     },
     {
@@ -3280,7 +2961,6 @@
       "sortid": 233,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatile_ember"
     },
     {
@@ -3289,7 +2969,6 @@
       "sortid": 246,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_1_eat",
       "metadata": {
         "dependencies": [
@@ -3317,30 +2996,11 @@
       }
     },
     {
-      "name": "SugarBeetSoup",
-      "type": "food",
-      "sortid": 286,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sugar_beet_soup"
-    },
-    {
-      "name": "BottleOfMolasses",
-      "type": "food",
-      "sortid": 279,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bottle_of_molasses"
-    },
-    {
       "name": "ConcentratedEmber",
       "type": "item",
       "sortid": 232,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "concentrated_ember"
     },
     {
@@ -3349,17 +3009,7 @@
       "sortid": 282,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_bottled_sugar_beet"
-    },
-    {
-      "name": "KelpSalad",
-      "type": "food",
-      "sortid": 284,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "kelp_salad"
     },
     {
       "name": "OxeyeDanishFoodEaten",
@@ -3367,7 +3017,6 @@
       "sortid": 254,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "oxeye_danish_food_eaten",
       "metadata": {
         "dependencies": [
@@ -3384,7 +3033,6 @@
       "sortid": 230,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "pyretic_composite"
     },
     {
@@ -3393,7 +3041,6 @@
       "sortid": 248,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_3_eat",
       "metadata": {
         "dependencies": [
@@ -3426,7 +3073,6 @@
       "sortid": 234,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatility"
     },
     {
@@ -3435,7 +3081,6 @@
       "sortid": 267,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_gen"
     },
     {
@@ -3444,7 +3089,6 @@
       "sortid": 291,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_sugar_beet_borscht"
     },
     {
@@ -3453,17 +3097,7 @@
       "sortid": 280,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bottled_sugar_beet"
-    },
-    {
-      "name": "SugarBeet",
-      "type": "food",
-      "sortid": 276,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sugar_beet"
     },
     {
       "name": "SugarBeetStage0",
@@ -3471,17 +3105,7 @@
       "sortid": 270,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_stage_0"
-    },
-    {
-      "name": "SugarBeetBorscht",
-      "type": "food",
-      "sortid": 289,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sugar_beet_borscht"
     },
     {
       "name": "SugarBeetStage1",
@@ -3489,7 +3113,6 @@
       "sortid": 272,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_stage_1"
     },
     {
@@ -3498,7 +3121,6 @@
       "sortid": 245,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_full_eat",
       "metadata": {
         "dependencies": [
@@ -3531,7 +3153,6 @@
       "sortid": 273,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_stage_2"
     },
     {
@@ -3540,7 +3161,6 @@
       "sortid": 274,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sugar_beet_stage_3"
     },
     {
@@ -3549,7 +3169,6 @@
       "sortid": 231,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_pyretic_composite"
     },
     {
@@ -3558,7 +3177,6 @@
       "sortid": 278,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "block_sugar_beet_stage_3"
     },
     {
@@ -3567,17 +3185,7 @@
       "sortid": 255,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_oxeye_danish"
-    },
-    {
-      "name": "SourBerries",
-      "type": "food",
-      "sortid": 256,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sour_berries"
     },
     {
       "name": "RichChocolateCakeSlice6Eat",
@@ -3585,7 +3193,6 @@
       "sortid": 251,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_6_eat",
       "metadata": {
         "dependencies": [
@@ -3618,7 +3225,6 @@
       "sortid": 283,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bottled_sugar_beet_right_clicked_in_air",
       "metadata": {
         "dependencies": [
@@ -3651,7 +3257,6 @@
       "sortid": 263,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_entity_collides_in_the_block",
       "metadata": {
         "dependencies": [
@@ -3668,7 +3273,6 @@
       "sortid": 287,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_sugar_beet_soup"
     },
     {
@@ -3677,7 +3281,6 @@
       "sortid": 234,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "volatility_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -3710,7 +3313,6 @@
       "sortid": 285,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "item_kelp_salad"
     },
     {
@@ -3719,7 +3321,6 @@
       "sortid": 237,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_full"
     },
     {
@@ -3728,7 +3329,6 @@
       "sortid": 277,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "growing_sugar_beet_block_destroyed_by_player",
       "metadata": {
         "dependencies": [
@@ -3752,21 +3352,11 @@
       }
     },
     {
-      "name": "UnripeSourBerries",
-      "type": "food",
-      "sortid": 257,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "unripe_sour_berries"
-    },
-    {
       "name": "MobPrimalEnderman",
       "type": "loottable",
       "sortid": 235,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mob_primal_enderman"
     },
     {
@@ -3775,7 +3365,6 @@
       "sortid": 238,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_1"
     },
     {
@@ -3784,7 +3373,6 @@
       "sortid": 266,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_3_on_block_right_clicked",
       "metadata": {
         "dependencies": [
@@ -3817,7 +3405,6 @@
       "sortid": 239,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_2"
     },
     {
@@ -3826,7 +3413,6 @@
       "sortid": 240,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_3"
     },
     {
@@ -3835,7 +3421,6 @@
       "sortid": 241,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_4"
     },
     {
@@ -3844,7 +3429,6 @@
       "sortid": 242,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_5"
     },
     {
@@ -3853,7 +3437,6 @@
       "sortid": 243,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "rich_chocolate_cake_slice_6"
     },
     {
@@ -3862,7 +3445,6 @@
       "sortid": 262,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "sour_berry_bush_stage_1_update_tick",
       "metadata": {
         "dependencies": [
@@ -3891,7 +3473,6 @@
       "sortid": 265,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "planting",
       "metadata": {
         "dependencies": [
@@ -3917,6 +3498,209 @@
           }
         ]
       }
+    },
+    {
+      "name": "DeathBloomPie",
+      "type": "item",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_bloom_pie"
+    },
+    {
+      "name": "SweetAnemonePie",
+      "type": "item",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sweet_anemone_pie"
+    },
+    {
+      "name": "PoppyPastry",
+      "type": "item",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poppy_pastry"
+    },
+    {
+      "name": "HydrangeaMuffin",
+      "type": "item",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hydrangea_muffin"
+    },
+    {
+      "name": "DandyDandelionCrumble",
+      "type": "item",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dandy_dandelion_crumble"
+    },
+    {
+      "name": "CripplingInfusion",
+      "type": "item",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crippling_infusion"
+    },
+    {
+      "name": "DebilitationInfusion",
+      "type": "item",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debilitation_infusion"
+    },
+    {
+      "name": "FeebleMindednessInfusion",
+      "type": "item",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feeble_mindedness_infusion"
+    },
+    {
+      "name": "PurgingInfusion",
+      "type": "item",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purging_infusion"
+    },
+    {
+      "name": "IgnitionInfusion",
+      "type": "item",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignition_infusion"
+    },
+    {
+      "name": "OxeyeDanish",
+      "type": "item",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxeye_danish"
+    },
+    {
+      "name": "BeetrootBorscht",
+      "type": "item",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beetroot_borscht"
+    },
+    {
+      "name": "SugarBeetSoup",
+      "type": "item",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sugar_beet_soup"
+    },
+    {
+      "name": "BottleOfMolasses",
+      "type": "item",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottle_of_molasses"
+    },
+    {
+      "name": "KelpSalad",
+      "type": "item",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kelp_salad"
+    },
+    {
+      "name": "SugarBeet",
+      "type": "item",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sugar_beet"
+    },
+    {
+      "name": "SugarBeetBorscht",
+      "type": "item",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sugar_beet_borscht"
+    },
+    {
+      "name": "SourBerries",
+      "type": "item",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sour_berries"
+    },
+    {
+      "name": "UnripeSourBerries",
+      "type": "item",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unripe_sour_berries"
+    },
+    {
+      "name": "Steeled",
+      "type": "enchantment",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steeled"
+    },
+    {
+      "name": "ShatteringCurse",
+      "type": "enchantment",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattering_curse"
+    },
+    {
+      "name": "ShatteringCurseActivate",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattering_curse_activate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SteeledWorkPlease",
+      "type": "procedure",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steeled_work_please",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "EndCityTreasure",
+      "type": "loottable",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "end_city_treasure"
     }
   ],
   "variable_elements": [],
@@ -3924,11 +3708,12 @@
   "language_map": {
     "en_us": {
       "item.floral_fantasy.ancient_bone": "Ancient Bone",
+      "enchantment.floral_fantasy.steeled": "Steeled",
       "item.floral_fantasy.gnoll_bone": "Gnoll Bone",
       "item.ores_and_oddities.sweet_anemone_pie": "Sweet Anemone Pie",
       "item.minecraft.splash_potion.effect.feeble_mindedness_potion": "Splash Potion of Feeble Mindedness",
-      "item.floral_fantasy.oxeye_danish": "Oxeye Danish",
       "effect.crippling": "Crippling",
+      "item.floral_fantasy.oxeye_danish": "Oxeye Danish",
       "block.floral_fantasy.potted_death_bloom": "Potted Death Bloom",
       "item.minecraft.lingering_potion.effect.ignition_potion": "Lingering Potion of Ignition",
       "advancements.all_pastries.descr": "Bake every pastry from Floral Fantasy",
@@ -3938,7 +3723,7 @@
       "item.floral_fantasy.kelp_salad": "Kelp Salad",
       "advancements.shade_rod_advancement.descr": "Relieve a Shade of its rod",
       "block.floral_fantasy.volatile_breath": "Volatile Breath",
-      "block.floral_fantasy.pyretic_stipule": "Pyretic Stipule",
+      "block.floral_fantasy.pyretic_stipule": "Pyretic Stipules",
       "item.minecraft.splash_potion.effect.ignition_potion": "Splash Potion of Ignition",
       "item.minecraft.potion.effect.purging_potion": "Potion of Purging",
       "item.ores_and_oddities.gnoll_bone": "Gnoll Bone",
@@ -3958,7 +3743,7 @@
       "item.minecraft.tipped_arrow.effect.ignition_potion": "Arrow of Ignition",
       "item.minecraft.lingering_potion.effect.strong_crippling_potion": "Lingering Potion of Crippling",
       "item.minecraft.potion.effect.strong_ignition_potion": "Potion of Ignition",
-      "block.floral_fantasy.grand_anemone_flower": "Anemone Flower",
+      "block.floral_fantasy.grand_anemone_flower": "Grand Anemone Flower",
       "item.minecraft.tipped_arrow.effect.strong_feeble_mindedness_potion": "Arrow of Feeble Mindedness",
       "item.minecraft.potion.effect.debilitation_potion": "Potion of Debilitation",
       "block.floral_fantasy.sugar_beet_stage_0": "Sugar Beet Crop",
@@ -4047,6 +3832,7 @@
       "item.minecraft.tipped_arrow.effect.purging_potion": "Arrow of Purging",
       "item.floral_fantasy.shade_spawn_egg": "Shade Spawn Egg",
       "item.floral_fantasy.argent_ember": "Argent Ember",
+      "enchantment.floral_fantasy.shattering_curse": "Curse of Shattering",
       "block.ores_and_oddities.potted_anemone_flower": "Potted Anemone Flower",
       "item.minecraft.splash_potion.effect.strong_crippling_potion": "Splash Potion of Crippling",
       "effect.debilitation": "Debilitation",
@@ -4137,5 +3923,5 @@
     "modElementsPackage": "net.mcreator.floral_fantasy",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100236710
+  "mcreatorVersion": 202200120510
 }

@@ -1,15 +1,36 @@
 
 package net.mcreator.floral_fantasy.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.floral_fantasy.procedures.SugarBeetSeedsRightClickedOnBlockProcedure;
+import net.mcreator.floral_fantasy.FloralFantasyModElements;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
 @FloralFantasyModElements.ModElement.Tag
 public class SugarBeetSeedsItem extends FloralFantasyModElements.ModElement {
-
 	@ObjectHolder("floral_fantasy:sugar_beet_seeds")
 	public static final Item block = null;
 
 	public SugarBeetSeedsItem(FloralFantasyModElements instance) {
 		super(instance, 268);
-
 	}
 
 	@Override
@@ -18,10 +39,14 @@ public class SugarBeetSeedsItem extends FloralFantasyModElements.ModElement {
 	}
 
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("sugar_beet_seeds");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override
@@ -51,20 +76,12 @@ public class SugarBeetSeedsItem extends FloralFantasyModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
 
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-
-				SugarBeetSeedsRightClickedOnBlockProcedure.executeProcedure($_dependencies);
-			}
+			SugarBeetSeedsRightClickedOnBlockProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
-
 	}
-
 }

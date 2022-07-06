@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.ISeedReader;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
@@ -36,6 +37,7 @@ import java.util.Random;
 public class PyreticOasis1Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -57,7 +59,7 @@ public class PyreticOasis1Structure {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
-							j = Math.abs(random.nextInt(Math.max(1, j)) - 24);
+							j = MathHelper.nextInt(random, 8, Math.max(j, 9));
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
 							if (blockAt.getBlock() == Blocks.NETHERRACK)
@@ -89,6 +91,7 @@ public class PyreticOasis1Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:pyretic_oasis_1"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;

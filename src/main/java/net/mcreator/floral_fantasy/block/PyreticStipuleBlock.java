@@ -32,6 +32,7 @@ import java.util.Collections;
 public class PyreticStipuleBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:pyretic_stipule")
 	public static final Block block = null;
+
 	public PyreticStipuleBlock(FloralFantasyModElements instance) {
 		super(instance, 176);
 	}
@@ -47,6 +48,7 @@ public class PyreticStipuleBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.NETHER_VINE).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0)

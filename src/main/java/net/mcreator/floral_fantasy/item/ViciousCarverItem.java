@@ -18,14 +18,17 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.mcreator.floral_fantasy.procedures.ViciousCarverLivingEntityIsHitProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class ViciousCarverItem extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:vicious_carver")
 	public static final Item block = null;
+
 	public ViciousCarverItem(FloralFantasyModElements instance) {
 		super(instance, 15);
 	}
@@ -70,11 +73,9 @@ public class ViciousCarverItem extends FloralFantasyModElements.ModElement {
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				World world = entity.world;
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					ViciousCarverLivingEntityIsHitProcedure.executeProcedure($_dependencies);
-				}
+
+				ViciousCarverLivingEntityIsHitProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}
 		}.setRegistryName("vicious_carver"));

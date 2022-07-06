@@ -22,10 +22,11 @@ import net.mcreator.floral_fantasy.FloralFantasyMod;
 import java.util.Map;
 
 public class BabyWaderOnEntityTickUpdateProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure BabyWaderOnEntityTickUpdate!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure BabyWaderOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -43,25 +44,25 @@ public class BabyWaderOnEntityTickUpdateProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure BabyWaderOnEntityTickUpdate!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure BabyWaderOnEntityTickUpdate!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure BabyWaderOnEntityTickUpdate!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((entity.isInWaterRainOrBubbleColumn())) {
+		Entity entity = (Entity) dependencies.get("entity");
+		if (entity.isInWaterRainOrBubbleColumn()) {
 			entity.attackEntityFrom(DamageSource.DROWN, (float) 1);
 		}
-		if ((Math.random() < 0.00025)) {
+		if (Math.random() < 0.00025) {
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.HAPPY_VILLAGER, x, (y + 1), z, (int) 10, 0.35, 0.35, 0.35, 1);
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+				((World) world).playSound(null, new BlockPos(x, y, z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.strider.happy")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1);
 			} else {

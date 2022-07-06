@@ -48,10 +48,11 @@ public class DeathBloomPottingProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure DeathBloomPotting!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure DeathBloomPotting!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -69,21 +70,21 @@ public class DeathBloomPottingProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure DeathBloomPotting!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure DeathBloomPotting!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency entity for procedure DeathBloomPotting!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.FLOWER_POT)) {
-			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == DeathBloomBlock.block.asItem())
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-							.getItem() == DeathBloomBlock.block.asItem()))) {
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.FLOWER_POT) {
+			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == DeathBloomBlock.block.asItem()
+					|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+							.getItem() == DeathBloomBlock.block.asItem()) {
 				if (entity instanceof LivingEntity) {
 					((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
 				}
@@ -93,7 +94,7 @@ public class DeathBloomPottingProcedure {
 							((PlayerEntity) entity).container.func_234641_j_());
 				}
 				{
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					BlockState _bs = PottedDeathBloomBlock.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

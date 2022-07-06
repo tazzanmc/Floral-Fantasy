@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "floral_fantasy:polised_end_stone",
     "floral_fantasy:polished_end_stone_slab",
-    "floral_fantasy:polished_end_stone_stairs",
-    "floral_fantasy:polished_end_stone_wall"
+    "floral_fantasy:polished_end_stone_wall",
+    "floral_fantasy:polised_end_stone",
+    "floral_fantasy:polished_end_stone_stairs"
   ]
 }

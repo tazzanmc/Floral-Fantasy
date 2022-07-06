@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "loottable",
   "definition": {
     "type": "Chest",
@@ -384,6 +384,20 @@
             "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.BOOK"
+            },
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 5,
+            "maxEnchantmentLevel": 15,
             "affectedByFortune": false,
             "explosionDecay": false,
             "silkTouchMode": 0

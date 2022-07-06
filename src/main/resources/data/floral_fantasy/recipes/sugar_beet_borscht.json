@@ -12,20 +12,20 @@
       "item": "minecraft:carrot"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:sugar_beet"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:sugar_beet"
     },
     {
-      "item": "floral_fantasy:deleted_mod_element"
+      "item": "floral_fantasy:sugar_beet"
     },
     {
       "item": "minecraft:bowl"
     }
   ],
   "result": {
-    "item": "floral_fantasy:deleted_mod_element",
+    "item": "floral_fantasy:sugar_beet_borscht",
     "count": 1
   }
 }

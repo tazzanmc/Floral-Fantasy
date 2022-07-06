@@ -1,0 +1,123 @@
+{
+  "_fv": 28,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Steeled",
+    "type": "WEARABLE",
+    "rarity": "UNCOMMON",
+    "minLevel": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "RESPIRATION"
+      },
+      {
+        "value": "AQUA_AFFINITY"
+      },
+      {
+        "value": "THORNS"
+      },
+      {
+        "value": "DEPTH_STRIDER"
+      },
+      {
+        "value": "FROST_WALKER"
+      },
+      {
+        "value": "BINDING_CURSE"
+      },
+      {
+        "value": "SHARPNESS"
+      },
+      {
+        "value": "SMITE"
+      },
+      {
+        "value": "BANE_OF_ARTHROPODS"
+      },
+      {
+        "value": "KNOCKBACK"
+      },
+      {
+        "value": "FIRE_ASPECT"
+      },
+      {
+        "value": "LOOTING"
+      },
+      {
+        "value": "SWEEPING"
+      },
+      {
+        "value": "EFFICIENCY"
+      },
+      {
+        "value": "SILK_TOUCH"
+      },
+      {
+        "value": "UNBREAKING"
+      },
+      {
+        "value": "FORTUNE"
+      },
+      {
+        "value": "POWER"
+      },
+      {
+        "value": "PUNCH"
+      },
+      {
+        "value": "FLAME"
+      },
+      {
+        "value": "INFINITY"
+      },
+      {
+        "value": "LUCK_OF_THE_SEA"
+      },
+      {
+        "value": "LURE"
+      },
+      {
+        "value": "LOYALTY"
+      },
+      {
+        "value": "IMPALING"
+      },
+      {
+        "value": "RIPTIDE"
+      },
+      {
+        "value": "CHANNELING"
+      },
+      {
+        "value": "MULTISHOT"
+      },
+      {
+        "value": "QUICK_CHARGE"
+      },
+      {
+        "value": "PIERCING"
+      },
+      {
+        "value": "MENDING"
+      },
+      {
+        "value": "VANISHING_CURSE"
+      },
+      {
+        "value": "SOUL_SPEED"
+      }
+    ],
+    "compatibleItems": [
+      {
+        "value": "Items.SHIELD"
+      }
+    ],
+    "isTreasureEnchantment": true,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

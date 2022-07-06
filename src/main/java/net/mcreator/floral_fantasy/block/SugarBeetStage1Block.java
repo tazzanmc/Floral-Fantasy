@@ -65,12 +65,14 @@ import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.stream.IntStream;
 import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
@@ -78,6 +80,7 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 	public static final Block block = null;
 	@ObjectHolder("floral_fantasy:sugar_beet_stage_1")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public SugarBeetStage1Block(FloralFantasyModElements instance) {
 		super(instance, 272);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
@@ -88,6 +91,7 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
@@ -95,15 +99,17 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 					.register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("sugar_beet_stage_1"));
 		}
 	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.PLANTS).sound(SoundType.CROP).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0)
-					.doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.PLANTS, MaterialColor.FOLIAGE).sound(SoundType.CROP).hardnessAndResistance(0f, 0f)
+					.setLightLevel(s -> 0).doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
 			setRegistryName("sugar_beet_stage_1");
 		}
 
@@ -120,7 +126,11 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(1, 0.001, 1, 15, 5, 15)).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(1, 0.001, 1, 15, 5, 15)
+
+			)
+
+					.withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -162,14 +172,11 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SugarBeetUpdateTickProcedure.executeProcedure($_dependencies);
-			}
+
+			SugarBeetUpdateTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -178,14 +185,11 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				GrowingSugarBeetBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
-			}
+
+			GrowingSugarBeetBlockDestroyedByPlayerProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -195,14 +199,11 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				GrowingSugarBeetBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
-			}
+
+			GrowingSugarBeetBlockDestroyedByPlayerProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -231,6 +232,7 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -330,7 +332,9 @@ public class SugarBeetStage1Block extends FloralFantasyModElements.ModElement {
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)

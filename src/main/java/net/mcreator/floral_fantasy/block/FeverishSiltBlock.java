@@ -26,6 +26,7 @@ import java.util.Collections;
 public class FeverishSiltBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:feverish_silt")
 	public static final Block block = null;
+
 	public FeverishSiltBlock(FloralFantasyModElements instance) {
 		super(instance, 178);
 	}
@@ -36,6 +37,7 @@ public class FeverishSiltBlock extends FloralFantasyModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.SAND).sound(SoundType.SAND).hardnessAndResistance(0.45f, 0.6000000000000001f).setLightLevel(s -> 1)

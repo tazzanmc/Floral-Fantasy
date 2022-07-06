@@ -31,6 +31,7 @@ import java.util.Collections;
 public class PyreticPedicelBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:pyretic_pedicel")
 	public static final Block block = null;
+
 	public PyreticPedicelBlock(FloralFantasyModElements instance) {
 		super(instance, 175);
 	}
@@ -41,8 +42,10 @@ public class PyreticPedicelBlock extends FloralFantasyModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 3).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().setNeedsPostProcessing((bs, br, bp) -> true)

@@ -47,6 +47,7 @@ public class TriggerBakeAllAdvancementProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -66,27 +67,26 @@ public class TriggerBakeAllAdvancementProcedure {
 		boolean cornflower_cake_crafted = false;
 		boolean hydrangea_muffin_crafted = false;
 		boolean dandy_dandelion_crumble_crafted = false;
-		if (((itemstack).getItem() == PoppyPastryItem.block)) {
-			poppy_pastry_crafted = (boolean) (true);
+		if (itemstack.getItem() == PoppyPastryItem.block) {
+			poppy_pastry_crafted = (true);
 		}
-		if (((itemstack).getItem() == SweetAnemonePieItem.block)) {
-			sweet_anemone_pie_crafted = (boolean) (true);
+		if (itemstack.getItem() == SweetAnemonePieItem.block) {
+			sweet_anemone_pie_crafted = (true);
 		}
-		if (((itemstack).getItem() == DeathBloomPieItem.block)) {
-			deathbloom_pie_crafted = (boolean) (true);
+		if (itemstack.getItem() == DeathBloomPieItem.block) {
+			deathbloom_pie_crafted = (true);
 		}
-		if (((itemstack).getItem() == CornflowerCakeItem.block)) {
-			cornflower_cake_crafted = (boolean) (true);
+		if (itemstack.getItem() == CornflowerCakeItem.block) {
+			cornflower_cake_crafted = (true);
 		}
-		if (((itemstack).getItem() == HydrangeaMuffinItem.block)) {
-			hydrangea_muffin_crafted = (boolean) (true);
+		if (itemstack.getItem() == HydrangeaMuffinItem.block) {
+			hydrangea_muffin_crafted = (true);
 		}
-		if (((itemstack).getItem() == DandyDandelionCrumbleItem.block)) {
-			dandy_dandelion_crumble_crafted = (boolean) (true);
+		if (itemstack.getItem() == DandyDandelionCrumbleItem.block) {
+			dandy_dandelion_crumble_crafted = (true);
 		}
-		if (((((poppy_pastry_crafted == (true)) && (hydrangea_muffin_crafted == (true)))
-				&& ((sweet_anemone_pie_crafted == (true)) && (dandy_dandelion_crumble_crafted == (true))))
-				&& ((deathbloom_pie_crafted == (true)) && (cornflower_cake_crafted == (true))))) {
+		if (poppy_pastry_crafted == true && hydrangea_muffin_crafted == true && sweet_anemone_pie_crafted == true
+				&& dandy_dandelion_crumble_crafted == true && deathbloom_pie_crafted == true && cornflower_cake_crafted == true) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("floral_fantasy:all_pastries"));

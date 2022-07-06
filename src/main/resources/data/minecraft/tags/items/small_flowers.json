@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "floral_fantasy:death_bloom",
-    "floral_fantasy:anemone_flower",
-    "floral_fantasy:weeping_bell",
     "floral_fantasy:grand_anemone_flower",
-    "floral_fantasy:kaleidoscope_rose"
+    "floral_fantasy:death_bloom",
+    "floral_fantasy:kaleidoscope_rose",
+    "floral_fantasy:anemone_flower",
+    "floral_fantasy:weeping_bell"
   ]
 }

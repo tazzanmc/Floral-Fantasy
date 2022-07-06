@@ -20,7 +20,13 @@ import net.mcreator.floral_fantasy.FloralFantasyMod;
 import java.util.Map;
 
 public class WaderEggHatchProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure WaderEggHatch!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency x for procedure WaderEggHatch!");
@@ -36,15 +42,10 @@ public class WaderEggHatchProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure WaderEggHatch!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure WaderEggHatch!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new BabyWaderEntity.CustomEntity(BabyWaderEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, (y + 1), z, world.getRandom().nextFloat() * 360F, 0);
@@ -54,7 +55,7 @@ public class WaderEggHatchProcedure {
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			((World) world).playSound(null, new BlockPos(x, y, z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.strider.happy")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 2);
 		} else {

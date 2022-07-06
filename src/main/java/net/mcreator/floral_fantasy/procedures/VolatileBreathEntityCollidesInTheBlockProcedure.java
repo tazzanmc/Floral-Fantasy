@@ -13,6 +13,7 @@ import net.mcreator.floral_fantasy.FloralFantasyMod;
 import java.util.Map;
 
 public class VolatileBreathEntityCollidesInTheBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -20,7 +21,7 @@ public class VolatileBreathEntityCollidesInTheBlockProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((!(entity.isImmuneToFire())) || (!(new Object() {
+		if (!entity.isImmuneToFire() || !(new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.NOT_SET;
@@ -31,7 +32,7 @@ public class VolatileBreathEntityCollidesInTheBlockProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity))))) {
+		}.checkGamemode(entity))) {
 			entity.setFire((int) 15);
 		}
 	}

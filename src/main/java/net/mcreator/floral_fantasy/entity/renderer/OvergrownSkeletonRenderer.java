@@ -1,3 +1,4 @@
+
 package net.mcreator.floral_fantasy.entity.renderer;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -26,6 +27,7 @@ public class OvergrownSkeletonRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(OvergrownSkeletonEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelovergrown_skeleton(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("floral_fantasy:textures/overgrown_skeleton.png");
@@ -88,6 +90,7 @@ public class OvergrownSkeletonRenderer {
 		private final ModelRenderer rightleg2;
 		private final ModelRenderer head;
 		private final ModelRenderer flower_r2;
+
 		public Modelovergrown_skeleton() {
 			textureWidth = 128;
 			textureHeight = 128;
@@ -326,6 +329,7 @@ public class OvergrownSkeletonRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.rightleg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
 			this.leftvine.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
 			this.rightvine.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
@@ -334,4 +338,5 @@ public class OvergrownSkeletonRenderer {
 			this.leftleg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
 		}
 	}
+
 }

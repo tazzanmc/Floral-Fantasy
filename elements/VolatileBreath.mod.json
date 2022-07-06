@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "block",
   "definition": {
     "texture": "volatile_breath",
@@ -82,17 +82,17 @@
     "breakSound": {
       "value": "block.fire.extinguish"
     },
-    "stepSound": {
-      "value": "block.fire.extinguish"
-    },
-    "placeSound": {
+    "fallSound": {
       "value": "block.fire.ambient"
     },
     "hitSound": {
       "value": "block.fire.extinguish"
     },
-    "fallSound": {
+    "placeSound": {
       "value": "block.fire.ambient"
+    },
+    "stepSound": {
+      "value": "block.fire.extinguish"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -134,6 +134,7 @@
         "value": "Blocks.STONE"
       }
     ],
+    "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

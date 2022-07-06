@@ -32,14 +32,17 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.floral_fantasy.procedures.FairyRingAdditionalGenerationConditionProcedure;
 
+import java.util.stream.Stream;
 import java.util.Random;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber
 public class FairyRingStructure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -74,8 +77,10 @@ public class FairyRingStructure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!FairyRingAdditionalGenerationConditionProcedure
-									.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							if (!FairyRingAdditionalGenerationConditionProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("floral_fantasy", "fairy_ring"));
@@ -96,6 +101,7 @@ public class FairyRingStructure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:fairy_ring"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);

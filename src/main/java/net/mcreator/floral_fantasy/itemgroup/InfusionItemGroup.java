@@ -31,5 +31,6 @@ public class InfusionItemGroup extends FloralFantasyModElements.ModElement {
 			}
 		};
 	}
+
 	public static ItemGroup tab;
 }

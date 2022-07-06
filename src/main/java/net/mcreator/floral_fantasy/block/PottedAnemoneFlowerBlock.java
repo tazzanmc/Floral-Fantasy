@@ -36,14 +36,17 @@ import net.minecraft.block.Block;
 import net.mcreator.floral_fantasy.procedures.PottedAnemoneFlowerBlockRightClickedProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class PottedAnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:potted_anemone_flower")
 	public static final Block block = null;
+
 	public PottedAnemoneFlowerBlock(FloralFantasyModElements instance) {
 		super(instance, 40);
 	}
@@ -59,6 +62,7 @@ public class PottedAnemoneFlowerBlock extends FloralFantasyModElements.ModElemen
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0).notSolid()
@@ -86,7 +90,11 @@ public class PottedAnemoneFlowerBlock extends FloralFantasyModElements.ModElemen
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(5, 0, 5, 11, 6, 11)).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(5, 0, 5, 11, 6, 11)
+
+			)
+
+					.withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -110,14 +118,11 @@ public class PottedAnemoneFlowerBlock extends FloralFantasyModElements.ModElemen
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				PottedAnemoneFlowerBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			PottedAnemoneFlowerBlockRightClickedProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 	}

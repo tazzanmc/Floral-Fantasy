@@ -40,10 +40,11 @@ public class VolatileBreathReplaceFireProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("blockstate") == null) {
-			if (!dependencies.containsKey("blockstate"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency blockstate for procedure VolatileBreathReplaceFire!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure VolatileBreathReplaceFire!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -61,20 +62,20 @@ public class VolatileBreathReplaceFireProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure VolatileBreathReplaceFire!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure VolatileBreathReplaceFire!");
+		if (dependencies.get("blockstate") == null) {
+			if (!dependencies.containsKey("blockstate"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency blockstate for procedure VolatileBreathReplaceFire!");
 			return;
 		}
-		BlockState blockstate = (BlockState) dependencies.get("blockstate");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world instanceof World ? (((World) world).getDimensionKey()) : World.OVERWORLD) == (World.THE_END))
-				&& (blockstate.getBlock() == Blocks.FIRE))) {
+		BlockState blockstate = (BlockState) dependencies.get("blockstate");
+		if ((world instanceof World ? (((World) world).getDimensionKey()) : World.OVERWORLD) == (World.THE_END)
+				&& blockstate.getBlock() == Blocks.FIRE) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = VolatileBreathBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

@@ -37,14 +37,17 @@ import net.mcreator.floral_fantasy.procedures.BabyWaderOnEntityTickUpdateProcedu
 import net.mcreator.floral_fantasy.entity.renderer.BabyWaderRenderer;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class BabyWaderEntity extends FloralFantasyModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.625f, 0.75f)).build("baby_wader").setRegistryName("baby_wader");
+
 	public BabyWaderEntity(FloralFantasyModElements instance) {
 		super(instance, 171);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BabyWaderRenderer.ModelRegisterHandler());
@@ -59,6 +62,7 @@ public class BabyWaderEntity extends FloralFantasyModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -133,15 +137,11 @@ public class BabyWaderEntity extends FloralFantasyModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				BabyWaderOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
-			}
+
+			BabyWaderOnEntityTickUpdateProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

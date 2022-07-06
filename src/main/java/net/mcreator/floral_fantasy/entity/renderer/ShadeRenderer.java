@@ -1,3 +1,4 @@
+
 package net.mcreator.floral_fantasy.entity.renderer;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -33,6 +34,7 @@ public class ShadeRenderer {
 					{
 						this.addLayer(new GlowingLayer<>(this));
 					}
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("floral_fantasy:textures/shade.png");
@@ -63,6 +65,7 @@ public class ShadeRenderer {
 		private final ModelRenderer head;
 		private final ModelRenderer armgroup1;
 		private final ModelRenderer armgroup2;
+
 		public Modelshade() {
 			textureWidth = 128;
 			textureHeight = 128;
@@ -101,10 +104,12 @@ public class ShadeRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.armgroup2.rotateAngleZ = f2;
 			this.armgroup1.rotateAngleZ = f2 / 20.f;
 			this.shade.rotateAngleY = f3 / (180F / (float) Math.PI);
 			this.shade.rotateAngleX = f4 / (180F / (float) Math.PI);
 		}
 	}
+
 }

@@ -34,15 +34,14 @@ import net.mcreator.floral_fantasy.procedures.DestroyIfAboveAirProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 @FloralFantasyModElements.ModElement.Tag
 public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:weeping_bell")
 	public static final Block block = null;
+
 	public WeepingBellBlock(FloralFantasyModElements instance) {
 		super(instance, 11);
 	}
@@ -58,10 +57,11 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 3)
-					.doesNotBlockMovement().notSolid().tickRandomly().setNeedsPostProcessing((bs, br, bp) -> true)
+			super(Block.Properties.create(Material.PLANTS, MaterialColor.FOLIAGE).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
+					.setLightLevel(s -> 3).doesNotBlockMovement().notSolid().tickRandomly().setNeedsPostProcessing((bs, br, bp) -> true)
 					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("weeping_bell");
 		}
@@ -79,7 +79,11 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(5, 0, 5, 11, 10, 11)).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(5, 0, 5, 11, 10, 11)
+
+			)
+
+					.withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -121,14 +125,8 @@ public class WeepingBellBlock extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DestroyIfAboveAirProcedure.executeProcedure($_dependencies);
-			}
+
+			DestroyIfAboveAirProcedure.executeProcedure(Collections.emptyMap());
 		}
 	}
 }

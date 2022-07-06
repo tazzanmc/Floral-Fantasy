@@ -28,6 +28,7 @@ import java.util.Collections;
 public class RichDirtBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:rich_dirt")
 	public static final Block block = null;
+
 	public RichDirtBlock(FloralFantasyModElements instance) {
 		super(instance, 22);
 	}
@@ -38,6 +39,7 @@ public class RichDirtBlock extends FloralFantasyModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.EARTH).sound(SoundType.WET_GRASS).hardnessAndResistance(0.6000000000000001f, 0.6f)

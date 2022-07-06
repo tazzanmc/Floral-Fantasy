@@ -3,6 +3,7 @@ package net.mcreator.floral_fantasy.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -15,6 +16,7 @@ import net.mcreator.floral_fantasy.FloralFantasyModElements;
 public class ShadeRodItem extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:shade_rod")
 	public static final Item block = null;
+
 	public ShadeRodItem(FloralFantasyModElements instance) {
 		super(instance, 6);
 	}
@@ -23,10 +25,16 @@ public class ShadeRodItem extends FloralFantasyModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("shade_rod");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override

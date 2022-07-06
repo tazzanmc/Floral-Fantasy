@@ -48,16 +48,19 @@ import net.minecraft.block.Block;
 import net.mcreator.floral_fantasy.procedures.DeathBloomMobplayerCollidesWithPlantProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class DeathBloomBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:death_bloom")
 	public static final Block block = null;
+
 	public DeathBloomBlock(FloralFantasyModElements instance) {
 		super(instance, 12);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -75,8 +78,10 @@ public class DeathBloomBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -106,15 +111,22 @@ public class DeathBloomBlock extends FloralFantasyModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:death_bloom"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.UNLUCK, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)
 					.hardnessAndResistance(0f, 0f).speedFactor(0.5f).setLightLevel(s -> 0));
 			setRegistryName("death_bloom");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 5;
 		}
 
 		@Override
@@ -146,11 +158,9 @@ public class DeathBloomBlock extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				DeathBloomMobplayerCollidesWithPlantProcedure.executeProcedure($_dependencies);
-			}
+
+			DeathBloomMobplayerCollidesWithPlantProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

@@ -15,12 +15,13 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.floral_fantasy.procedures.InfuserBreathMeterShowProcedure;
 import net.mcreator.floral_fantasy.procedures.InfuserBlazeMeterShowProcedure;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
-
-import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
 public class GUIInfuserGuiWindow extends ContainerScreen<GUIInfuserGui.GuiContainerMod> {
@@ -28,6 +29,7 @@ public class GUIInfuserGuiWindow extends ContainerScreen<GUIInfuserGui.GuiContai
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GUIInfuserGui.guistate;
+
 	public GUIInfuserGuiWindow(GUIInfuserGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -51,22 +53,36 @@ public class GUIInfuserGuiWindow extends ContainerScreen<GUIInfuserGui.GuiContai
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_gui.png"));
 		this.blit(ms, this.guiLeft + 0, this.guiTop + 0, 0, 0, 175, 165, 175, 165);
-		if (InfuserBlazeMeterShowProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+
+		if (InfuserBlazeMeterShowProcedure
+				.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_blaze_meter.png"));
 			this.blit(ms, this.guiLeft + 58, this.guiTop + 70, 0, 0, 18, 4, 18, 4);
 		}
-		if (InfuserBreathMeterShowProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world))) {
+		if (InfuserBreathMeterShowProcedure
+				.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_breath_meter.png"));
 			this.blit(ms, this.guiLeft + 98, this.guiTop + 70, 0, 0, 18, 4, 18, 4);
 		}
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_progress_arrow.png"));
 		this.blit(ms, this.guiLeft + 83, this.guiTop + 17, 0, 0, 8, 19, 8, 19);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_blaze_bubbles.png"));
 		this.blit(ms, this.guiLeft + 61, this.guiTop + 40, 0, 0, 12, 29, 12, 29);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("floral_fantasy:textures/infuser_breath_bubbles.png"));
 		this.blit(ms, this.guiLeft + 102, this.guiTop + 40, 0, 0, 12, 29, 12, 29);
+
 		RenderSystem.disableBlend();
 	}
 

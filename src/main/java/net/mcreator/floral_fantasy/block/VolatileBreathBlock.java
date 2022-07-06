@@ -37,16 +37,19 @@ import net.mcreator.floral_fantasy.procedures.VolatileBreathEntityCollidesInTheB
 import net.mcreator.floral_fantasy.procedures.DestroyIfAboveAirProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:volatile_breath")
 	public static final Block block = null;
+
 	public VolatileBreathBlock(FloralFantasyModElements instance) {
 		super(instance, 162);
 	}
@@ -62,6 +65,7 @@ public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.FIRE)
@@ -88,7 +92,11 @@ public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 1, 16)).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 1, 16)
+
+			)
+
+					.withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -118,10 +126,11 @@ public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
 			} else {
 			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				DestroyIfAboveAirProcedure.executeProcedure($_dependencies);
-			}
+
+			DestroyIfAboveAirProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -151,11 +160,9 @@ public class VolatileBreathBlock extends FloralFantasyModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				VolatileBreathEntityCollidesInTheBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			VolatileBreathEntityCollidesInTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

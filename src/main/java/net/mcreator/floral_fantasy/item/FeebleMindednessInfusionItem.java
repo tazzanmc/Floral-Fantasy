@@ -16,38 +16,37 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.block.BlockState;
 
 import net.mcreator.floral_fantasy.procedures.FeebleMindednessInfusionFoodEatenProcedure;
 import net.mcreator.floral_fantasy.itemgroup.InfusionItemGroup;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class FeebleMindednessInfusionItem extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:feeble_mindedness_infusion")
 	public static final Item block = null;
+
 	public FeebleMindednessInfusionItem(FloralFantasyModElements instance) {
-		super(instance, 218);
+		super(instance, 300);
 	}
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
+		elements.items.add(() -> new ItemCustom());
 	}
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
+
+	public static class ItemCustom extends Item {
+		public ItemCustom() {
 			super(new Item.Properties().group(InfusionItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE)
 					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
 			setRegistryName("feeble_mindedness_infusion");
-		}
-
-		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
 		}
 
 		@Override
@@ -58,6 +57,27 @@ public class FeebleMindednessInfusionItem extends FloralFantasyModElements.ModEl
 		@Override
 		public net.minecraft.util.SoundEvent getEatSound() {
 			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
+
+		@Override
+		public int getUseDuration(ItemStack itemstack) {
+			return 32;
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+			return 0F;
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
 		}
 
 		@Override
@@ -73,11 +93,9 @@ public class FeebleMindednessInfusionItem extends FloralFantasyModElements.ModEl
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				FeebleMindednessInfusionFoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			FeebleMindednessInfusionFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

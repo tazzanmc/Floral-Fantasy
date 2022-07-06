@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.ISeedReader;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
@@ -32,14 +33,17 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.floral_fantasy.procedures.WeepingBellGenerationConditionProcedure;
 
+import java.util.stream.Stream;
 import java.util.Random;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber
 public class WeepingBell4Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -61,7 +65,7 @@ public class WeepingBell4Structure {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.WORLD_SURFACE_WG, i, k);
-							j = Math.abs(random.nextInt(Math.max(1, j)) - 24);
+							j = MathHelper.nextInt(random, 8, Math.max(j, 9));
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
 							if (blockAt.getBlock() == Blocks.STONE)
@@ -80,7 +84,10 @@ public class WeepingBell4Structure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!WeepingBellGenerationConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							if (!WeepingBellGenerationConditionProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("floral_fantasy", "weeping_bell"));
@@ -101,6 +108,7 @@ public class WeepingBell4Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("floral_fantasy:weeping_bell_4"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_STRUCTURES).add(() -> configuredFeature);

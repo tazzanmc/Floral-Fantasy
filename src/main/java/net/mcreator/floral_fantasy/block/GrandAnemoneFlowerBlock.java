@@ -31,16 +31,19 @@ import net.minecraft.block.Block;
 import net.mcreator.floral_fantasy.procedures.GrandAnemoneFlowerSpawnParticlesProcedure;
 import net.mcreator.floral_fantasy.FloralFantasyModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @FloralFantasyModElements.ModElement.Tag
 public class GrandAnemoneFlowerBlock extends FloralFantasyModElements.ModElement {
 	@ObjectHolder("floral_fantasy:grand_anemone_flower")
 	public static final Block block = null;
+
 	public GrandAnemoneFlowerBlock(FloralFantasyModElements instance) {
 		super(instance, 9);
 	}
@@ -56,6 +59,7 @@ public class GrandAnemoneFlowerBlock extends FloralFantasyModElements.ModElement
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.REGENERATION, 30,
@@ -63,6 +67,11 @@ public class GrandAnemoneFlowerBlock extends FloralFantasyModElements.ModElement
 							.hardnessAndResistance(0f, 0f).setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
 							.setLightLevel(s -> 4));
 			setRegistryName("grand_anemone_flower");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 30;
 		}
 
 		@Override
@@ -96,14 +105,11 @@ public class GrandAnemoneFlowerBlock extends FloralFantasyModElements.ModElement
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				GrandAnemoneFlowerSpawnParticlesProcedure.executeProcedure($_dependencies);
-			}
+
+			GrandAnemoneFlowerSpawnParticlesProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

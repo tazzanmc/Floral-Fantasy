@@ -10,7 +10,13 @@ import net.mcreator.floral_fantasy.FloralFantasyMod;
 import java.util.Map;
 
 public class DestroyIfAboveAirProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure DestroyIfAboveAir!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency x for procedure DestroyIfAboveAir!");
@@ -26,20 +32,14 @@ public class DestroyIfAboveAirProcedure {
 				FloralFantasyMod.LOGGER.warn("Failed to load dependency z for procedure DestroyIfAboveAir!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FloralFantasyMod.LOGGER.warn("Failed to load dependency world for procedure DestroyIfAboveAir!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((!(world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)).isSolid()))) {
+		if (!world.getBlockState(new BlockPos(x, y - 1, z)).isSolid()) {
 			if (world instanceof World) {
-				Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
-						new BlockPos((int) x, (int) y, (int) z));
-				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+				Block.spawnDrops(world.getBlockState(new BlockPos(x, y, z)), (World) world, new BlockPos(x, y, z));
+				world.destroyBlock(new BlockPos(x, y, z), false);
 			}
 		}
 	}

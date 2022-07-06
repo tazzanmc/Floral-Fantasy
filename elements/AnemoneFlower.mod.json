@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -148,6 +148,7 @@
       }
     ],
     "patchSize": 15,
+    "generateAtAnyHeight": false,
     "onTickUpdate": {
       "name": "AnemoneFlowerUpdateTick"
     }
