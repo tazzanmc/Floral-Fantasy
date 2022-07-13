@@ -147,21 +147,6 @@
         "value": "forest_hills"
       },
       {
-        "value": "mutated_redwood_taiga"
-      },
-      {
-        "value": "mutated_redwood_taiga_hills"
-      },
-      {
-        "value": "redwood_taiga"
-      },
-      {
-        "value": "redwood_taiga_hills"
-      },
-      {
-        "value": "mutated_extreme_hills"
-      },
-      {
         "value": "jungle"
       },
       {
@@ -211,6 +196,15 @@
       },
       {
         "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "grove"
+      },
+      {
+        "value": "lush_caves"
+      },
+      {
+        "value": "meadow"
       }
     ],
     "spawnInDungeons": true

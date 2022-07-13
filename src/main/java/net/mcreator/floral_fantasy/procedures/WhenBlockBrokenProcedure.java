@@ -6,6 +6,7 @@ import net.minecraftforge.event.world.BlockEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,8 +15,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.floral_fantasy.item.SugarBeetSeedsItem;
+import net.mcreator.floral_fantasy.item.RhubarbSeedsItem;
 import net.mcreator.floral_fantasy.FloralFantasyMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -74,15 +77,27 @@ public class WhenBlockBrokenProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		double randomDrop = 0;
+		double chooseSeed = 0;
 		randomDrop = Math.random();
 		if (randomDrop >= 0.85 && ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.FERN
 				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRASS)) {
 			if (!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-							new ItemStack(SugarBeetSeedsItem.block));
-					entityToSpawn.setPickupDelay((int) 10);
-					world.addEntity(entityToSpawn);
+				randomDrop = (MathHelper.nextInt(new Random(), 1, 2));
+				if (randomDrop == 1) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+								new ItemStack(SugarBeetSeedsItem.block));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				}
+				if (randomDrop == 2) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+								new ItemStack(RhubarbSeedsItem.block));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
 				}
 			}
 		}

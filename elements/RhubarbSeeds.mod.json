@@ -3,17 +3,17 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unripe_sour_berries",
+    "texture": "rhubarb_seeds",
     "customModelName": "Normal",
-    "name": "Unripe Sour Berries",
+    "name": "Rhubarb Seeds",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "FOOD"
+      "value": "MISC"
     },
     "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 24,
-    "toolType": 0.0,
+    "useDuration": 0,
+    "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
       "value": ""
@@ -29,10 +29,13 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedOnBlock": {
+      "name": "RhubarbSeedsRightClickedOnBlock"
+    },
     "hasDispenseBehavior": false,
-    "isFood": true,
-    "nutritionalValue": 1,
-    "saturation": 0.19999999999999998,
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
     "eatResultItem": {
       "value": ""
     },

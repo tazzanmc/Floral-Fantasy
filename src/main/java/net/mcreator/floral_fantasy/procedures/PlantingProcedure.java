@@ -104,15 +104,12 @@ public class PlantingProcedure {
 				((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world)
-						.playSound(null, new BlockPos(x, y, z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
-								SoundCategory.BLOCKS, (float) 1, (float) 1);
+				((World) world).playSound(null, new BlockPos(x, y, z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.place")),
+						SoundCategory.BLOCKS, (float) 1, (float) 1);
 			} else {
 				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-								.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.place")),
 						SoundCategory.BLOCKS, (float) 1, (float) 1, false);
 			}
 		}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "floral_fantasy:blocks/rhubarb_stage2"
+  }
+}

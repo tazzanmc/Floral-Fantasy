@@ -100,16 +100,6 @@ public class ForgottenSkeletonEntity extends FloralFantasyModElements.ModElement
 			biomeCriteria = true;
 		if (new ResourceLocation("wooded_hills").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("giant_spruce_taiga").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("giant_spruce_taiga_hills").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("giant_tree_taiga").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("giant_tree_taiga_hills").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("gravelly_mountains").equals(event.getName()))
-			biomeCriteria = true;
 		if (new ResourceLocation("jungle").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("jungle_edge").equals(event.getName()))
@@ -143,6 +133,12 @@ public class ForgottenSkeletonEntity extends FloralFantasyModElements.ModElement
 		if (new ResourceLocation("wooded_badlands_plateau").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("wooded_mountains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

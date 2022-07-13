@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "forgotten_bones"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "_fv": 28,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Fresh Out the Oven(?)",
+    "achievementName": "Fresh Out the Oven",
     "achievementDescription": "Bake every pastry from Floral Fantasy",
     "achievementIcon": {
       "value": "CUSTOM:CornflowerCake"
